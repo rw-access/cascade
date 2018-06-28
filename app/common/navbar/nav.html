@@ -201,27 +201,21 @@
         </li> <!-- Session Dropdown /-->
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown" ng-hide="user.username">
+        <li class="dropdown">
           <a data-toggle="dropdown" class="dropdown-toggle"><span class="glyphicon glyphicon-blackboard"></span> Documentation <span class="caret"></span></a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
-            <!-- TODO -->
             <li><a href="#/docs/user-guide"><span class="glyphicon glyphicon-cloud"></span> User Guide</a></li>
             <li><a href="#/docs/technical-guide"><span class="glyphicon glyphicon-education"></span> Development Guide</a></li>
+            <li><a href="#/docs/requirements"><span class="glyphicon glyphicon-education"></span> Installation Requirements</a></li>
           </ul>
         </li>
         <li ng-show="user.username" class="dropdown">
           <a data-toggle="dropdown" class="dropdown-toggle"><span class="glyphicon glyphicon-user"></span> {{user.full_name}} <span class="caret"></span></a>
           <ul class="dropdown-menu dropdown-menu-right" role="menu">
-            <!-- TODO -->
             <li><a href="#/account"><span class="glyphicon glyphicon-cog"></span> Account Settings</a></li>
             <li class="divider"></li>
             <li><a href="#/admin/databases"><span class="glyphicon glyphicon-cloud"></span> Manage External Databases</a></li>
             <li><a href="#/admin/jobs"><span class="glyphicon glyphicon-briefcase"></span> Manage Jobs</a></li>
-            <li class="divider"></li>
-            <li><a href="#/docs/user-guide"><span class="glyphicon glyphicon-blackboard"></span> User Guide</a></li>
-            <li><a href="#/docs/technical-guide"><span class="glyphicon glyphicon-education"></span> Development Guide</a></li>
-            <li class="divider"></li>
-            <li><a href="#" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
           </ul>
         </li>
       </ul>

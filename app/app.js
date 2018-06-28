@@ -351,7 +351,7 @@
         url: '/docs/user-guide',
         views: {
           'content-block': {
-            templateUrl: '/docs/user-guide',
+            templateUrl: 'docs/user-guide.html',
             controller: function($element) {
                 $($element).find('a').on("click", function (clickEvent) {
                     var elem = $(clickEvent.toElement).attr('href');
@@ -367,7 +367,7 @@
         url: '/docs/technical-guide',
         views: {
           'content-block': {
-            templateUrl: '/docs/technical-guide',
+            templateUrl: 'docs/technical-guide.html',
             controller: function($element) {
                 $($element).find('a').on("click", function (clickEvent) {
                     var elem = $(clickEvent.toElement).attr('href');
@@ -379,16 +379,23 @@
             }
           }
         }
-      }).state('logout', {
-        url: '/account/logout',
+      }).state('requirements', {
+        url: '/docs/requirements',
         views: {
-          'content-view': {
-            template: "<h1>TODO</h1>",
-            controller: function($rootScope, $cookies, $state) {
+          'content-block': {
+            templateUrl: 'docs/requirements.html',
+            controller: function($element) {
+                $($element).find('a').on("click", function (clickEvent) {
+                    var elem = $(clickEvent.toElement).attr('href');
+                    if (elem && elem.startsWith('#') && !elem.startsWith("/#")) {
+                        $('html, body').animate({scrollTop: $(elem).offset().top - 60});
+                        return false;
+                    }
+                });
             }
           }
         }
-      });
+      })
   });/* end $stateProvider */
 
   app.run(function($rootScope, SessionService) {

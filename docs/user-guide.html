@@ -1,0 +1,147 @@
+<div class="documentation container"><h1 id="cascade-user-guide">CASCADE User Guide</h1>
+<p>CASCADE is a platform that aides analysts in hunting advanced cyber adversaries. By using MITRE's ATT&amp;CK framework, known adversary behaviors can be identified and searched for. Typically, upon finding suspicious activity, an analyst will continue to search the database for related process activity, and identifying how alerts are related to each other. CASCADE automates significant portions of the hunting process, and identifies ATT&amp;CK techniques. Because context is automatically gathered and graphs of activity can be built and labelled with ATT&amp;CK data, analysts can focus efforts on decision making, and response and remediation.</p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ol>
+<li><a href="#sessions">Sessions</a></li>
+<li><a href="#data-model">Data Model</a></li>
+<li><a href="#analytics">Analytics</a><ol>
+<li><a href="#run-mode">Run Mode</a> (first vs. second pass)</li>
+<li><a href="#query-language">Query Language</a></li>
+<li><a href="#attack-mapping">ATT&amp;CK Mapping</a></li>
+<li><a href="#analytic-configurations">Configurations</a></li>
+</ol>
+</li>
+<li><a href="#investigation-process">Investigation Process</a></li>
+<li><a href="#tuning-analytics">Tuning Analytics</a></li>
+<li><a href="#connecting-accounts">Connecting Accounts</a></li>
+<li><a href="#jobs">Managing Jobs</a></li>
+</ol>
+<h2 id="sessions">Sessions</h2>
+<p>Any investigation within CASCADE is done within the context of a session, where cyber analytics are run and event graph building occurs. A session is defined by a name, and the timeframe of activity, defined by the start and end points. These can be described with absolute points in time, such as "01/13/2017 17:00:00 UTC", or with relative offsets, such as "-DD:HH:MM:SS" which indicate sliding windows, where the timeframes are continuously relative to present time. CASCADE allows for either start or end time to be set, allowing for different types of ranges. For instance, setting only the end time to "01/13/2017 17:00:00" but leaving the start undefined is equivalent to "Anything before January 13th, 2017 at 5PM". Internally, all times are stored in UTC, but CASCADE can convert time offsets, such as "-05:00" if appended.</p>
+<p>For relative windows, events will automatically roll off as they fall out of the time window. To update a relative window, the session needs to be "refreshed" which causes the server to run all of the analytics again over that time range and investigate any new results that were found.</p>
+<p><a href="#/create-session">Create a new session.</a></p>
+<h2 id="data-model">Data Model</h2>
+<p>All events within CASCADE are defined within the extensible data model, which is based off the model in MITRE's <a href="https://car.mitre.org/wiki/Data_Model">Cyber Analytic Repository</a>. The data model defines all of the types of events</p>
+<ul>
+<li><em>object</em> is the name of the changed, accessed or manipulated resource. These can include OS-level entities such as processes, files, network connections, and threads.</li>
+<li><em>action</em> describes what actually happened to or from the resource of interest. For instance, a process can be <em>created</em> or <em>terminated</em>, a file could be <em>created</em>, <em>written to</em>, <em>read</em> or <em>deleted</em>.</li>
+<li><em>fields</em> are the names of the properties that can be used to describe an event. If a process is created, then it is useful to know the <em>process id</em> or the <em>path</em> of the file executing, or the <em>command line</em> arguments.</li>
+</ul>
+<p>In CASCADE, a data model event needs to have objects, actions and fields populated, and always needs a time field that specifies when the event occurred. Causal relationships between events are described with links between the two. For example, a link from one process to another could describe the parent-child relationship. The <a href="#/investiation-process">investigation process</a> section describes how these relationships are defined and chained together.</p>
+<p><a href="#/data-model">View the Data Model.</a></p>
+<h2 id="analytics">Analytics</h2>
+<p>Within the browser or via REST API, new analytics can be added to CASCADE. Analytics are essentially queries created to detect specific behaviors. Analytics can be mapped to ATT&amp;CK techniques and tactics, which is useful in understanding specific ATT&amp;CK behaviors. This is key in generating a labelling events with ATT&amp;CK techniques and tactics, and generating an ATT&amp;CK matrix, crucial for identifying detection gaps. Analytics identify suspicious events to <a href="#investigation">investigate</a>. Some behaviors may be significantly more common than others and may yield high volumes of events. In that case, analytics need to be <a href="#tuning-analytics">finely tuned</a>, to filter out predictable and regularly occurring events, which is crucial in avoiding data explosion for number of events found.</p>
+<p><a href="#/analytics">List the existing analytics.</a></p>
+<h3 id="run-mode">Run Mode</h3>
+<p>Analytics are run as either a first- or second-pass of detection. When running an analytic as a first pass, all results returned (not in the baseline) will be investigated. However, the second-pass mode will only run, but constrain output to results that have <em>already</em> been detected by the automated investigation process. When events are identified, they will be fully investigated, via forward- and backward- chaining. Each run mode follows a slightly different order of operations:</p>
+<h4 id="first-pass">First Pass</h4>
+<p>Generate a query for the target database language. For each result returned</p>
+<ol>
+<li>Ignore the result if it matches the baseline (if present for the analytic).</li>
+<li>Otherwise, add the event(s) to the session and create a corresponding analytic result.</li>
+<li>Begin investigating all events via forward and backward chaining. Discovered events will automatically be added to the session.</li>
+</ol>
+<h4 id="second-pass">Second Pass</h4>
+<p>Instead of querying over the database for all instances, a second pass analytic will identify all events in the session that match the analytic query. These include events that were discovered indirectly, by investigating other events identified in other first- or second- pass analytics. Second pass may be useful in cases where an event is not necessarily suspicious without some other incriminating context. For instance, in Windows, finding a <code>cmd.exe</code> execution in the parent process tree may be worth investigating, to see any other children it may have caused.</p>
+<ol>
+<li>Run the analytic over the events <em>already discovered</em> in the session. This includes any events found directly by first-pass or indirectly, by investigations or other second-pass analytics.</li>
+<li>Begin re-investigating these events, in both directions (forward and backward chaining).</li>
+<li>As new events are added to the session, re-investigate any that trigger the second-pass analytic.</li>
+</ol>
+<h4 id="identify-only">Identify Only</h4>
+<p>There are also two other modes within CASCADE, more for experimental purposes. If desired, analytics can be run as <em>identify only</em>, which essentially finds events that match analytics, but does not continue down the investigate process. Hence, it only identifes the events that trigger the analytic, and no further. There is another nearly identical mode that ignores the baseline, temporarily ignoring any tuning that has been done on the analytic. This could be also be useful for gathering metrics and identifying periods of time in which useful tuning could occur.</p>
+<h3 id="query-language">Query Language</h3>
+<p>The CASCADE query language is tightly integrated with the data model. The data model describes the types of events that are collected and the fields that may be present in those events. By integrating with the data model, analytics can be developed in a way that is independent of sensor or database configurations. When analytics are run, the query can be parsed and converted into the target query language of choice, such as Splunk or ElasticSearch.</p>
+<p>A data model query is built according to </p>
+<pre><code>search [object] [action] where ( boolean search expression )
+</code></pre>
+<p>The inner part of the query, the boolean expression, is built off of boolean logic, <code>and</code>/<code>or</code>/<code>not</code>, and field comparisons. The expression <code>field1 == "value1"</code> limits the query to events where <code>field1</code> is equal to the string "value1". WildCards can also be expressed using <code>*</code>. Expressions also can be used to filter down existing analytics by referencing another analytic by name <code>analytic("Analytic - Remote Thread Creation")</code>or by id <code>analytic(579a56ccb16e3c9abd53a15a)</code>. CASCADE will dereference any analytics upon search time.</p>
+<p>For example, to search for all creations of the command shell process that are run with the flag <code>/c</code>, a query could be constructed that looks like</p>
+<pre><code>search process create where exe == "cmd.exe" and command_line == "* /c *"
+</code></pre>
+<p>A more complex analytic may look for all events that triggered the analytic "Analytic - Remote Thread Creation", where the thread start function begins with the string "LoadLibrary"</p>
+<pre><code>search thread remote_create where 
+    analytic( "Analytic - Remote Thread Creation" ) and start_function == "LoadLibrary*"
+</code></pre>
+<p>Supported Expressions:</p>
+<ul>
+<li>Boolean Operators<ul>
+<li><strong>and</strong></li>
+<li><strong>or</strong></li>
+<li><strong>not</strong></li>
+</ul>
+</li>
+<li>Field Comparisons<ul>
+<li><strong>==</strong> equality </li>
+<li><strong>!=</strong> inequality</li>
+<li><strong>&lt;</strong>  less than</li>
+<li><strong>&lt;=</strong> less than or equal to</li>
+<li><strong>&gt;=</strong> greater than or equal to</li>
+<li><strong>&gt;</strong>  greater than</li>
+</ul>
+</li>
+<li>Analytic References<ul>
+<li>analytic(<code>id</code>)</li>
+<li>analytic("Name of Analytic")</li>
+</ul>
+</li>
+<li>Order of Operations<ul>
+<li>field1 == "value1" <strong>and</strong> <strong>not</strong> ( field2 == "value2" <strong>or</strong> field3 != "value4")</li>
+</ul>
+</li>
+</ul>
+<h3 id="external-analytics">External Analytics</h3>
+<p>To detect more complex behaviors that require patterns between multiple analytics, it may be best to implement these in another platform. CASCADE's query language may be easy to convert into multiple languages, but at the cost of its simplicity. As a compromise, more sophisticated logic, such as statistical summaries, outliers, joins, and transactions should be implemented in the target database query language directly, and CASCADE requires the name of the saved search.</p>
+<p>To make this possible, there needs to be a mapping of the query outputs into the data model events. For instance, if an external query detects events using custom field names and has several events, CASCADE just needs to know how each field maps to the query. This is implemented in the browser or directly via API. One example field mapping for <a href="https://car.mitre.org/wiki/CAR-2014-02-001">CAR-2014-02-001: New Service Monitoring</a>, that identifies a process create and a file create  event of a Windows service. The data model fields are on the left and the analytic output fields are on the right</p>
+<ul>
+<li>file - create<ul>
+<li>file_path == Image</li>
+<li>fqdn  == ComputerName</li>
+<li>image_path == CreatorImagePath</li>
+<li>pid == FileCreatePid</li>
+</ul>
+</li>
+<li>process - create<ul>
+<li>fqdn  == ComputerName</li>
+<li>image_path == Image</li>
+<li>pid == ServiceProcessPid</li>
+</ul>
+</li>
+</ul>
+<h3 id="analytic-configurations">Analytic Configurations</h3>
+<p>There may be multiple use cases for different analytics. Depending on the environment, and the type of behavior an analyst is looking for, a different set of first or second pass analytics may be created. For instance, it may be useful to have a list of every analytic run as second-pass mode. This could be very useful to force ATT&amp;CK labeling of all discovered events that match an analytic, or as part of a forensic process. Or a list of high confidence analytics could be generated and run as a first-pass to quickly identify malicious activity. It may also be useful to create a hybrid list of first and second pass analytics to detect a specific red team or adversary, for testing or evaluation purposes. When operating in the context of a session, multiple configurations may be run and these are easily built on-the-fly.</p>
+<p><a href="#/analytics/configure">View or modify analytic configurations.</a></p>
+<h2 id="investigation-process">Investigation Process</h2>
+<p>As events are identified by analytics, they start of a recursive investigative process in two directions: forward and backward. For example, if one analytic identifies a suspicious process execution, then there are naturally several causally related events that may also be suspect. These events may happen before the suspicious process creation as part of its history, or could be part of its future. The investigation process can looks for cause-and-effect relationships both ways</p>
+<ul>
+<li><strong>Forward Pivots</strong> - <em>What events did this cause to happen?</em><ul>
+<li>Parent Process -&gt; Child Process</li>
+<li>File Modification (.exe) -&gt; Process Execution</li>
+</ul>
+</li>
+<li><strong>Backward Pivots</strong> - <em>What events was this caused by?</em><ul>
+<li>Child Process &lt;- Parent Process</li>
+<li>Process Execution &lt;- File Modification (.exe)</li>
+</ul>
+</li>
+</ul>
+<p>By recursively chaining these relationships, CASCADE can identify distant related events. For instance, by chaining forward pivots, children, grandchildren, and distant descendants can all be identified. But chaining backward pivots, an ancestry can be built to identify a lineage for context, or to identify earlier suspicious events. When an analytic identifies a suspicious event (via first-pass or second-pass searches), CASCADE begins investigating both the ancestry and descendant events.</p>
+<p><a href="#/data-model">View the data model relationships.</a></p>
+<h2 id="tuning-analytics">Tuning Analytics</h2>
+<p>Analytic baselines are generated and adjusted via the tuning process. Tuned analytics must also have a start and end time to specify the time period to collect events for the analytic. Once the results are collected, CASCADE organizes the events into a <a href="https://en.wikipedia.org/wiki/Hierarchical_clustering">hierarchical tree</a>. This tree is partitioned by looking for the most common key-value pairs and repeating this process recursively. Currently, wildcard matching is not supported, so there is no effort to identify "similar" strings when building these structures. These hierarchies can be collapsed by left-clicking on nodes to baseline at a higher level. When an event is returned by the event, it effectively walks the tree, and determines if its fields match the conditions in the baseline. If it continues to make this process to a leaf node and the key-value pair still matches, then that result is considered to be a match. By collapsing nodes, the criteria for matches can be made less strict. These decisions--strictness, time frame, etc.--are decisions that analysts make and are not automated by CASCADE. To remove events from the baseline, right clicking on a node will remove the corresponding events. Additionally, the organizational fields may be dynamically decided, and if one field is redundant or has high entropy, it can be unchecked and the baseline will rebuild upon clicking "Update Fields".</p>
+<p><a href="#/analytics/tuning">View or modify analytic baselines.</a></p>
+<h2 id="connecting-accounts">Connecting Accounts</h2>
+<p>Currently, CASCADE query can be integrated with Splunk, ElasticSearch and MongoDB, if the events are already normalized according to the data model. To connect CASCADE to a new database instance, it needs to know configuration information. This can be configured from the browser by navigating to the User <strong>&gt;</strong> <a href="#/admin/databases">Manage External Databases</a> <strong>&gt;</strong> <a href="#/admin/databases/connect">Connect to Database</a> menu. This information only pertains to connection information about the database, but not login credentials. Any login information to the database is connected to the CASCADE account, described below in account management.</p>
+<h3 id="authentication-to-external-databases">Authentication to External Databases</h3>
+<p>If a user exists and the connection information is also present (see <a href="#connecting-to-databases">Connecting to Databases</a>), it can be connected to the account with login information. Within the web application, click the User <strong>&gt;</strong> Account Settings <strong>&gt;</strong> <a href="#/account/add-database">Connect to Database</a> link. Select the database instance that was created earlier and specify the user login information, such as user name and password. If login is successful, the external credentials are associated with the CASCADE user account, and all queries will happen on behalf of it.</p>
+<h2 id="jobs">Jobs</h2>
+<p>Many different types of searches can be performed to fetch for events or perform other actions. In CASCADE, pending requests are implemented in a job queue. All jobs happen on behalf of a user. Jobs may create additional jobs, allowing for the graph to self-expand as new events are discovered. To manage jobs from the web app, click the User <strong>&gt;</strong> <a href="#/admin/jobs">Manage Jobs</a> link.</p>
+<p>Types of jobs</p>
+<ul>
+<li><strong>AnalyticJob</strong>       - Run an analytic (first- or second-pass) and investigate the results returned</li>
+<li><strong>ExtractEventsJob</strong>  - Extracts events out of external analytics based off the specified field mapping</li>
+<li><strong>CustomQueryJob</strong>    - Searches for any events that match a query that is specified on-the-fly</li>
+<li><strong>InvestigateJob</strong>    - Create forward and backward pivots for an identified event. No searches are run</li>
+<li><strong>PivotJob</strong>          - For an event and a specific pivot, search for matching events</li>
+<li><strong>TuningJob</strong>         - Tune an analytic over a specified period of time to build an initial baseline</li>
+</ul></div

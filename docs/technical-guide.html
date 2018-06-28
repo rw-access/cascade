@@ -1,0 +1,78 @@
+<div class="documentation container"><h1 id="cascade-technical-guide">CASCADE Technical Guide</h1>
+<p>This guide describes the design choices behind CASCADE, the interplay between components and details into the structure of the source code. The guide is intended for any audience that desires to know inner workings, and has plans to continue to develop, maintain or fix server-side or client-side code. CASCADE consists of a web server, which provides a RESTful API interface and acts as middleware between the front-end web UI and external database solutions, such as ElasticSearch and Splunk. Analytics are saved queries that are designed to detect known behaviors, and these run on behalf of the user. When an event is found, CASCADE will automate the drilldown process, and continue to return to the external database to fetch more events and gather context. By gathering related events, a graph of activity can be built and analyzed, which provides a much richer view and understanding that can empower an analyst's decision-making process.</p>
+<h4 id="table-of-contents">Table of contents</h4>
+<ol>
+<li><a href="#file-organization">File Organization</a></li>
+<li><a href="#server">Server Details</a></li>
+</ol>
+<h2 id="file-organization">File Organization</h2>
+<p>Several components work together for CASCADE to function properly. The directory structure is described in sections, based off the highest level directories. </p>
+<p>The <code>app/</code> directory Contains Python modules and all of the necessary code for the server-side framework. This is where the data model and analytics are defined, connections to external databases (e.g. Splunk, ElasticSearch) are managed, and the web/API server is located.</p>
+<pre><code>  .
+  |-- app/
+  |    `-- cascade/
+  |         |-- data_model/
+  |         |    |-- language/
+  |         |    |-- events.py
+  |         |    |-- pivots.py
+  |         |    `-- query.py
+  |         |-- query_layers/
+  |         |    |-- base.py
+  |         |    |-- elastic.py
+  |         |    `-- splunk.py
+  |         |-- analytics.py
+  |         |-- attack.py
+  |         |-- session.py
+  |         |-- jobs.py
+  |         |-- runner.py
+</code></pre>
+<p>Configuration files are stored in the <code>/conf</code> directory. The configuration file(s) contain settings for CASCADE, such as database keys, links to the ATT&amp;CK and CAR wikis, and server settings. This folder contains files that store the default settings (<code>default.yml</code>), as well as the active configuration (<code>cascade.yml</code>)</p>
+<pre><code>  |-- conf/
+  |    |-- cascade.yml
+  |    `-- default.yml
+</code></pre>
+<p>Documents, such as these guides are stored in the documents folder, as both Markdown (source) and PDF.</p>
+<pre><code>  |-- docs/
+  |    |-- user-guide(.md | .pdf)
+  |    `-- technical-guide(.md | .pdf)
+</code></pre>
+<p>The <code>misc/</code> directory contains useful but miscellaneous files. This directory is prepopulated with a few <code>.bson</code> files, which are used to initialize MongoDB, which CASCADE uses as its database.</p>
+<pre><code>  |-- misc/
+</code></pre>
+<p>The web application is in the <code>www/</code> folder. The application is built with Bootstrap, Angular and d3 frameworks. The shared libraries are all consolidated into <code>lib/</code>. The app-specific developments are split off from commonly used directives, templates, and components, from page specific views.</p>
+<pre><code>  |-- www/
+  |   |-- app/
+  |   |   |-- common/
+  |   |   |-- components/
+  |   |   `-- app.js
+  |   `-- lib/
+  |        |-- css/
+  |        `-- js/
+</code></pre>
+<p>The single python file at the root level, <code>cascade.py</code> loads up the other code and starts the server. The command line arguments are printed out by running <code>python cascade.py --help</code>.  </p>
+<pre><code>  `-- cascade.py
+</code></pre>
+<h2 id="server">Server</h2>
+<p>The CASCADE server is developed in python and the source code is in the <code>app</code> folder. The file <code>cascade.py</code> loads the server code, parses the command line, or other one-off commands, such as importing the database, creating a user or running setup. Persistent objects are stored in MongoDB, and schemas are defined using the <a href="http://docs.mongoengine.org/">MongoEngine</a> library
+ for Python.</p>
+<h3 id="command-line-usage">Command Line Usage</h3>
+<p>CASCADE can be configured to allow account creation via the web interface. If enabled, any user can access the site to create accounts, manipulate sessions and view data. There are currently no account control mechanisms to define roles and permissions; every user has the same level of access. The account creation can be enabled by setting <code>config: account_creation</code> to <code>True</code> in the config file <code>conf/cascade.yml</code></p>
+<p>Otherwise there are several command line arguments to create users and reset passwords:</p>
+<pre><code>Usage: python cascade.py [-h | --help] [-v | -vv | -vvv]
+</code></pre>
+<h4 id="setup">Setup</h4>
+<pre><code>            --setup
+</code></pre>
+<h4 id="start-job-runner-service">Start Job Runner Service</h4>
+<pre><code>            --jobs | -j | --job_runner
+</code></pre>
+<h4 id="manage-accounts">Manage Accounts</h4>
+<pre><code>          --create_user username
+          --change_password username
+          --reset_password username [--send_email]
+</code></pre>
+<h4 id="manage-mongo-collections">Manage Mongo Collections</h4>
+<pre><code>          --export path/to/file.bson [--collection analytic --collection attack_tactic ...  | -a ]
+          --import path/to/file.bson
+          --purge [--collection analytic --collection attack_tactic ...  | -a ]
+</code></pre></div
