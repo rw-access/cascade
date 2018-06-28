@@ -1,0 +1,252 @@
+[
+  {
+    "_class": "ApiEvent", 
+    "actions": [
+      "call"
+    ], 
+    "fields": [
+      "arguments", 
+      "exe", 
+      "fqdn", 
+      "function", 
+      "hostname", 
+      "image_path", 
+      "module", 
+      "parent_exe", 
+      "parent_image_path", 
+      "pid", 
+      "ppid", 
+      "return", 
+      "user"
+    ], 
+    "name": "api"
+  }, 
+  {
+    "_class": "DriverEvent", 
+    "actions": [
+      "load", 
+      "unload"
+    ], 
+    "fields": [
+      "base_address", 
+      "fqdn", 
+      "hostname", 
+      "md5_hash", 
+      "module_name", 
+      "module_path", 
+      "publisher", 
+      "sha1_hash", 
+      "sha256_hash"
+    ], 
+    "name": "driver"
+  }, 
+  {
+    "_class": "FileEvent", 
+    "actions": [
+      "create", 
+      "delete", 
+      "modify", 
+      "raw_access", 
+      "read", 
+      "timestomp", 
+      "write"
+    ], 
+    "fields": [
+      "company", 
+      "creation_time", 
+      "exe", 
+      "file_name", 
+      "file_path", 
+      "fqdn", 
+      "hostname", 
+      "image_path", 
+      "md5_hash", 
+      "pid", 
+      "ppid", 
+      "previous_creation_time", 
+      "sha1_hash", 
+      "sha256_hash", 
+      "signer", 
+      "user"
+    ], 
+    "name": "file"
+  }, 
+  {
+    "_class": "NetworkEvent", 
+    "actions": [
+      "end", 
+      "message", 
+      "start"
+    ], 
+    "fields": [
+      "content", 
+      "dest_fqdn", 
+      "dest_hostname", 
+      "dest_ip", 
+      "dest_port", 
+      "end_time", 
+      "exe", 
+      "flags", 
+      "fqdn", 
+      "hostname", 
+      "image_path", 
+      "mac", 
+      "packet_count", 
+      "pid", 
+      "ppid", 
+      "proto_info", 
+      "protocol", 
+      "src_fqdn", 
+      "src_hostname", 
+      "src_ip", 
+      "src_port", 
+      "start_time", 
+      "user"
+    ], 
+    "name": "flow"
+  }, 
+  {
+    "_class": "ModuleEvent", 
+    "actions": [
+      "load", 
+      "unload"
+    ], 
+    "fields": [
+      "base_address", 
+      "exe", 
+      "fqdn", 
+      "hostname", 
+      "image_path", 
+      "md5_hash", 
+      "module_name", 
+      "module_path", 
+      "pid", 
+      "publisher", 
+      "sha1_hash", 
+      "sha256_hash", 
+      "tid"
+    ], 
+    "name": "module"
+  }, 
+  {
+    "_class": "ProcessEvent", 
+    "actions": [
+      "create", 
+      "inject", 
+      "terminate"
+    ], 
+    "fields": [
+      "command_line", 
+      "current_directory", 
+      "duration", 
+      "exe", 
+      "fqdn", 
+      "hostname", 
+      "image_path", 
+      "integrity_level", 
+      "md5_hash", 
+      "parent_command_line", 
+      "parent_exe", 
+      "parent_image_path", 
+      "pid", 
+      "ppid", 
+      "sha1_hash", 
+      "sha256_hash", 
+      "sid", 
+      "terminal_session_id", 
+      "user"
+    ], 
+    "name": "process"
+  }, 
+  {
+    "_class": "RegistryEvent", 
+    "actions": [
+      "create_key", 
+      "delete_key", 
+      "delete_value", 
+      "read_value", 
+      "rename_key", 
+      "write_value"
+    ], 
+    "fields": [
+      "data", 
+      "data_type", 
+      "exe", 
+      "fqdn", 
+      "hostname", 
+      "image_path", 
+      "key", 
+      "parent_exe", 
+      "parent_image_path", 
+      "pid", 
+      "ppid", 
+      "user", 
+      "value"
+    ], 
+    "name": "registry"
+  }, 
+  {
+    "_class": "ThreadEvent", 
+    "actions": [
+      "create", 
+      "remote_create", 
+      "suspend", 
+      "terminate"
+    ], 
+    "fields": [
+      "fqdn", 
+      "hostname", 
+      "src_exe", 
+      "src_image_path", 
+      "src_parent_exe", 
+      "src_parent_image_path", 
+      "src_pid", 
+      "src_ppid", 
+      "src_tid", 
+      "stack_base", 
+      "stack_limit", 
+      "start_address", 
+      "start_address_win32", 
+      "start_function", 
+      "subprocess_tag", 
+      "target_exe", 
+      "target_image_path", 
+      "target_parent_exe", 
+      "target_parent_image_path", 
+      "target_pid", 
+      "target_ppid", 
+      "target_tid", 
+      "user", 
+      "user_stack_base", 
+      "user_stack_limit"
+    ], 
+    "name": "thread"
+  }, 
+  {
+    "_class": "UserEvent", 
+    "actions": [
+      "interactive", 
+      "local", 
+      "lock", 
+      "login", 
+      "logout", 
+      "privilege", 
+      "rdp", 
+      "reconnect", 
+      "remote", 
+      "unlock"
+    ], 
+    "fields": [
+      "dest_ip", 
+      "dest_port", 
+      "hostname", 
+      "logon_id", 
+      "logon_type", 
+      "privileges", 
+      "src_ip", 
+      "src_port", 
+      "user"
+    ], 
+    "name": "user_session"
+  }
+]

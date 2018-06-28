@@ -1,0 +1,50 @@
+[
+  {
+    "_cls": "DatabaseInfo.SplunkInfo", 
+    "fields": {
+      "app": {
+        "default": null, 
+        "type": "StringField"
+      }, 
+      "host": {
+        "default": null, 
+        "type": "StringField"
+      }, 
+      "name": {
+        "default": null, 
+        "type": "StringField"
+      }, 
+      "port": {
+        "default": 8089, 
+        "type": "IntField"
+      }
+    }, 
+    "name": "Splunk"
+  }, 
+  {
+    "_cls": "DatabaseInfo.ElasticSearchInfo", 
+    "fields": {
+      "hosts": {
+        "default": null, 
+        "type": "ListField"
+      }, 
+      "name": {
+        "default": null, 
+        "type": "StringField"
+      }, 
+      "port": {
+        "default": 9200, 
+        "type": "IntField"
+      }, 
+      "use_ssl": {
+        "default": false, 
+        "type": "BooleanField"
+      }, 
+      "verify_certs": {
+        "default": true, 
+        "type": "BooleanField"
+      }
+    }, 
+    "name": "ElasticSearch"
+  }
+]

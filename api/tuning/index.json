@@ -1,0 +1,2513 @@
+[
+  {
+    "_id": "59a72cd817f950574704fa6e", 
+    "analytic": "577c2186ce4ace904e344339", 
+    "keys": [
+      {
+        "name": "parent_image_path", 
+        "status": true
+      }, 
+      {
+        "name": "sha256_hash", 
+        "status": true
+      }, 
+      {
+        "name": "terminal_session_id", 
+        "status": false
+      }, 
+      {
+        "name": "image_path", 
+        "status": true
+      }, 
+      {
+        "name": "current_directory", 
+        "status": false
+      }, 
+      {
+        "name": "pid", 
+        "status": true
+      }, 
+      {
+        "name": "hostname", 
+        "status": false
+      }, 
+      {
+        "name": "command_line", 
+        "status": true
+      }, 
+      {
+        "name": "integrity_level", 
+        "status": true
+      }, 
+      {
+        "name": "fqdn", 
+        "status": false
+      }, 
+      {
+        "name": "exe", 
+        "status": true
+      }, 
+      {
+        "name": "user", 
+        "status": true
+      }, 
+      {
+        "name": "md5_hash", 
+        "status": true
+      }, 
+      {
+        "name": "ppid", 
+        "status": true
+      }, 
+      {
+        "name": "parent_command_line", 
+        "status": true
+      }, 
+      {
+        "name": "sha1_hash", 
+        "status": true
+      }, 
+      {
+        "name": "parent_exe", 
+        "status": true
+      }
+    ], 
+    "original_root": {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 9, 
+                                                      "value": "harley-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 9, 
+                                                  "value": "harley-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 9, 
+                                                      "value": "zissler-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 9, 
+                                                  "value": "zissler-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "beane-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "beane-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "colgan-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "colgan-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "dc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "dc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "escue-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "escue-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "fulco-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "fulco-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "kressierer-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "kressierer-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "mims-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "mims-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "minahan-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "minahan-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "ostermeyer-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "ostermeyer-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "peele-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "peele-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "platten-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "platten-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "santilli-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "santilli-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "sespinosa-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "sespinosa-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "sounder-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "sounder-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 8, 
+                                                      "value": "teston-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 8, 
+                                                  "value": "teston-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "command_line", 
+                                              "leaf": false, 
+                                              "size": 138, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"\"c:\\Program Files\\SplunkUniversalForwarder\\etc\\apps\\fmx_computer_properties\\bin\\launch.bat\"\""
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "beane-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "beane-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "colgan-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "colgan-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "dc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "dc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "escue-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "escue-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "fulco-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "fulco-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "harley-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "harley-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "kressierer-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "kressierer-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "mims-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "mims-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "minahan-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "minahan-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "ostermeyer-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "ostermeyer-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "peele-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "peele-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "platten-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "platten-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "santilli-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "santilli-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "sespinosa-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "sespinosa-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "sounder-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "sounder-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "teston-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "teston-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 2, 
+                                                      "value": "zissler-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "zissler-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "command_line", 
+                                              "leaf": false, 
+                                              "size": 34, 
+                                              "value": "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Program Files\\SplunkUniversalForwarder\\etc\\apps\\TA-autorunsTCP\\bin\\launch.bat\"\""
+                                            }
+                                          ], 
+                                          "key": "parent_image_path", 
+                                          "leaf": false, 
+                                          "size": 172, 
+                                          "value": "C:\\Program Files\\SplunkUniversalForwarder\\bin\\splunkd.exe"
+                                        }
+                                      ], 
+                                      "key": "parent_exe", 
+                                      "leaf": false, 
+                                      "size": 172, 
+                                      "value": "splunkd.exe"
+                                    }
+                                  ], 
+                                  "key": "parent_command_line", 
+                                  "leaf": false, 
+                                  "size": 172, 
+                                  "value": "\"c:\\Program Files\\SplunkUniversalForwarder\\bin\\splunkd.exe\" service"
+                                }, 
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "beane-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "beane-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "colgan-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "colgan-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "escue-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "escue-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "fulco-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "fulco-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "harley-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "harley-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "kressierer-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "kressierer-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "mims-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "mims-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "minahan-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "minahan-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "ostermeyer-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "ostermeyer-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "peele-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "peele-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "platten-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "platten-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "santilli-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "santilli-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "sespinosa-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "sespinosa-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "sounder-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "sounder-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "teston-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "teston-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "zissler-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "zissler-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "command_line", 
+                                              "leaf": false, 
+                                              "size": 16, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"reg delete HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run /v caldera /f\""
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"cmd /c del \"C:\\born.exe\"\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\colgan-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\platten-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\santilli-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\sespinosa-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 3752 /f\""
+                                                    }
+                                                  ], 
+                                                  "key": "hostname", 
+                                                  "leaf": false, 
+                                                  "size": 6, 
+                                                  "value": "ostermeyer-pc"
+                                                }
+                                              ], 
+                                              "key": "fqdn", 
+                                              "leaf": false, 
+                                              "size": 6, 
+                                              "value": "ostermeyer-pc.brawlco.com"
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"cmd /c del \"C:\\and.exe\"\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\mims-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\ostermeyer-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\teston-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"takeown /F C:\\and.exe /A\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 3468 /f\""
+                                                    }
+                                                  ], 
+                                                  "key": "hostname", 
+                                                  "leaf": false, 
+                                                  "size": 6, 
+                                                  "value": "sounder-pc"
+                                                }
+                                              ], 
+                                              "key": "fqdn", 
+                                              "leaf": false, 
+                                              "size": 6, 
+                                              "value": "sounder-pc.brawlco.com"
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "beane-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "beane-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "colgan-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "colgan-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "platten-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "platten-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "zissler-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "zissler-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "command_line", 
+                                              "leaf": false, 
+                                              "size": 4, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"cmd /c del \"C:\\and.exe\"\""
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "escue-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "escue-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "fulco-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "fulco-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "peele-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "peele-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "santilli-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "santilli-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "command_line", 
+                                              "leaf": false, 
+                                              "size": 4, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"cmd /c del \"C:\\born.exe\"\""
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"cmd /c del \"C:\\raised.exe\"\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\escue-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\peele-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 3764 /f\""
+                                                    }
+                                                  ], 
+                                                  "key": "hostname", 
+                                                  "leaf": false, 
+                                                  "size": 4, 
+                                                  "value": "mims-pc"
+                                                }
+                                              ], 
+                                              "key": "fqdn", 
+                                              "leaf": false, 
+                                              "size": 4, 
+                                              "value": "mims-pc.brawlco.com"
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "harley-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "harley-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "minahan-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "minahan-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "teston-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "teston-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "command_line", 
+                                              "leaf": false, 
+                                              "size": 3, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"cmd /c del \"C:\\west.exe\"\""
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"cmd /c del \"C:\\philadelphia.exe\"\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\harley-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 3520 /f\""
+                                                    }
+                                                  ], 
+                                                  "key": "hostname", 
+                                                  "leaf": false, 
+                                                  "size": 3, 
+                                                  "value": "kressierer-pc"
+                                                }
+                                              ], 
+                                              "key": "fqdn", 
+                                              "leaf": false, 
+                                              "size": 3, 
+                                              "value": "kressierer-pc.brawlco.com"
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\beane-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\zissler-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 4004 /f\""
+                                                    }
+                                                  ], 
+                                                  "key": "hostname", 
+                                                  "leaf": false, 
+                                                  "size": 3, 
+                                                  "value": "santilli-pc"
+                                                }
+                                              ], 
+                                              "key": "fqdn", 
+                                              "leaf": false, 
+                                              "size": 3, 
+                                              "value": "santilli-pc.brawlco.com"
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\minahan-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 856 /f\""
+                                                    }
+                                                  ], 
+                                                  "key": "hostname", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "colgan-pc"
+                                                }
+                                              ], 
+                                              "key": "fqdn", 
+                                              "leaf": false, 
+                                              "size": 2, 
+                                              "value": "colgan-pc.brawlco.com"
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\fulco-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 2108 /f\""
+                                                    }
+                                                  ], 
+                                                  "key": "hostname", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "escue-pc"
+                                                }
+                                              ], 
+                                              "key": "fqdn", 
+                                              "leaf": false, 
+                                              "size": 2, 
+                                              "value": "escue-pc.brawlco.com"
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"net use \\\\kressierer-pc.brawlco.com\\C$ /delete\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 3912 /f\""
+                                                    }
+                                                  ], 
+                                                  "key": "hostname", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "platten-pc"
+                                                }
+                                              ], 
+                                              "key": "fqdn", 
+                                              "leaf": false, 
+                                              "size": 2, 
+                                              "value": "platten-pc.brawlco.com"
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"cmd /c del \"C:\\philadelphia.exe\"\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 984 /f\""
+                                                    }
+                                                  ], 
+                                                  "key": "hostname", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "sespinosa-pc"
+                                                }
+                                              ], 
+                                              "key": "fqdn", 
+                                              "leaf": false, 
+                                              "size": 2, 
+                                              "value": "sespinosa-pc.brawlco.com"
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "fulco-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "fulco-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "command_line", 
+                                              "leaf": false, 
+                                              "size": 1, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 164 /f\""
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "beane-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "beane-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "command_line", 
+                                              "leaf": false, 
+                                              "size": 1, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 3248 /f\""
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "zissler-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "zissler-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "command_line", 
+                                              "leaf": false, 
+                                              "size": 1, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 3388 /f\""
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "harley-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "harley-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "command_line", 
+                                              "leaf": false, 
+                                              "size": 1, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 3508 /f\""
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "minahan-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "minahan-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "command_line", 
+                                              "leaf": false, 
+                                              "size": 1, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 3564 /f\""
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "peele-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "peele-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "command_line", 
+                                              "leaf": false, 
+                                              "size": 1, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 3820 /f\""
+                                            }, 
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "teston-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "teston-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "command_line", 
+                                              "leaf": false, 
+                                              "size": 1, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"taskkill /pid 928 /f\""
+                                            }
+                                          ], 
+                                          "key": "parent_image_path", 
+                                          "leaf": false, 
+                                          "size": 64, 
+                                          "value": "C:\\Program Files\\cagent\\cagent.exe"
+                                        }
+                                      ], 
+                                      "key": "parent_exe", 
+                                      "leaf": false, 
+                                      "size": 64, 
+                                      "value": "cagent.exe"
+                                    }
+                                  ], 
+                                  "key": "parent_command_line", 
+                                  "leaf": false, 
+                                  "size": 64, 
+                                  "value": "\"c:\\Program Files\\cagent\\cagent.exe\""
+                                }, 
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "beane-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "beane-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "colgan-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "colgan-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "platten-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "platten-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "sounder-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "sounder-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "zissler-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "zissler-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "parent_command_line", 
+                                              "leaf": false, 
+                                              "size": 5, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"cmd /c del \"C:\\and.exe\"\""
+                                            }
+                                          ], 
+                                          "key": "command_line", 
+                                          "leaf": false, 
+                                          "size": 5, 
+                                          "value": "cmd  /c del \"C:\\and.exe\""
+                                        }, 
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "escue-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "escue-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "fulco-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "fulco-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "ostermeyer-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "ostermeyer-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "peele-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "peele-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "santilli-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "santilli-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "parent_command_line", 
+                                              "leaf": false, 
+                                              "size": 5, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"cmd /c del \"C:\\born.exe\"\""
+                                            }
+                                          ], 
+                                          "key": "command_line", 
+                                          "leaf": false, 
+                                          "size": 5, 
+                                          "value": "cmd  /c del \"C:\\born.exe\""
+                                        }, 
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "harley-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "harley-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "minahan-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "minahan-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "teston-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "teston-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "parent_command_line", 
+                                              "leaf": false, 
+                                              "size": 3, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"cmd /c del \"C:\\west.exe\"\""
+                                            }
+                                          ], 
+                                          "key": "command_line", 
+                                          "leaf": false, 
+                                          "size": 3, 
+                                          "value": "cmd  /c del \"C:\\west.exe\""
+                                        }, 
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "kressierer-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "kressierer-pc.brawlco.com"
+                                                }, 
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "hostname", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "sespinosa-pc"
+                                                    }
+                                                  ], 
+                                                  "key": "fqdn", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "sespinosa-pc.brawlco.com"
+                                                }
+                                              ], 
+                                              "key": "parent_command_line", 
+                                              "leaf": false, 
+                                              "size": 2, 
+                                              "value": "C:\\windows\\system32\\cmd.exe /c \"cmd /c del \"C:\\philadelphia.exe\"\""
+                                            }
+                                          ], 
+                                          "key": "command_line", 
+                                          "leaf": false, 
+                                          "size": 2, 
+                                          "value": "cmd  /c del \"C:\\philadelphia.exe\""
+                                        }, 
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "parent_command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "C:\\windows\\system32\\cmd.exe /c \"cmd /c del \"C:\\raised.exe\"\""
+                                                    }
+                                                  ], 
+                                                  "key": "hostname", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "mims-pc"
+                                                }
+                                              ], 
+                                              "key": "fqdn", 
+                                              "leaf": false, 
+                                              "size": 1, 
+                                              "value": "mims-pc.brawlco.com"
+                                            }
+                                          ], 
+                                          "key": "command_line", 
+                                          "leaf": false, 
+                                          "size": 1, 
+                                          "value": "cmd  /c del \"C:\\raised.exe\""
+                                        }
+                                      ], 
+                                      "key": "parent_image_path", 
+                                      "leaf": false, 
+                                      "size": 16, 
+                                      "value": "C:\\Windows\\System32\\cmd.exe"
+                                    }
+                                  ], 
+                                  "key": "parent_exe", 
+                                  "leaf": false, 
+                                  "size": 16, 
+                                  "value": "cmd.exe"
+                                }, 
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "\"cmd\" /c copy \"C:\\and.exe\" \"\\\\mims-pc.brawlco.com\\C$\\raised.exe\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "\"cmd\" /c copy \"C:\\and.exe\" \"\\\\ostermeyer-pc.brawlco.com\\C$\\born.exe\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "\"cmd\" /c copy \"C:\\and.exe\" \"\\\\teston-pc.brawlco.com\\C$\\west.exe\""
+                                                    }
+                                                  ], 
+                                                  "key": "parent_image_path", 
+                                                  "leaf": false, 
+                                                  "size": 3, 
+                                                  "value": "C:\\and.exe"
+                                                }
+                                              ], 
+                                              "key": "parent_exe", 
+                                              "leaf": false, 
+                                              "size": 3, 
+                                              "value": "and.exe"
+                                            }
+                                          ], 
+                                          "key": "parent_command_line", 
+                                          "leaf": false, 
+                                          "size": 3, 
+                                          "value": "C:\\and.exe -f"
+                                        }
+                                      ], 
+                                      "key": "hostname", 
+                                      "leaf": false, 
+                                      "size": 3, 
+                                      "value": "sounder-pc"
+                                    }
+                                  ], 
+                                  "key": "fqdn", 
+                                  "leaf": false, 
+                                  "size": 3, 
+                                  "value": "sounder-pc.brawlco.com"
+                                }
+                              ], 
+                              "key": "user", 
+                              "leaf": false, 
+                              "size": 255, 
+                              "value": "NT AUTHORITY\\SYSTEM"
+                            }
+                          ], 
+                          "key": "integrity_level", 
+                          "leaf": false, 
+                          "size": 255, 
+                          "value": "System"
+                        }, 
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "\"cmd\" /c copy \"C:\\born.exe\" \"\\\\colgan-pc.brawlco.com\\C$\\and.exe\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "\"cmd\" /c copy \"C:\\born.exe\" \"\\\\platten-pc.brawlco.com\\C$\\and.exe\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "\"cmd\" /c copy \"C:\\born.exe\" \"\\\\santilli-pc.brawlco.com\\C$\\born.exe\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "\"cmd\" /c copy \"C:\\born.exe\" \"\\\\sespinosa-pc.brawlco.com\\C$\\philadelphia.exe\""
+                                                    }
+                                                  ], 
+                                                  "key": "user", 
+                                                  "leaf": false, 
+                                                  "size": 4, 
+                                                  "value": "BRAWLCO\\mostermeyer"
+                                                }
+                                              ], 
+                                              "key": "hostname", 
+                                              "leaf": false, 
+                                              "size": 4, 
+                                              "value": "ostermeyer-pc"
+                                            }
+                                          ], 
+                                          "key": "fqdn", 
+                                          "leaf": false, 
+                                          "size": 4, 
+                                          "value": "ostermeyer-pc.brawlco.com"
+                                        }, 
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "\"cmd\" /c copy \"C:\\born.exe\" \"\\\\beane-pc.brawlco.com\\C$\\and.exe\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "\"cmd\" /c copy \"C:\\born.exe\" \"\\\\zissler-pc.brawlco.com\\C$\\and.exe\""
+                                                    }
+                                                  ], 
+                                                  "key": "user", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "BRAWLCO\\psantilli"
+                                                }
+                                              ], 
+                                              "key": "hostname", 
+                                              "leaf": false, 
+                                              "size": 2, 
+                                              "value": "santilli-pc"
+                                            }
+                                          ], 
+                                          "key": "fqdn", 
+                                          "leaf": false, 
+                                          "size": 2, 
+                                          "value": "santilli-pc.brawlco.com"
+                                        }, 
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "user", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "BRAWLCO\\rescue"
+                                                    }
+                                                  ], 
+                                                  "key": "hostname", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "escue-pc"
+                                                }
+                                              ], 
+                                              "key": "fqdn", 
+                                              "leaf": false, 
+                                              "size": 1, 
+                                              "value": "escue-pc.brawlco.com"
+                                            }
+                                          ], 
+                                          "key": "command_line", 
+                                          "leaf": false, 
+                                          "size": 1, 
+                                          "value": "\"cmd\" /c copy \"C:\\born.exe\" \"\\\\fulco-pc.brawlco.com\\C$\\born.exe\""
+                                        }
+                                      ], 
+                                      "key": "parent_image_path", 
+                                      "leaf": false, 
+                                      "size": 7, 
+                                      "value": "C:\\born.exe"
+                                    }
+                                  ], 
+                                  "key": "parent_exe", 
+                                  "leaf": false, 
+                                  "size": 7, 
+                                  "value": "born.exe"
+                                }
+                              ], 
+                              "key": "parent_command_line", 
+                              "leaf": false, 
+                              "size": 7, 
+                              "value": "C:\\born.exe -d -f"
+                            }, 
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "\"cmd\" /c copy \"C:\\raised.exe\" \"\\\\escue-pc.brawlco.com\\C$\\born.exe\""
+                                                    }, 
+                                                    {
+                                                      "children": [], 
+                                                      "key": "command_line", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "\"cmd\" /c copy \"C:\\raised.exe\" \"\\\\peele-pc.brawlco.com\\C$\\born.exe\""
+                                                    }
+                                                  ], 
+                                                  "key": "user", 
+                                                  "leaf": false, 
+                                                  "size": 2, 
+                                                  "value": "BRAWLCO\\cmims"
+                                                }
+                                              ], 
+                                              "key": "parent_image_path", 
+                                              "leaf": false, 
+                                              "size": 2, 
+                                              "value": "C:\\raised.exe"
+                                            }
+                                          ], 
+                                          "key": "parent_exe", 
+                                          "leaf": false, 
+                                          "size": 2, 
+                                          "value": "raised.exe"
+                                        }
+                                      ], 
+                                      "key": "parent_command_line", 
+                                      "leaf": false, 
+                                      "size": 2, 
+                                      "value": "C:\\raised.exe -d -f"
+                                    }
+                                  ], 
+                                  "key": "hostname", 
+                                  "leaf": false, 
+                                  "size": 2, 
+                                  "value": "mims-pc"
+                                }
+                              ], 
+                              "key": "fqdn", 
+                              "leaf": false, 
+                              "size": 2, 
+                              "value": "mims-pc.brawlco.com"
+                            }, 
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "user", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "BRAWLCO\\aplatten"
+                                                    }
+                                                  ], 
+                                                  "key": "hostname", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "platten-pc"
+                                                }
+                                              ], 
+                                              "key": "fqdn", 
+                                              "leaf": false, 
+                                              "size": 1, 
+                                              "value": "platten-pc.brawlco.com"
+                                            }
+                                          ], 
+                                          "key": "command_line", 
+                                          "leaf": false, 
+                                          "size": 1, 
+                                          "value": "\"cmd\" /c copy \"C:\\and.exe\" \"\\\\kressierer-pc.brawlco.com\\C$\\philadelphia.exe\""
+                                        }, 
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "user", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "BRAWLCO\\scolgan"
+                                                    }
+                                                  ], 
+                                                  "key": "hostname", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "colgan-pc"
+                                                }
+                                              ], 
+                                              "key": "fqdn", 
+                                              "leaf": false, 
+                                              "size": 1, 
+                                              "value": "colgan-pc.brawlco.com"
+                                            }
+                                          ], 
+                                          "key": "command_line", 
+                                          "leaf": false, 
+                                          "size": 1, 
+                                          "value": "\"cmd\" /c copy \"C:\\and.exe\" \"\\\\minahan-pc.brawlco.com\\C$\\west.exe\""
+                                        }
+                                      ], 
+                                      "key": "parent_image_path", 
+                                      "leaf": false, 
+                                      "size": 2, 
+                                      "value": "C:\\and.exe"
+                                    }
+                                  ], 
+                                  "key": "parent_exe", 
+                                  "leaf": false, 
+                                  "size": 2, 
+                                  "value": "and.exe"
+                                }
+                              ], 
+                              "key": "parent_command_line", 
+                              "leaf": false, 
+                              "size": 2, 
+                              "value": "C:\\and.exe -d -f"
+                            }, 
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [
+                                        {
+                                          "children": [
+                                            {
+                                              "children": [
+                                                {
+                                                  "children": [
+                                                    {
+                                                      "children": [], 
+                                                      "key": "user", 
+                                                      "leaf": true, 
+                                                      "size": 1, 
+                                                      "value": "BRAWLCO\\tkressierer"
+                                                    }
+                                                  ], 
+                                                  "key": "parent_image_path", 
+                                                  "leaf": false, 
+                                                  "size": 1, 
+                                                  "value": "C:\\philadelphia.exe"
+                                                }
+                                              ], 
+                                              "key": "parent_exe", 
+                                              "leaf": false, 
+                                              "size": 1, 
+                                              "value": "philadelphia.exe"
+                                            }
+                                          ], 
+                                          "key": "parent_command_line", 
+                                          "leaf": false, 
+                                          "size": 1, 
+                                          "value": "C:\\philadelphia.exe -d -f"
+                                        }
+                                      ], 
+                                      "key": "hostname", 
+                                      "leaf": false, 
+                                      "size": 1, 
+                                      "value": "kressierer-pc"
+                                    }
+                                  ], 
+                                  "key": "fqdn", 
+                                  "leaf": false, 
+                                  "size": 1, 
+                                  "value": "kressierer-pc.brawlco.com"
+                                }
+                              ], 
+                              "key": "command_line", 
+                              "leaf": false, 
+                              "size": 1, 
+                              "value": "\"cmd\" /c copy \"C:\\philadelphia.exe\" \"\\\\harley-pc.brawlco.com\\C$\\west.exe\""
+                            }
+                          ], 
+                          "key": "integrity_level", 
+                          "leaf": false, 
+                          "size": 12, 
+                          "value": "High"
+                        }
+                      ], 
+                      "key": "terminal_session_id", 
+                      "leaf": false, 
+                      "size": 267, 
+                      "value": "0"
+                    }
+                  ], 
+                  "key": "image_path", 
+                  "leaf": false, 
+                  "size": 267, 
+                  "value": "C:\\Windows\\System32\\cmd.exe"
+                }
+              ], 
+              "key": "exe", 
+              "leaf": false, 
+              "size": 267, 
+              "value": "cmd.exe"
+            }
+          ], 
+          "key": "current_directory", 
+          "leaf": false, 
+          "size": 267, 
+          "value": "C:\\windows\\system32\\"
+        }
+      ], 
+      "leaf": false, 
+      "size": 267
+    }, 
+    "root": {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "children": [], 
+                                      "key": "command_line", 
+                                      "leaf": true, 
+                                      "size": 138, 
+                                      "value": "C:\\windows\\system32\\cmd.exe /c \"\"c:\\Program Files\\SplunkUniversalForwarder\\etc\\apps\\fmx_computer_properties\\bin\\launch.bat\"\""
+                                    }, 
+                                    {
+                                      "children": [], 
+                                      "key": "command_line", 
+                                      "leaf": true, 
+                                      "size": 34, 
+                                      "value": "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Program Files\\SplunkUniversalForwarder\\etc\\apps\\TA-autorunsTCP\\bin\\launch.bat\"\""
+                                    }
+                                  ], 
+                                  "key": "parent_image_path", 
+                                  "leaf": false, 
+                                  "size": 172, 
+                                  "value": "C:\\Program Files\\SplunkUniversalForwarder\\bin\\splunkd.exe"
+                                }
+                              ], 
+                              "key": "parent_exe", 
+                              "leaf": false, 
+                              "size": 172, 
+                              "value": "splunkd.exe"
+                            }
+                          ], 
+                          "key": "parent_command_line", 
+                          "leaf": false, 
+                          "size": 172, 
+                          "value": "\"c:\\Program Files\\SplunkUniversalForwarder\\bin\\splunkd.exe\" service"
+                        }, 
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [], 
+                                  "key": "parent_image_path", 
+                                  "leaf": true, 
+                                  "size": 64, 
+                                  "value": "C:\\Program Files\\cagent\\cagent.exe"
+                                }
+                              ], 
+                              "key": "parent_exe", 
+                              "leaf": false, 
+                              "size": 64, 
+                              "value": "cagent.exe"
+                            }
+                          ], 
+                          "key": "parent_command_line", 
+                          "leaf": false, 
+                          "size": 64, 
+                          "value": "\"c:\\Program Files\\cagent\\cagent.exe\""
+                        }
+                      ], 
+                      "key": "user", 
+                      "leaf": false, 
+                      "size": 236, 
+                      "value": "NT AUTHORITY\\SYSTEM"
+                    }
+                  ], 
+                  "key": "integrity_level", 
+                  "leaf": false, 
+                  "size": 236, 
+                  "value": "System"
+                }
+              ], 
+              "key": "image_path", 
+              "leaf": false, 
+              "size": 236, 
+              "value": "C:\\Windows\\System32\\cmd.exe"
+            }
+          ], 
+          "key": "exe", 
+          "leaf": false, 
+          "size": 236, 
+          "value": "cmd.exe"
+        }
+      ], 
+      "leaf": false, 
+      "size": 236
+    }, 
+    "time_range": {
+      "_cls": "AbsoluteRange", 
+      "end": "2017-08-31T04:00:00+00:00", 
+      "start": "2016-01-01T05:00:00+00:00"
+    }
+  }
+]

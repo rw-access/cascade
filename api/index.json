@@ -1,0 +1,467 @@
+[
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_api", 
+    "uri": "/api"
+  }, 
+  {
+    "doc": ":type user: User", 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_analytics", 
+    "uri": "/api/analytics"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "POST"
+    ], 
+    "name": "submit_analytic", 
+    "uri": "/api/analytics"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_analytic", 
+    "uri": "/api/analytics/{analytic}"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "PUT", 
+      "DELETE"
+    ], 
+    "name": "update_analytic", 
+    "uri": "/api/analytics/{analytic}"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "unparse_analytic", 
+    "uri": "/api/analytics/{analytic}/lift"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET", 
+      "PUT", 
+      "POST"
+    ], 
+    "name": "query_baseline", 
+    "uri": "/api/analytics/{analytic}/tuning"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_baseline_events", 
+    "uri": "/api/analytics/{analytic}/tuning/events"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_attack", 
+    "uri": "/api/attack"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "POST"
+    ], 
+    "name": "update_attack", 
+    "uri": "/api/attack"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET", 
+      "POST"
+    ], 
+    "name": "tactic_sets", 
+    "uri": "/api/attack/tactic_sets"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET", 
+      "DELETE"
+    ], 
+    "name": "tactic_set_query", 
+    "uri": "/api/attack/tactic_sets/{set_id}"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "attack_tactics", 
+    "uri": "/api/attack/tactics"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "attack_techniques", 
+    "uri": "/api/attack/techniques"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET", 
+      "POST"
+    ], 
+    "name": "query_analytic_configurations", 
+    "uri": "/api/configurations/analytics"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET", 
+      "PUT", 
+      "DELETE"
+    ], 
+    "name": "query_analytic_configuration", 
+    "uri": "/api/configurations/analytics/{config_id}"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_data_model", 
+    "uri": "/api/data_model"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_objects", 
+    "uri": "/api/data_model/objects"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_pivots", 
+    "uri": "/api/data_model/pivots"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET", 
+      "POST"
+    ], 
+    "name": "query_databases", 
+    "uri": "/api/databases"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET", 
+      "PUT", 
+      "DELETE"
+    ], 
+    "name": "query_database", 
+    "uri": "/api/databases/{database_id}"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET", 
+      "POST"
+    ], 
+    "name": "debug", 
+    "uri": "/api/debug"
+  }, 
+  {
+    "doc": ":type user: User", 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_events", 
+    "uri": "/api/events"
+  }, 
+  {
+    "doc": ":type event: DataModelEvent\n:type user: users.User", 
+    "methods": [
+      "GET", 
+      "DELETE"
+    ], 
+    "name": "query_event", 
+    "uri": "/api/events/{event}"
+  }, 
+  {
+    "doc": ":type user: User", 
+    "methods": [
+      "GET", 
+      "POST", 
+      "DELETE"
+    ], 
+    "name": "query_jobs", 
+    "uri": "/api/jobs"
+  }, 
+  {
+    "doc": ":type job: Job\n:type user: User", 
+    "methods": [
+      "GET", 
+      "POST", 
+      "DELETE"
+    ], 
+    "name": "query_job", 
+    "uri": "/api/jobs/{job}"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "POST"
+    ], 
+    "name": "login", 
+    "uri": "/api/login"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "get_languages", 
+    "uri": "/api/query/languages"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "POST"
+    ], 
+    "name": "unparse_query", 
+    "uri": "/api/query/lift"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "POST"
+    ], 
+    "name": "make_query", 
+    "uri": "/api/query/parse"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_database_schemas", 
+    "uri": "/api/schemas/databases"
+  }, 
+  {
+    "doc": ":type user: User", 
+    "methods": [
+      "GET", 
+      "POST"
+    ], 
+    "name": "all_sessions", 
+    "uri": "/api/sessions"
+  }, 
+  {
+    "doc": ":type session: Session\n:type user: User", 
+    "methods": [
+      "GET", 
+      "PUT", 
+      "POST", 
+      "DELETE"
+    ], 
+    "name": "query_session", 
+    "uri": "/api/sessions/{session}"
+  }, 
+  {
+    "doc": ":type session: Session\n:type user: User", 
+    "methods": [
+      "GET"
+    ], 
+    "name": "attack_timeline", 
+    "uri": "/api/sessions/{session}/attack_timeline"
+  }, 
+  {
+    "doc": ":type session: cascade.session.Session\n:type user: User", 
+    "methods": [
+      "POST"
+    ], 
+    "name": "automate_session", 
+    "uri": "/api/sessions/{session}/automate"
+  }, 
+  {
+    "doc": ":type session: cascade.session.Session\n:type user: User", 
+    "methods": [
+      "POST"
+    ], 
+    "name": "automate_session_custom", 
+    "uri": "/api/sessions/{session}/automate/custom"
+  }, 
+  {
+    "doc": ":type session: cascade.session.Session\n:type user: User", 
+    "methods": [
+      "POST"
+    ], 
+    "name": "investigate_event", 
+    "uri": "/api/sessions/{session}/automate/event/{event}"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "get_clusters", 
+    "uri": "/api/sessions/{session}/clusters"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "get_clusters_with_attack", 
+    "uri": "/api/sessions/{session}/clusters/attack"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "get_clusters_host", 
+    "uri": "/api/sessions/{session}/clusters/hosts"
+  }, 
+  {
+    "doc": ":type session: Session\n:type user: User", 
+    "methods": [
+      "GET"
+    ], 
+    "name": "session_events", 
+    "uri": "/api/sessions/{session}/events"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "export_session", 
+    "uri": "/api/sessions/{session}/export"
+  }, 
+  {
+    "doc": ":type session: Session\n:type user: User", 
+    "methods": [
+      "GET"
+    ], 
+    "name": "alert_graph", 
+    "uri": "/api/sessions/{session}/graphs/alerts"
+  }, 
+  {
+    "doc": ":type session: Session\n:type user: User", 
+    "methods": [
+      "GET"
+    ], 
+    "name": "technique_graph", 
+    "uri": "/api/sessions/{session}/graphs/technique"
+  }, 
+  {
+    "doc": ":type session: Session\n:type user: User", 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_session_hosts", 
+    "uri": "/api/sessions/{session}/hosts"
+  }, 
+  {
+    "doc": ":type session: Session\n:type user: User", 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_session_jobs", 
+    "uri": "/api/sessions/{session}/jobs"
+  }, 
+  {
+    "doc": ":type session: Session\n:type user: User", 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_session_job_status", 
+    "uri": "/api/sessions/{session}/jobs/{status}"
+  }, 
+  {
+    "doc": ":type session: Session\n:type user: User", 
+    "methods": [
+      "GET"
+    ], 
+    "name": "session_results", 
+    "uri": "/api/sessions/{session}/results"
+  }, 
+  {
+    "doc": ":type session: Session\n:type user: User", 
+    "methods": [
+      "GET"
+    ], 
+    "name": "session_analytic_results", 
+    "uri": "/api/sessions/{session}/results/{analytic}"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET", 
+      "POST"
+    ], 
+    "name": "query_baselines", 
+    "uri": "/api/tuning"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET", 
+      "POST", 
+      "PUT"
+    ], 
+    "name": "query_baseline_alternate", 
+    "uri": "/api/tuning/{analytic}"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_baseline_events_alternate", 
+    "uri": "/api/tuning/{analytic}/events"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET"
+    ], 
+    "name": "query_user", 
+    "uri": "/api/user"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "GET", 
+      "POST"
+    ], 
+    "name": "user_databases", 
+    "uri": "/api/user/databases"
+  }, 
+  {
+    "doc": null, 
+    "methods": [
+      "POST"
+    ], 
+    "name": "upload_data", 
+    "uri": "/api/utils/upload"
+  }
+]

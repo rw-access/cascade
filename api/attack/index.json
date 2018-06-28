@@ -1,0 +1,1814 @@
+{
+  "tactics": [
+    {
+      "_id": "571a762fcefaff1b704aefd9", 
+      "description": "The command and control tactic represents how adversaries communicate with systems under their control within a target network. There are many ways an adversary can establish command and control with various levels of covertness, depending on system configuration and network topology. Due to the wide degree of variation available to the adversary at the network level, only the most common factors were used to describe the differences in command and control. There are still a great many specific techniques within the documented methods, largely due to how easy it is to define new protocols and use existing, legitimate protocols and network services for communication. \n\nThe resulting breakdown should help convey the concept that detecting intrusion through command and control protocols without prior knowledge is a difficult proposition over the long term. Adversaries' main constraints in network-level defense avoidance are testing and deployment of tools to rapidly change their protocols, awareness of existing defensive technologies, and access to legitimate Web services that, when used appropriately, make their tools difficult to distinguish from benign traffic.", 
+      "name": "Command and Control", 
+      "order": 9, 
+      "url": "https://attack.mitre.org/wiki/Command_and_Control"
+    }, 
+    {
+      "_id": "571a762fcefaff1b704aefda", 
+      "description": "Privilege escalation is the result of actions that allow an adversary to obtain a higher level of permissions on a system or network. Certain tools or actions require a higher level of privilege to work and are likely necessary at many points throughout an operation. Adversaries can enter a system with unprivileged access and must take advantage of a system weakness to obtain local administrator or SYSTEM privileges. A user account with administrator-like access can also be used. User accounts with permissions to access specific systems or perform specific functions necessary for adversaries to achieve their objective may also be considered an escalation of privilege.", 
+      "name": "Privilege Escalation", 
+      "order": 1, 
+      "url": "https://attack.mitre.org/wiki/Privilege_Escalation"
+    }, 
+    {
+      "_id": "571a762fcefaff1b704aefdb", 
+      "description": "Collection consists of techniques used to identify and gather information, such as sensitive files, from a target network prior to exfiltration. This category also covers locations on a system or network where the adversary may look for information to exfiltrate.", 
+      "name": "Collection", 
+      "order": 7, 
+      "url": "https://attack.mitre.org/wiki/Collection"
+    }, 
+    {
+      "_id": "571a762fcefaff1b704aefdc", 
+      "description": "Exfiltration refers to techniques and attributes that result or aid in the adversary removing files and information from a target network. This category also covers locations on a system or network where the adversary may look for information to exfiltrate.", 
+      "name": "Exfiltration", 
+      "order": 8, 
+      "url": "https://attack.mitre.org/wiki/Exfiltration"
+    }, 
+    {
+      "_id": "571a762fcefaff1b704aefdd", 
+      "description": "Credential access represents techniques resulting in access to or control over system, domain, or service credentials that are used within an enterprise environment. Adversaries will likely attempt to obtain legitimate credentials from users or administrator accounts (local system administrator or domain users with administrator access) to use within the network. This allows the adversary to assume the identity of the account, with all of that account's permissions on the system and network, and makes it harder for defenders to detect the adversary. With sufficient access within a network, an adversary can create accounts for later use within the environment.", 
+      "name": "Credential Access", 
+      "order": 3, 
+      "url": "https://attack.mitre.org/wiki/Credential_Access"
+    }, 
+    {
+      "_id": "571a762fcefaff1b704aefde", 
+      "description": "Lateral movement consists of techniques that enable an adversary to access and control remote systems on a network and could, but does not necessarily, include execution of tools on remote systems. The lateral movement techniques could allow an adversary to gather information from a system without needing additional tools, such as a remote access tool.", 
+      "name": "Lateral Movement", 
+      "order": 5, 
+      "url": "https://attack.mitre.org/wiki/Lateral_Movement"
+    }, 
+    {
+      "_id": "571a762fcefaff1b704aefdf", 
+      "description": "Defense evasion consists of techniques an adversary may use to evade detection or avoid other defenses. Sometimes these actions are the same as or variations of techniques in other categories that have the added benefit of subverting a particular defense or mitigation. Defense evasion may be considered a set of attributes the adversary applies to all other phases of the operation.", 
+      "name": "Defense Evasion", 
+      "order": 2, 
+      "url": "https://attack.mitre.org/wiki/Defense_Evasion"
+    }, 
+    {
+      "_id": "571a762fcefaff1b704aefe0", 
+      "description": "The execution tactic represents techniques that result in execution of adversary-controlled code on a local or remote system. This tactic is often used in conjunction with lateral movement to expand access to remote systems on a network.", 
+      "name": "Execution", 
+      "order": 6, 
+      "url": "https://attack.mitre.org/wiki/Execution"
+    }, 
+    {
+      "_id": "571a762fcefaff1b704aefe1", 
+      "description": "Persistence is any access, action, or configuration change to a system that gives an adversary a persistent presence on that system. Adversaries will often need to maintain access to systems through interruptions such as system restarts, loss of credentials, or other failures that would require a remote access tool to restart or alternate backdoor for them to regain access.", 
+      "name": "Persistence", 
+      "order": 0, 
+      "url": "https://attack.mitre.org/wiki/Persistence"
+    }, 
+    {
+      "_id": "571a762fcefaff1b704aefe2", 
+      "description": "Discovery consists of techniques that allow the adversary to gain knowledge about the system and internal network. When adversaries gain access to a new system, they must orient themselves to what they now have control of and what benefits operating from that system give to their current objective or overall goals during the intrusion. The operating system provides many native tools that aid in this post-compromise information-gathering phase.", 
+      "name": "Discovery", 
+      "order": 4, 
+      "url": "https://attack.mitre.org/wiki/Discovery"
+    }
+  ], 
+  "techniques": [
+    {
+      "_id": "571a773dcefaff3c6ca4e4e3", 
+      "description": "Some security tools inspect files with static signatures to determine if they are known malicious. Adversaries may add data to files to increase the size beyond what security tools are capable of handling or to change the file hash to avoid hash-based blacklists.", 
+      "name": "Binary Padding", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1009", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1009"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4e4", 
+      "description": "Adversaries may use fallback or alternate communication channels if the primary channel is compromised or inaccessible in order to maintain reliable command and control and to avoid data transfer thresholds.", 
+      "name": "Fallback Channels", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1008", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1008"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4e5", 
+      "description": "Credential dumping is the process of obtaining account login and password information from the operating system and software. Credentials can be used to perform [[Lateral Movement]] and access restricted information.\n\nTools may dump credentials in many different ways: extracting credential hashes for offline cracking, extracting plaintext passwords, and extracting Kerberos tickets, among others. Examples of credential dumpers include pwdump7, [[Software/S0005|Windows Credential Editor]], [[Software/S0002|Mimikatz]], and [[Software/S0008|gsecdump]]. These tools are in use by both professional security testers and adversaries.\n\nPlaintext passwords can be obtained using tools such as [[Software/S0002|Mimikatz]] to extract passwords stored by the Local Security Authority (LSA). If smart cards are used to authenticate to a domain using a personal identification number (PIN), then that PIN is also cached as a result and may be dumped.Github Mimikatz Module sekurlsa\n\nDCSync is a variation on credential dumping which can be used to acquire sensitive information from a domain controller. The action works by simulating a domain controller replication process from a remote domain controller, which may contain various pieces of information included in Active Directory such as passwords, historical hashes, and current hashes of potentially useful accounts, such as the KRBTGT account NTLM hash. Any members of the Administrators, Domain Admins, Enterprise Admin groups or computer accounts on the domain controller are able to run DCSync to pull password data.ADSecurity Mimikatz DCSync The hashes can then in turn be used to create a Golden Ticket for use in [[Technique/T1097|Pass the Ticket]].Harmj0y Mimikatz and DCSync DCSync functionality has been included in the \"lsadump\" module in Mimikatz.GitHub Mimikatz lsadump Module", 
+      "name": "Credential Dumping", 
+      "tactics": [
+        "571a762fcefaff1b704aefdd"
+      ], 
+      "technique_id": "T1003", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1003"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4e6", 
+      "description": "An adversary may compress data (e.g., sensitive documents) that is collected prior to exfiltration in order to make it portable and minimize the amount of data sent over the network. The compression is done separately from the exfiltration channel and is performed using a custom program or algorithm, or a more common compression library or utility such as 7zip, RAR, ZIP, or zlib.", 
+      "name": "Data Compressed", 
+      "tactics": [
+        "571a762fcefaff1b704aefdc"
+      ], 
+      "technique_id": "T1002", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1002"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4e7", 
+      "description": "Command and control (C2) communications are hidden (but not necessarily encrypted) in an attempt to make the content more difficult to discover or decipher and to make the communication less conspicuous and hide commands from being seen. This encompasses many methods, such as adding junk data to protocol traffic, using steganography, commingling legitimate traffic with C2 communications traffic, or using a non-standard data encoding system, such as a modified Base64 encoding for the message body of an HTTP request.", 
+      "name": "Data Obfuscation", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1001", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1001"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4e8", 
+      "description": "Adversaries may try to get information about registered services. Commands that may obtain information about services using operating system utilities are \"sc,\" \"tasklist /svc\" using [[Software/S0057|Tasklist]], and \"net start\" using [[Software/S0039|Net]], but adversaries may also use other tools as well.", 
+      "name": "System Service Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1007", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1007"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4e9", 
+      "description": "Windows allows programs to have direct access to logical volumes. Programs with direct access may read and write files directly from the drive by analyzing file system data structures. This technique bypasses Windows file access controls as well as file system monitoring tools.Hakobyan 2009\n\nUtilities, such as NinjaCopy, exist to perform these actions in PowerShell.Github PowerSploit Ninjacopy", 
+      "name": "File System Logical Offsets", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1006", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1006"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4ea", 
+      "description": "Sensitive data can be collected from local system sources, such as the file system or databases of information residing on the system prior to [[Exfiltration]].\n\nAdversaries will often search the file system on computers they have compromised to find files of interest. They may do this using a [[Technique/T1059|Command-Line Interface]], such as [[Software/S0106|cmd]], which has functionality to interact with the file system to gather information. Some adversaries may also use [[Technique/T1119|Automated Collection]] on the local system.", 
+      "name": "Data from Local System", 
+      "tactics": [
+        "571a762fcefaff1b704aefdb"
+      ], 
+      "technique_id": "T1005", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1005"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4eb", 
+      "description": "Winlogon is a part of some Windows versions that performs actions at logon. In Windows systems prior to Windows Vista, a Registry key can be modified that causes Winlogon to load a DLL on startup. Adversaries may take advantage of this feature to load adversarial code at startup for persistence.", 
+      "name": "Winlogon Helper DLL", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1004", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1004"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4ec", 
+      "description": "Adversaries may enumerate files and directories or may search in specific locations of a host or network share for certain information within a file system. \n\n===Windows===\n\nExample utilities used to obtain this information are <code>dir</code> and <code>tree</code>.Windows Commands JPCERT Custom tools may also be used to gather file and directory information and interact with the Windows API.\n\n===Mac and Linux===\n\nIn Mac and Linux, this kind of discovery is accomplished with the <code>ls</code>, <code>find</code>, and <code>locate</code> commands.", 
+      "name": "File and Directory Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1083", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1083"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4ed", 
+      "description": "An adversary may attempt to get detailed information about the operating system and hardware, including version, patches, hotfixes, service packs, and architecture.\n\n===Windows===\n\nExample commands and utilities that obtain this information include <code>ver</code>, [[Software/S0096|Systeminfo]], and <code>dir</code> within [[Software/S0106|cmd]] for identifying information based on present files and directories.\n\n===Mac===\n\nOn Mac, the <code>systemsetup</code> command gives a detailed breakdown of the system, but it requires administrative privileges. Additionally, the <code>system_profiler</code> gives a very detailed breakdown of configurations, firewall rules, mounted volumes, hardware, and many other things without needing elevated permissions.", 
+      "name": "System Information Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1082", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1082"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4ee", 
+      "description": "Adversaries may search local file systems and remote file shares for files containing passwords.  These can be files created by users to store their own credentials, shared credential stores for a group of individuals, configuration files containing passwords for a system or service, or source code/binary files containing embedded passwords.\n\nIt is possible to extract passwords from backups or saved virtual machines through [[Technique/T1003|Credential Dumping]].CG 2014 Passwords may also be obtained from Group Policy Preferences stored on the Windows Domain Controller.SRD GPP", 
+      "name": "Credentials in Files", 
+      "tactics": [
+        "571a762fcefaff1b704aefdd"
+      ], 
+      "technique_id": "T1081", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1081"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4ef", 
+      "description": "Content stored on network drives or in other shared locations may be tainted by adding malicious programs, scripts, or exploit code to otherwise valid files. Once a user opens the shared tainted content, the malicious portion can be executed to run the adversary's code on a remote system. Adversaries may use tainted shared content to move laterally.", 
+      "name": "Taint Shared Content", 
+      "tactics": [
+        "571a762fcefaff1b704aefde"
+      ], 
+      "technique_id": "T1080", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1080"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4f0", 
+      "description": "Adversaries may attempt to get a listing of local system or domain accounts. \n\n===Windows===\n\nExample commands that can acquire this information are <code>net user</code>, <code>net group <groupname></code>, and <code>net localgroup <groupname></code> using the [[Software/S0039|Net]] utility or through use of [[Software/S0105|dsquery]]. If adversaries attempt to identify the primary user, currently logged in user, or set of users that commonly uses a system, [[Technique/T1033|System Owner/User Discovery]] may apply.\n\n===Mac===\n\nOn Mac, groups can be enumerated through the <code>groups</code> and <code>id</code> commands. In mac specifically, <code>dscl . list /Groups</code> and <code>dscacheutil -q group</code> can also be used to enumerate groups and users.\n\n===Linux===\n\nOn Linux, local users can be enumerated through the use of the <code>/etc/passwd</code> file which is world readable. In mac, this same file is only used in single-user mode in addition to the <code>/etc/master.passwd</code> file.\n\nAlso, groups can be enumerated through the <code>groups</code> and <code>id</code> commands. In mac specifically, <code>dscl . list /Groups</code> and <code>dscacheutil -q group</code> can also be used to enumerate groups and users.", 
+      "name": "Account Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1087", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1087"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4f1", 
+      "description": "PowerShell is a powerful interactive command-line interface and scripting environment included in the Windows operating system.TechNet PowerShell Adversaries can use PowerShell to perform a number of actions, including discovery of information and execution of code. Examples include the Start-Process cmdlet which can be used to run an executable and the Invoke-Command cmdlet which runs a command locally or on a remote computer. \n\nPowerShell may also be used to download and run executables from the Internet, which can be executed from disk or in memory without touching disk.\n\nAdministrator permissions are required to use PowerShell to connect to remote systems.\n\nA number of PowerShell-based offensive testing tools are available, including Empire,Github PowerShell Empire PowerSploit,Powersploit and PSAttack.Github PSAttack", 
+      "name": "PowerShell", 
+      "tactics": [
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1086", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1086"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4f2", 
+      "description": "The rundll32.exe program can be called to execute an arbitrary binary. Adversaries may take advantage of this functionality to proxy execution of code to avoid triggering security tools that may not monitor execution of the rundll32.exe process because of whitelists or false positives from Windows using rundll32.exe for normal operations.", 
+      "name": "Rundll32", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1085", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1085"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4f3", 
+      "description": "Windows Management Instrumentation (WMI) can be used to install event filters, providers, consumers, and bindings that execute code when a defined event occurs. Adversaries may use the capabilities of WMI to subscribe to an event and execute arbitrary code when that event occurs, providing persistence on a system. Adversaries may attempt to evade detection of this technique by compiling WMI scripts.Dell WMI Persistence Examples of events that may be subscribed to are the wall clock time or the computer's uptime.Kazanciyan 2014 Several threat groups have reportedly used this technique to maintain persistence.Mandiant M-Trends 2015", 
+      "name": "Windows Management Instrumentation Event Subscription", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1084", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1084"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4f4", 
+      "description": "Adversaries may disable security tools to avoid possible detection of their tools and activities. This can take the form of killing security software or event logging processes, deleting Registry keys so that tools do not start at run time, or other methods to interfere with security scanning or event reporting.", 
+      "name": "Disabling Security Tools", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1089", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1089"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4f5", 
+      "description": "Windows User Account Control (UAC) allows a program to elevate its privileges to perform a task under administrator-level permissions by prompting the user for confirmation. The impact to the user ranges from denying the operation under high enforcement to allowing the user to perform the action if they are in the local administrators group and click through the prompt or allowing them to enter an administrator password to complete the action.TechNet How UAC Works\n\nIf the UAC protection level of a computer is set to anything but the highest level, certain Windows programs are allowed to elevate privileges or execute some elevated COM objects without prompting the user through the UAC notification box.TechNet Inside UACMSDN COM Elevation An example of this is use of rundll32.exe to load a specifically crafted DLL which loads an auto-elevated COM object and performs a file operation in a protected directory which would typically require elevated access. Malicious software may also be injected into a trusted process to gain elevated privileges without prompting a user.Davidson Windows Adversaries can use these techniques to elevate privileges to administrator if the target process is unprotected.\n\nMany methods have been discovered to bypass UAC. The Github readme page for UACMe contains an extensive list of methodsGithub UACMe that have been discovered and implemented within UACMe, but may not be a comprehensive list of bypasses. Additional bypass methods are regularly discovered and some used in the wild, such as:\n\n* <code>eventvwr.exe</code> can auto-elevate and execute a specified binary or script.enigma0x3 Fileless UAC BypassFortinet Fareit\n\nAnother bypass is possible through some [[Lateral Movement]] techniques if credentials for an account with administrator privileges are known, since UAC is a single system security mechanism, and the privilege or integrity of a process running on one system will be unknown on lateral systems and default to high integrity.SANS UAC Bypass", 
+      "name": "Bypass User Account Control", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1088", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1088"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4f6", 
+      "description": "Adversaries will likely attempt to get a listing of other systems by IP address, hostname, or other logical identifier on a network that may be used for [[Lateral Movement]] from the current system. Functionality could exist within remote access tools to enable this, but utilities available on the operating system could also be used. \n\n===Windows===\n\nExamples of tools and commands that acquire this information include \"ping\" or \"net view\" using [[Software/S0039|Net]].\n\n===Mac===\n\nSpecific to Mac, the <code>bonjour</code> protocol to discover additional Mac-based systems within the same broadcast domain. Utilities such as \"ping\" and others can be used to gather information about remote systems.\n\n===Linux===\n\nUtilities such as \"ping\" and others can be used to gather information about remote systems.", 
+      "name": "Remote System Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1018", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1018"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4f7", 
+      "description": "The BIOS (Basic Input/Output System) and The Unified Extensible Firmware Interface (UEFI) or Extensible Firmware Interface (EFI) are examples of system firmware that operate as the software interface between the operating system and hardware of a computer.Wikipedia BIOSWikipedia UEFIAbout UEFI\n\nSystem firmware like BIOS and (U)EFI underly the functionality of a computer and may be modified by an adversary to perform or assist in malicious activity. Capabilities exist to overwrite the system firmware, which may give sophisticated adversaries a means to install malicious firmware updates as a means of persistence on a system that may be difficult to detect.", 
+      "name": "System Firmware", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1019", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1019"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4f8", 
+      "description": "Adversaries may attempt to get a listing of open application windows. Window listings could convey information about how the system is used or give context to information collected by a keylogger.\n\nIn Mac, this can be done natively with a small [[Technique/T1155|AppleScript]] script.", 
+      "name": "Application Window Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1010", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1010"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4f9", 
+      "description": "Exfiltration could occur over a different network medium than the command and control channel. If the command and control network is a wired Internet connection, the exfiltration may occur, for example, over a WiFi connection, modem, cellular data connection, Bluetooth, or another radio frequency (RF) channel. Adversaries could choose to do this if they have sufficient access or proximity, and the connection might not be secured or defended as well as the primary Internet-connected channel because it is not routed through the same enterprise network.", 
+      "name": "Exfiltration Over Other Network Medium", 
+      "tactics": [
+        "571a762fcefaff1b704aefdc"
+      ], 
+      "technique_id": "T1011", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1011"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4fa", 
+      "description": "Adversaries may interact with the Windows Registry to gather information about the system, configuration, and installed software.\n\nThe Registry contains a significant amount of information about the operating system, configuration, software, and security.Wikipedia Windows Registry Some of the information may help adversaries to further their operation within a network.", 
+      "name": "Query Registry", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1012", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1012"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4fb", 
+      "description": "A port monitor can be set through the AddMonitor API call to set a DLL to be loaded at startup.AddMonitor This DLL can be located in <code>C:\\Windows\\System32</code> and will be loaded by the print spooler service, spoolsv.exe, on boot.Bloxham Alternatively, an arbitrary DLL can be loaded if permissions allow writing a fully-qualified pathname for that DLL to <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\Print\\Monitors</code>.Bloxham The spoolsv.exe process also runs under SYSTEM level permissions.\n\nAdversaries can use this technique to load malicious code at startup that will persist on system reboot and execute as SYSTEM.", 
+      "name": "Local Port Monitor", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1013", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1013"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4fc", 
+      "description": "Rootkits are programs that hide the existence of malware by intercepting and modifying operating system API calls that supply system information. Rootkits or rootkit enabling functionality may reside at the user or kernel level in the operating system or lower, to include a [[Technique/T1062|Hypervisor]], Master Boot Record, or the [[Technique/T1019|System Firmware]].Wikipedia Rootkit\n\nAdversaries may use rootkits to hide the presence of programs, files, network connections, services, drivers, and other system components.", 
+      "name": "Rootkit", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1014", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1014"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4fd", 
+      "description": "Windows contains accessibility features that may be launched with a key combination before a user has logged in (for example, when the user is on the Windows logon screen). An adversary can modify the way these programs are launched to get a command prompt or backdoor without logging in to the system.\n\nTwo common accessibility programs are <code>C:\\Windows\\System32\\sethc.exe</code>, launched when the shift key is pressed five times and <code>C:\\Windows\\System32\\utilman.exe</code>, launched when the Windows + U key combination is pressed. The sethc.exe program is often referred to as \"sticky keys\", and has been used by adversaries for unauthenticated access through a remote desktop login screen.FireEye Hikit Rootkit\n\nDepending on the version of Windows, an adversary may take advantage of these features in different ways because of code integrity enhancements. In newer versions of Windows, the replaced binary needs to be digitally signed for x64 systems, the binary must reside in <code>%systemdir%\\</code>, and it must be protected by Windows File or Resource Protection (WFP/WRP).DEFCON2016 Sticky Keys The debugger method was likely discovered as a potential workaround because it does not require the corresponding accessibility feature binary to be replaced. Examples for both methods:\n\nFor simple binary replacement on Windows XP and later as well as and Windows Server 2003/R2 and later, for example, the program (e.g., <code>C:\\Windows\\System32\\utilman.exe</code>) may be replaced with \"cmd.exe\" (or another program that provides backdoor access). Subsequently, pressing the appropriate key combination at the login screen while sitting at the keyboard or when connected over [[Technique/T1076|Remote Desktop Protocol]] will cause the replaced file to be executed with SYSTEM privileges.Tilbury 2014\n\nFor the debugger method on Windows Vista and later as well as Windows Server 2008 and later, for example, a Registry key may be modified that configures \"cmd.exe,\" or another program that provides backdoor access, as a \"debugger\" for the accessibility program (e.g., \"utilman.exe\"). After the Registry is modified, pressing the appropriate key combination at the login screen while at the keyboard or when connected with RDP will cause the \"debugger\" program to be executed with SYSTEM privileges.Tilbury 2014\n\nOther accessibility features exist that may also be leveraged in a similar fashion:DEFCON2016 Sticky Keys\n\n*On-Screen Keyboard: <code>C:\\Windows\\System32\\osk.exe</code>\n*Magnifier: <code>C:\\Windows\\System32\\Magnify.exe</code>\n*Narrator: <code>C:\\Windows\\System32\\Narrator.exe</code>\n*Display Switcher: <code>C:\\Windows\\System32\\DisplaySwitch.exe</code>\n*App Switcher: <code>C:\\Windows\\System32\\AtBroker.exe</code>", 
+      "name": "Accessibility Features", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1015", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1015"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4fe", 
+      "description": "Adversaries will likely look for details about the network configuration and settings of systems they access or through information discovery of remote systems. Several operating system administration utilities exist that can be used to gather this information. Examples include [[Software/S0099|Arp]], [[Software/S0100|ipconfig]]/[[Software/S0101|ifconfig]], [[Software/S0102|nbtstat]], and [[Software/S0103|route]].", 
+      "name": "System Network Configuration Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1016", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1016"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e4ff", 
+      "description": "Adversaries may deploy malicious software to systems within a network using application deployment systems employed by enterprise administrators. The permissions required for this action vary by system configuration; local credentials may be sufficient with direct access to the deployment server, or specific domain credentials may be required. However, the system may require an administrative account to log in or to perform software deployment.\n\nAccess to a network-wide or enterprise-wide software deployment system enables an adversary to have remote code execution on all systems that are connected to such a system. The access may be used to laterally move to systems, gather information, or cause a specific effect, such as wiping the hard drives on all endpoints.", 
+      "name": "Application Deployment Software", 
+      "tactics": [
+        "571a762fcefaff1b704aefde"
+      ], 
+      "technique_id": "T1017", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1017"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e500", 
+      "description": "A connection proxy is used to direct network traffic between systems or act as an intermediary for network communications. Many tools exist that enable traffic redirection through proxies or port redirection, including [[Software/S0040|HTRAN]], ZXProxy, and ZXPortMap.Trend Micro APT Attack Tools\n\nThe definition of a proxy can also be expanded out to encompass trust relationships between networks in peer-to-peer, mesh, or trusted connections between networks consisting of hosts or systems that regularly communicate with each other.\n\nThe network may be within a single organization or across organizations with trust relationships. Adversaries could use these types of relationships to manage command and control communications, to reduce the number of simultaneous outbound network connections, to provide resiliency in the face of connection loss, or to ride over existing trusted communications paths between victims to avoid suspicion.", 
+      "name": "Connection Proxy", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1090", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1090"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e501", 
+      "description": "Adversaries may move to additional systems, possibly those on disconnected or air-gapped networks, by copying malware to removable media and taking advantage of Autorun features when the media is inserted into another system and executes. This may occur through modification of executable files stored on removable media or by copying malware and renaming it to look like a legitimate file to trick users into executing it on a separate system.", 
+      "name": "Replication Through Removable Media", 
+      "tactics": [
+        "571a762fcefaff1b704aefde"
+      ], 
+      "technique_id": "T1091", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1091"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e502", 
+      "description": "Adversaries can perform command and control between compromised hosts on potentially disconnected networks using removable media to transfer commands from system to system. Both systems would need to be compromised, with the likelihood that an Internet-connected system was compromised first and the second through lateral movement by [[Technique/T1091|Replication Through Removable Media]]. Commands and files would be relayed from the disconnected system to the Internet-connected system to which the adversary has direct access.", 
+      "name": "Communication Through Removable Media", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1092", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1092"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e503", 
+      "description": "Process hollowing occurs when a process is created in a suspended state and the process's memory is replaced with the code of a second program so that the second program runs instead of the original program. Windows and process monitoring tools believe the original process is running, whereas the actual program running is different.Leitch Hollowing\n\nProcess hollowing may be used similarly to [[Technique/T1055|DLL Injection]] to evade defenses and detection analysis of malicious process execution by launching adversary-controlled code under the context of a legitimate process.", 
+      "name": "Process Hollowing", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1093", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1093"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e504", 
+      "description": "Adversaries may communicate using a custom command and control protocol instead of using existing [[Technique/T1071|Standard Application Layer Protocol]] to encapsulate commands. Implementations could mimic well-known protocols.", 
+      "name": "Custom Command and Control Protocol", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1094", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1094"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e505", 
+      "description": "Use of a standard non-application layer protocol for communication between host and C2 server or among infected hosts within a network. The list of possible protocols is extensive.Wikipedia OSI Specific examples include use of network layer protocols, such as the Internet Control Message Protocol (ICMP), and transport layer protocols, such as the User Datagram Protocol (UDP).\n\nICMP communication between hosts is one example. Because ICMP is part of the Internet Protocol Suite, it is required to be implemented by all IP-compatible hosts;Microsoft ICMP however, it is not as commonly monitored as other Internet Protocols such as TCP or UDP and may be used by adversaries to hide communications.", 
+      "name": "Standard Non-Application Layer Protocol", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1095", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1095"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e506", 
+      "description": "Data or executables may be stored in New Technology File System (NTFS) partition metadata instead of directly in files. This may be done to evade some defenses, such as static indicator scanning tools and anti-virus.Journey into IR ZeroAccess NTFS EA\n\nThe NTFS format has a feature called Extended Attributes (EA), which allows data to be stored as an attribute of a file or folder.Microsoft File Streams", 
+      "name": "NTFS Extended Attributes", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1096", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1096"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e507", 
+      "description": "Pass the ticket (PtT)Aorato PTT is a method of authenticating to a system using Kerberos tickets without having access to an account's password. Kerberos authentication can be used as the first step to lateral movement to a remote system.\n\nIn this technique, valid Kerberos tickets for [[Technique/T1078|Valid Accounts]] are captured by [[Technique/T1003|Credential Dumping]]. A user's service tickets or ticket granting ticket (TGT) may be obtained, depending on the level of access. A service ticket allows for access to a particular resource, whereas a TGT can be used to request service tickets from the Ticket Granting Service (TGS) to access any resource the user has privileges to access.ADSecurity AD Kerberos AttacksGentilKiwi Pass the Ticket\n\nSilver Tickets can be obtained for services that use Kerberos as an authentication mechanism and are used to generate tickets to access that particular resource and the system that hosts the resource (e.g., SharePoint).ADSecurity AD Kerberos Attacks\n\nGolden Tickets can be obtained for the domain using the Key Distribution Service account KRBTGT account NTLM hash, which enables generation of TGTs for any account in Active Directory.Campbell 2014", 
+      "name": "Pass the Ticket", 
+      "tactics": [
+        "571a762fcefaff1b704aefde"
+      ], 
+      "technique_id": "T1097", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1097"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e508", 
+      "description": "Account manipulation may aid adversaries in maintaining access to credentials and certain permission levels within an environment. Manipulation could consist of modifying permissions, adding or changing permission groups, modifying account settings, or modifying how authentication is performed. In order to create or manipulate accounts, the adversary must already have sufficient permissions on systems or the domain.", 
+      "name": "Account Manipulation", 
+      "tactics": [
+        "571a762fcefaff1b704aefdd"
+      ], 
+      "technique_id": "T1098", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1098"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e509", 
+      "description": "Timestomping is a technique that modifies the timestamps of a file (the modify, access, create, and change times), often to mimic files that are in the same folder. This is done, for example, on files that have been modified or created by the adversary so that they do not appear conspicuous to forensic investigators or file analysis tools. Timestomping may be used along with file name [[Technique/T1036|Masquerading]] to hide malware and tools.WindowsIR Anti-Forensic Techniques", 
+      "name": "Timestomp", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1099", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1099"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e50a", 
+      "description": "Sensitive data can be collected from any removable media (optical disk drive, USB memory, etc.) connected to the compromised system prior to [[Exfiltration]].\n\nAdversaries may search connected removable media on computers they have compromised to find files of interest. Interactive command shells may be in use, and common functionality within [[Software/S0106|cmd]] may be used to gather information. Some adversaries may also use [[Technique/T1119|Automated Collection]] on removable media.", 
+      "name": "Data from Removable Media", 
+      "tactics": [
+        "571a762fcefaff1b704aefdb"
+      ], 
+      "technique_id": "T1025", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1025"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e50b", 
+      "description": "Adversaries may use a custom cryptographic protocol or algorithm to hide command and control traffic. A simple scheme, such as XOR-ing the plaintext with a fixed key, will produce a very weak ciphertext.\n\nCustom encryption schemes may vary in sophistication. Analysis and reverse engineering of malware samples may be enough to discover the algorithm and encryption key used.\n\nSome adversaries may also attempt to implement their own version of a well-known cryptographic algorithm instead of using a known implementation library, which may lead to unintentional errors.F-Secure Cosmicduke", 
+      "name": "Custom Cryptographic Protocol", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1024", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1024"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e50c", 
+      "description": "Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system.", 
+      "name": "Obfuscated Files or Information", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1027", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1027"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e50d", 
+      "description": "Some adversaries may split communications between different protocols.  There could be one protocol for inbound command and control and another for outbound data, allowing it to bypass certain firewall restrictions.  The split could also be random to simply avoid data threshold alerts on any one communication.", 
+      "name": "Multiband Communication", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1026", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1026"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e50e", 
+      "description": "An adversary may use valid credentials to log into a service specifically designed to accept remote connections, such as telnet, SSH, and VNC. The adversary may then perform actions as the logged-on user.", 
+      "name": "Remote Services", 
+      "tactics": [
+        "571a762fcefaff1b704aefde"
+      ], 
+      "technique_id": "T1021", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1021"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e50f", 
+      "description": "Data, such as sensitive documents, may be exfiltrated through the use of automated processing or [[Technique/T1064|Scripting]] after being gathered during [[Collection]]. \n\nWhen automated exfiltration is used, other exfiltration techniques likely apply as well to transfer the information out of the network, such as [[Technique/T1041|Exfiltration Over Command and Control Channel]] and [[Technique/T1048|Exfiltration Over Alternative Protocol]].", 
+      "name": "Automated Exfiltration", 
+      "tactics": [
+        "571a762fcefaff1b704aefdc"
+      ], 
+      "technique_id": "T1020", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1020"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e510", 
+      "description": "Shortcuts or symbolic links are ways of referencing other files or programs that will be opened or executed when the shortcut is clicked or executed by a system startup process. Adversaries could use shortcuts to execute their tools for persistence. They may create a new shortcut as a means of indirection that may use [[Technique/T1036|Masquerading]] to look like a legitimate program. Adversaries could also edit the target path or entirely replace an existing shortcut so their tools will be executed instead of the intended legitimate program.", 
+      "name": "Shortcut Modification", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1023", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1023"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e511", 
+      "description": "Data is encrypted before being exfiltrated in order to hide the information that is being exfiltrated from detection or to make the exfiltration less conspicuous upon inspection by a defender. The encryption is performed by a utility, programming library, or custom algorithm on the data itself and is considered separate from any encryption performed by the command and control or file transfer protocol. Common file archive formats that can encrypt files are RAR and zip.\n\nOther exfiltration techniques likely apply as well to transfer the information out of the network, such as [[Technique/T1041|Exfiltration Over Command and Control Channel]] and [[Technique/T1048|Exfiltration Over Alternative Protocol]]", 
+      "name": "Data Encrypted", 
+      "tactics": [
+        "571a762fcefaff1b704aefdc"
+      ], 
+      "technique_id": "T1022", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1022"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e512", 
+      "description": "Data exfiltration may be performed only at certain times of day or at certain intervals.  This could be done to blend traffic patterns with normal activity or availability.\n\nWhen scheduled exfiltration is used, other exfiltration techniques likely apply as well to transfer the information out of the network, such as Exfiltration Over Command and Control Channel and Exfiltration Over Alternative Protocol.", 
+      "name": "Scheduled Transfer", 
+      "tactics": [
+        "571a762fcefaff1b704aefdc"
+      ], 
+      "technique_id": "T1029", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1029"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e513", 
+      "description": "Windows Remote Management (WinRM) is the name of both a Windows service and a protocol that allows a user to interact with a remote system (e.g., run an executable, modify the Registry, modify services).Microsoft WinRM It may be called with the <code>winrm</code> command or by any number of programs such as PowerShell.Jacobsen 2014", 
+      "name": "Windows Remote Management", 
+      "tactics": [
+        "571a762fcefaff1b704aefe0", 
+        "571a762fcefaff1b704aefde"
+      ], 
+      "technique_id": "T1028", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1028"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e514", 
+      "description": "Adversaries use command and control over an encrypted channel using a known encryption protocol like HTTPS or SSL/TLS. The use of strong encryption makes it difficult for defenders to detect signatures within adversary command and control traffic.\n\nSome adversaries may use other encryption protocols and algorithms with symmetric keys, such as RC4, that rely on encryption keys encoded into malware configuration files and not public key cryptography. Such keys may be obtained through malware reverse engineering.", 
+      "name": "Standard Cryptographic Protocol", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1032", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1032"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e515", 
+      "description": "===Windows===\n\nAdversaries may attempt to identify the primary user, currently logged in user, set of users that commonly uses a system, or whether a user is actively using the system. They may do this, for example, by retrieving account usernames or by using [[Technique/T1003|Credential Dumping]]. The information may be collected in a number of different ways using other [[Discovery]] techniques, because user and username details are prevalent throughout a system and include running process ownership, file/directory ownership, session information, and system logs.\n\n===Mac===\n\nOn Mac, the currently logged in user can be identified with <code>users</code>,<code>w</code>, and <code>who</code>.\n\n===Linux===\n\nOn Linux, the currently logged in user can be identified with <code>w</code> and <code>who</code>.", 
+      "name": "System Owner/User Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1033", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1033"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e516", 
+      "description": "An adversary may exfiltrate data in fixed size chunks instead of whole files or limit packet sizes below certain thresholds. This approach may be used to avoid triggering network data transfer threshold alerts.", 
+      "name": "Data Transfer Size Limits", 
+      "tactics": [
+        "571a762fcefaff1b704aefdc"
+      ], 
+      "technique_id": "T1030", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1030"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e517", 
+      "description": "Windows service configuration information, including the file path to the service's executable, is stored in the Registry. Service configurations can be modified using utilities such as sc.exe and [[Software/S0075|Reg]].\n\nAdversaries can modify an existing service to persist malware on a system by using system utilities or by using custom tools to interact with the Windows API. Use of existing services is a type of [[Technique/T1036|Masquerading]] that may make detection analysis more challenging. Modifying existing services may interrupt their functionality or may enable services that are disabled or otherwise not commonly used.", 
+      "name": "Modify Existing Service", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1031", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1031"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e518", 
+      "description": "Masquerading occurs when an executable, legitimate or malicious, is placed in a commonly trusted location (such as C:\\Windows\\System32) or named with a common name (such as \"explorer.exe\" or \"svchost.exe\") to bypass tools that trust executables by relying on file name or path. An adversary may even use a renamed copy of a legitimate utility, such as rundll32.exe.Endgame Masquerade Ball Masquerading also may be done to deceive defenders and system administrators into thinking a file is benign by associating the name with something that is thought to be legitimate.", 
+      "name": "Masquerading", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1036", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1036"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e519", 
+      "description": "===Windows===\n\nWindows allows logon scripts to be run whenever a specific user or group of users log into a system.TechNet Logon Scripts The scripts can be used to perform administrative functions, which may often execute other programs or send information to an internal logging server.\n\nIf adversaries can access these scripts, they may insert additional code into the logon script to execute their tools when a user logs in. This code can allow them to maintain persistence on a single system, if it is a local script, or to move laterally within a network, if the script is stored on a central server and pushed to many systems. Depending on the access configuration of the logon scripts, either local credentials or an administrator account may be necessary.\n\n===Mac===\n\nMac allows login and logoff hooks to be run as root whenever a specific user logs into or out of a system. A login hook tells Mac OS X to execute a certain script when a user logs in, but unlike startup items, a login hook executes as rootcreating login hook. There can only be one login hook at a time though. If adversaries can access these scripts, they can insert additional code to the script to execute their tools when a user logs in.", 
+      "name": "Logon Scripts", 
+      "tactics": [
+        "571a762fcefaff1b704aefde", 
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1037", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1037"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e51a", 
+      "description": "Path interception occurs when an executable is placed in a specific path so that it is executed by an application instead of the intended target. One example of this was the use of a copy of [[Software/S0106|cmd]] in the current working directory of a vulnerable application that loads a CMD or BAT file with the CreateProcess function.TechNet MS14-019\n\nThere are multiple distinct weaknesses or misconfigurations that adversaries may take advantage of when performing path interception: unquoted paths, path environment variable misconfigurations, and search order hijacking. The first vulnerability deals with full program paths, while the second and third occur when program paths are not specified. These techniques can be used for persistence if executables are called on a regular basis, as well as privilege escalation if intercepted executables are started by a higher privileged process.\n\n===Unquoted Paths===\nService paths (stored in Windows Registry keys)Microsoft Subkey and shortcut paths are vulnerable to path interception if the path has one or more spaces and is not surrounded by quotation marks (e.g., <code>C:\\unsafe path with space\\program.exe</code> vs. <code>\"C:\\safe path with space\\program.exe\"</code>).Baggett 2012 An adversary can place an executable in a higher level directory of the path, and Windows will resolve that executable instead of the intended executable. For example, if the path in a shortcut is <code>C:\\program files\\myapp.exe</code>, an adversary may create a program at <code>C:\\program.exe</code> that will be run instead of the intended program.\n\n===PATH Environment Variable Misconfiguration===\nThe PATH environment variable contains a list of directories. Certain methods of executing a program (namely using cmd.exe or the command-line) rely solely on the PATH environment variable to determine the locations that are searched for a program when the path for the program is not given. If any directories are listed in the PATH environment variable before the Windows directory, <code>%SystemRoot%\\system32</code> (e.g., <code>C:\\Windows\\system32</code>), a program may be placed in the preceding directory that is named the same as a Windows program (such as cmd, PowerShell, or Python), which will be executed when that command is executed from a script or command-line.\n\nFor example, if <code>C:\\example path</code> precedes <code>C:\\Windows\\system32</code> is in the PATH environment variable, a program that is named net.exe and placed in <code>C:\\example path</code> will be called instead of the Windows system \"net\" when \"net\" is executed from the command-line.\n\n===Search Order Hijacking===\nSearch order hijacking occurs when an adversary abuses the order in which Windows searches for programs that are not given a path. The search order differs depending on the method that is used to execute the program.Microsoft CreateProcessHill NT ShellMicrosoft WinExec However, it is common for Windows to search in the directory of the initiating program before searching through the Windows system directory. An adversary who finds a program vulnerable to search order hijacking (i.e., a program that does not specify the path to an executable) may take advantage of this vulnerability by creating a program named after the improperly specified program and placing it within the initiating program's directory.\n\nFor example, \"example.exe\" runs \"cmd.exe\" with the command-line argument <code>net user</code>. An adversary may place a program called \"net.exe\" within the same directory as example.exe, \"net.exe\" will be run instead of the Windows system utility net. In addition, if an adversary places a program called \"net.com\" in the same directory as \"net.exe\", then <code>cmd.exe /C net user</code> will execute \"net.com\" instead of \"net.exe\" due to the order of executable extensions defined under PATHEXT.MSDN Environment Property\n\nSearch order hijacking is also a common practice for hijacking DLL loads and is covered in [[Technique/T1038|DLL Search Order Hijacking]].", 
+      "name": "Path Interception", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1034", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1034"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e51b", 
+      "description": "Adversaries may execute a binary, command, or script via a method that interacts with Windows services, such as the Service Control Manager. This can be done by either creating a new service or modifying an existing service. This technique is the execution used in conjunction with [[Technique/T1050|New Service]] and [[Technique/T1031|Modify Existing Service]] during service persistence or privilege escalation.", 
+      "name": "Service Execution", 
+      "tactics": [
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1035", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1035"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e51c", 
+      "description": "Windows systems use a common method to look for required DLLs to load into a program.Microsoft DLL Search Adversaries may take advantage of the Windows DLL search order and programs that ambiguously specify DLLs to gain privilege escalation and persistence. \n\nAdversaries may perform DLL preloading, also called binary planting attacks,OWASP Binary Planting by placing a malicious DLL with the same name as an ambiguously specified DLL in a location that Windows searches before the legitimate DLL. Often this location is the current working directory of the program. Remote DLL preloading attacks occur when a program sets its current directory to a remote location such as a Web share before loading a DLL.Microsoft 2269637 Adversaries may use this behavior to cause the program to load a malicious DLL. \n\nAdversaries may also directly modify the way a program loads DLLs by replacing an existing DLL or modifying a .manifest or .local redirection file, directory, or junction to cause the program to load a different DLL to maintain persistence or privilege escalation.Microsoft DLL RedirectionMicrosoft ManifestsMandiant Search Order\n\nIf a search order-vulnerable program is configured to run at a higher privilege level, then the adversary-controlled DLL that is loaded will also be executed at the higher level. In this case, the technique could be used for privilege escalation from user to administrator or SYSTEM or from administrator to SYSTEM, depending on the program.\n\nPrograms that fall victim to path hijacking may appear to behave normally because malicious DLLs may be configured to also load the legitimate DLLs they were meant to replace.", 
+      "name": "DLL Search Order Hijacking", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1038", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1038"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e51d", 
+      "description": "Sensitive data can be collected from remote systems via shared network drives (host shared directory, network file server, etc.) that are accessible from the current system prior to [[Exfiltration]].\n\nAdversaries may search network shares on computers they have compromised to find files of interest. Interactive command shells may be in use, and common functionality within [[Software/S0106|cmd]] may be used to gather information.", 
+      "name": "Data from Network Shared Drive", 
+      "tactics": [
+        "571a762fcefaff1b704aefdb"
+      ], 
+      "technique_id": "T1039", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1039"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e51e", 
+      "description": "Adversaries may attempt to gather information about attached peripheral devices and components connected to a computer system. The information may be used to enhance their awareness of the system and network environment or may be used for further actions.", 
+      "name": "Peripheral Device Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1120", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1120"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e51f", 
+      "description": "Windows Management Instrumentation (WMI) is a Windows administration feature that provides a uniform environment for local and remote access to Windows system components. It relies on the WMI service for local and remote access and the server message block (SMB)Wikipedia SMB and Remote Procedure Call Service (RPCS)TechNet RPC for remote access. RPCS operates over port 135.MSDN WMI\n\nAn adversary can use WMI to interact with local and remote systems and use it as a means to perform many tactic functions, such as gathering information for [[Discovery]] and remote [[Execution]] of files as part of [[Lateral Movement]].FireEye WMI 2015", 
+      "name": "Windows Management Instrumentation", 
+      "tactics": [
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1047", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1047"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e520", 
+      "description": "Adversaries may attempt to get a listing of services running on remote hosts, including those that may be vulnerable to remote software exploitation. Methods to acquire this information include port scans and vulnerability scans using tools that are brought onto a system.", 
+      "name": "Network Service Scanning", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1046", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1046"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e521", 
+      "description": "Software packing is a method of compressing or encrypting an executable. Packing an executable changes the file signature in an attempt to avoid signature-based detection. Most decompression techniques decompress the executable code in memory.\n\nUtilities used to perform software packing are called packers. Example packers are MPRESS and UPX. A more comprehensive list of known packers is available,Wikipedia Exe Compression but adversaries may create their own packing techniques that do not leave the same artifacts as well-known packers to evade defenses.", 
+      "name": "Software Packing", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1045", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1045"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e522", 
+      "description": "Processes may automatically execute specific binaries as part of their functionality or to perform other actions. If the permissions on the file system directory containing a target binary, or permissions on the binary itself, are improperly set, then the target binary may be overwritten with another binary using user-level permissions and executed by the original process. If the original process and thread are running under a higher permissions level, then the replaced binary will also execute under higher-level permissions, which could include SYSTEM.\n\nAdversaries may use this technique to replace legitimate binaries with malicious ones as a means of executing code at a higher permissions level. If the executing process is set to run at a specific time or during a certain event (e.g., system bootup) then this technique can also be used for persistence.\n\n===Services===\n\nManipulation of Windows service binaries is one variation of this technique. Adversaries may replace a legitimate service executable with their own executable to gain persistence and/or privilege escalation to the account context the service is set to execute under (local/domain account, SYSTEM, LocalService, or NetworkService). Once the service is started, either directly by the user (if appropriate access is available) or through some other means, such as a system restart if the service starts on bootup, the replaced executable will run instead of the original service executable.\n\n===Executable Installers===\n\nAnother variation of this technique can be performed by taking advantage of a weakness that is common in executable, self-extracting installers. During the installation process, it is common for installers to use a subdirectory within the <code>%TEMP%</code> directory to unpack binaries such as DLLs, EXEs, or other payloads. When installers create subdirectories and files they often do not set appropriate permissions to restrict write access, which allows for execution of untrusted code placed in the subdirectories or overwriting of binaries used in the installation process. This behavior is related to and may take advantage of [[Technique/T1038|DLL Search Order Hijacking]]. Some installers may also require elevated privileges that will result in privilege escalation when executing adversary controlled code. This behavior is related to [[Technique/T1088|Bypass User Account Control]]. Several examples of this weakness in existing common installers have been reported to software vendors.Mozilla Firefox Installer DLL HijackSeclists Kanthak 7zip Installer", 
+      "name": "File System Permissions Weakness", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1044", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1044"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e523", 
+      "description": "Adversaries may communicate over a commonly used port to bypass firewalls or network detection systems and to blend with normal network activity to avoid more detailed inspection. They may use commonly open ports such as\n* TCP:80 (HTTP)\n* TCP:443 (HTTPS)\n* TCP:25 (SMTP)\n* TCP/UDP:53 (DNS)\n\nThey may use the protocol associated with the port or a completely different protocol. \n\nFor connections that occur internally within an enclave (such as those between a proxy or pivot node and other nodes), examples of common ports are \n* TCP/UDP:135 (RPC)\n* TCP/UDP:22 (SSH)\n* TCP/UDP:3389 (RDP)", 
+      "name": "Commonly Used Port", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1043", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1043"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e524", 
+      "description": "When a file is opened, the default program used to open the file (also called the file association or handler) is checked. File association selections are stored in the Windows Registry and can be edited by users, administrators, or programs that have Registry access.Microsoft Change Default ProgramsMicrosoft File Handlers Applications can modify the file association for a given file extension to call an arbitrary program when a file with the given extension is opened.", 
+      "name": "Change Default File Association", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1042", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1042"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e525", 
+      "description": "Data exfiltration is performed over the [[Command and Control]] channel.  Data is encoded into the normal communications channel using the same protocol as command and control communications.", 
+      "name": "Exfiltration Over Command and Control Channel", 
+      "tactics": [
+        "571a762fcefaff1b704aefdc"
+      ], 
+      "technique_id": "T1041", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1041"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e526", 
+      "description": "Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection.\n\nUser credentials may be sent over an insecure, unencrypted protocol that can be captured and obtained through network packet analysis. An adversary may place a network interface into promiscuous mode, using a utility to capture traffic in transit over the network or use span ports to capture a larger amount of data. In addition, Address Resolution Protocol (ARP) and Domain Name Service (DNS) poisoning can be used to capture credentials to websites, proxies, and internal systems by redirecting traffic to an adversary.", 
+      "name": "Network Sniffing", 
+      "tactics": [
+        "571a762fcefaff1b704aefdd"
+      ], 
+      "technique_id": "T1040", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1040"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e527", 
+      "description": "Adversaries may attempt to get a listing of network connections to or from the compromised system they are currently accessing or from remote systems by querying for information over the network. \n\n===Windows===\n\nUtilities and commands that acquire this information include [[Software/S0104|netstat]], \"net use,\" and \"net session\" with [[Software/S0039|Net]].\n\n===Mac and Linux ===\n\nIn Mac and Linux, <code>netstat</code> and <code>lsof</code> can be used to list current connections. <code>who -a</code> and <code>w</code> can be used to show which users are currently logged in, similar to \"net session\".", 
+      "name": "System Network Connections Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1049", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1049"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e528", 
+      "description": "Data exfiltration is performed with a different protocol from the main command and control protocol or channel. The data is likely to be sent to an alternate network location from the main command and control server. Alternate protocols include FTP, SMTP, HTTP/S, DNS, or some other network protocol. Different channels could include Internet Web services such as cloud storage.", 
+      "name": "Exfiltration Over Alternative Protocol", 
+      "tactics": [
+        "571a762fcefaff1b704aefdc"
+      ], 
+      "technique_id": "T1048", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1048"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e529", 
+      "description": "Adversaries may collect data stored in the Windows clipboard from users copying information within or between applications. \n\n===Windows===\n\nApplications can access clipboard data by using the Windows API.MSDN Clipboard \n\n===Mac===\n\nOSX provides a native command, <code>pbpaste</code>, to grab clipboard contents Operating with EmPyre.", 
+      "name": "Clipboard Data", 
+      "tactics": [
+        "571a762fcefaff1b704aefdb"
+      ], 
+      "technique_id": "T1115", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1115"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e52a", 
+      "description": "Adversaries may target user email to collect sensitive information from a target.\n\nFiles containing email data can be acquired from a user's system, such as Outlook storage or cache files .pst and .ost.\n\nAdversaries may leverage a user's credentials and interact directly with the Exchange server to acquire information from within a network.\n\nSome adversaries may acquire user credentials and access externally facing webmail applications, such as Outlook Web Access.", 
+      "name": "Email Collection", 
+      "tactics": [
+        "571a762fcefaff1b704aefdb"
+      ], 
+      "technique_id": "T1114", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1114"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e52b", 
+      "description": "Regsvr32.exe is a command-line program used to register and unregister object linking and embedding controls, including dynamic link libraries (DLLs), on Windows systems. Regsvr32.exe can be used to execute arbitrary binaries.Microsoft Regsvr32\n\nAdversaries may take advantage of this functionality to proxy execution of code to avoid triggering security tools that may not monitor execution of, and modules loaded by, the regsvr32.exe process because of whitelists or false positives from Windows using regsvr32.exe for normal operations. Regsvr32.exe is also a Microsoft signed binary.\n\nRegsvr32.exe can also be used to specifically bypass process whitelisting using functionality to load COM scriptlets to execute DLLs under user permissions. Since regsvr32.exe is network and proxy aware, the scripts can be loaded by passing a uniform resource locator (URL) to file on an external Web server as an argument during invocation. This method makes no changes to the Registry as the COM object is not actually registered, only executed.SubTee Regsvr32 Whitelisting Bypass This variation of the technique has been used in campaigns targeting governments.FireEye Regsvr32 Targeting Mongolian Gov", 
+      "name": "Regsvr32", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1117", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1117"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e52c", 
+      "description": "Code signing provides a level of authenticity on a binary from the developer and a guarantee that the binary has not been tampered with.Wikipedia Code Signing However, adversaries are known to use code signing certificates to masquerade malware and tools as legitimate binariesJanicab. The certificates used during an operation may be created, forged, or stolen by the adversary.Securelist Digital CertificatesSymantec Digital Certificates\n\nCode signing to verify software on first run can be used on modern Windows and MacOS/OS X systems. It is not used on Linux due to the decentralized nature of the platform.Wikipedia Code Signing\n\nCode signing certificates may be used to bypass security policies that require signed code to execute on a system.", 
+      "name": "Code Signing", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1116", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1116"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e52d", 
+      "description": "Use of two- or multifactor authentication is recommended and provides a higher level of security than user names and passwords alone, but organizations should be aware of techniques that could be used to intercept and bypass these security mechanisms. Adversaries may target authentication mechanisms, such as smart cards, to gain access to systems, services, and network resources.\n\nIf a smart card is used for two-factor authentication (2FA), then a keylogger will need to be used to obtain the password associated with a smart card during normal use. With both an inserted card and access to the smart card password, an adversary can connect to a network resource using the infected system to proxy the authentication with the inserted hardware token.Mandiant M Trends 2011\n\nOther methods of 2FA may be intercepted and used by an adversary to authenticate. It is common for one-time codes to be sent via out-of-band communications (email, SMS). If the device and/or service is not secured, then it may be vulnerable to interception. Although primarily focused on by cyber criminals, these authentication mechanisms have been targeted by advanced actors.Operation Emmental\n\nOther hardware tokens, such as RSA SecurID, require the adversary to have access to the physical device or the seed and algorithm in addition to the corresponding credentials.", 
+      "name": "Two-Factor Authentication Interception", 
+      "tactics": [
+        "571a762fcefaff1b704aefdd"
+      ], 
+      "technique_id": "T1111", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1111"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e52e", 
+      "description": "Adversaries may use brute force techniques to attempt access to accounts when passwords are unknown or when password hashes are obtained.\n\n[[Technique/T1003|Credential Dumping]] to obtain password hashes may only get an adversary so far when [[Technique/T1075|Pass the Hash]] is not an option. Techniques to systematically guess the passwords used to compute hashes are available, or the adversary may use a pre-computed rainbow table. Cracking hashes is usually done on adversary-controlled systems outside of the target network.Wikipedia Password cracking\n\nAdversaries may attempt to brute force logins without knowledge of passwords or hashes during an operation either with zero knowledge or by attempting a list of known or possible passwords. This is a riskier option because it could cause numerous authentication failures and account lockouts, depending on the organization's login failure policies.Cylance Cleaver\n\nA related technique called password spraying uses one password, or a small list of passwords, that matches the complexity policy of the domain and may be a commonly used password. Logins are attempted with that password and many different accounts on a network to avoid account lockouts that would normally occur when brute forcing a single account with many passwords.BlackHillsInfosec Password Spraying", 
+      "name": "Brute Force", 
+      "tactics": [
+        "571a762fcefaff1b704aefdd"
+      ], 
+      "technique_id": "T1110", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1110"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e52f", 
+      "description": "Adversaries may attempt to take screen captures of the desktop to gather information over the course of an operation. Screen capturing functionality may be included as a feature of a remote access tool used in post-compromise operations.\n\n===Mac===\n\nOn OSX, the native command <code>screencapture</code> is used to capture screenshots.\n\n===Linux===\n\nOn Linux, there is the native command <code>xwd</code>.Antiquated Mac Malware", 
+      "name": "Screen Capture", 
+      "tactics": [
+        "571a762fcefaff1b704aefdb"
+      ], 
+      "technique_id": "T1113", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1113"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e530", 
+      "description": "Adversaries may interact with the Windows Registry to hide configuration information within Registry keys, remove information as part of cleaning up, or as part of other techniques to aid in [[Persistence]] and [[Execution]].\n\nAccess to specific areas of the Registry depends on account permissions, some requiring administrator-level access. The built-in Windows command-line utility [[Software/S0075|Reg]] may be used for local or remote Registry modification.Microsoft Reg Other tools may also be used, such as a remote access tool, which may contain functionality to interact with the Registry through the Windows API (see examples).\n\nThe Registry of a remote system may be modified to aid in execution of files as part of [[Lateral Movement]]. It requires the remote Registry service to be running on the target system.Microsoft Remote Often [[Technique/T1078|Valid Accounts]] are required, along with access to the remote system's [[Technique/T1077|Windows Admin Shares]] for RPC communication.", 
+      "name": "Modify Registry", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1112", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1112"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e531", 
+      "description": "Once established within a system or network, an adversary may use automated techniques for collecting internal data. Methods for performing this technique could include use of [[Technique/T1064|Scripting]] to search for and copy information fitting set criteria such as file type, location, or name at specific time intervals. This functionality could also be built into remote access tools. \n\nThis technique may incorporate use of other techniques such as [[Technique/T1083|File and Directory Discovery]] and [[Technique/T1105|Remote File Copy]] to identify and move files.", 
+      "name": "Automated Collection", 
+      "tactics": [
+        "571a762fcefaff1b704aefdb"
+      ], 
+      "technique_id": "T1119", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1119"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e532", 
+      "description": "InstallUtil is a command-line utility that allows for installation and uninstallation of resources by executing specific installer components specified in .NET binaries.MSDN InstallUtil InstallUtil is located in the .NET directory on a Windows system: <code>C:\\Windows\\Microsoft.NET\\Framework\\v<version>\\InstallUtil.exe</code>.InstallUtil.exe is digitally signed by Microsoft.\n\nAdversaries may use InstallUtil to proxy execution of code through a trusted Windows utility. InstallUtil may also be used to bypass process whitelisting through use of attributes within the binary that execute the class decorated with the attribute <code>[System.ComponentModel.RunInstaller(true)]</code>.SubTee GitHub All The Things Application Whitelisting Bypass", 
+      "name": "InstallUtil", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1118", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1118"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e533", 
+      "description": "An adversary may attempt to block indicators or events from leaving the host machine. In the case of network-based reporting of indicators, an adversary may block traffic associated with reporting to prevent central analysis. This may be accomplished by many means, such as stopping a local process or creating a host-based firewall rule to block traffic to a specific server.", 
+      "name": "Indicator Blocking", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1054", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1054"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e534", 
+      "description": "DLL injection is used to run code in the context of another process by causing the other process to load and execute code. Running code in the context of another process provides adversaries many benefits, such as access to the process's memory and permissions. It also allows adversaries to mask their actions under a legitimate process. A more sophisticated kind of DLL injection, reflective DLL injection, loads code without calling the normal Windows API calls, potentially bypassing DLL load monitoring. Numerous methods of DLL injection exist on Windows, including modifying the Registry, creating remote threads, Windows hooking APIs, and DLL pre-loading.CodeProject Inject CodeWikipedia DLL Injection", 
+      "name": "DLL Injection", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1055", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1055"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e535", 
+      "description": "Adversaries can use methods of capturing user input for obtaining credentials for [[Technique/T1078|Valid Accounts]] and information [[Collection]] that include keylogging and user input field interception.\n\nKeylogging is the most prevalent type of input capture, with many different ways of intercepting keystrokes,Adventures of a Keystroke but other methods exist to target information for specific purposes, such as performing a UAC prompt or wrapping the Windows default credential provider.Wrightson 2012\n\nKeylogging is likely to be used to acquire credentials for new access opportunities when [[Technique/T1003|Credential Dumping]] efforts are not effective, and may require an adversary to remain passive on a system for a period of time before an opportunity arises.\n\nAdversaries may also install code on externally facing portals, such as a VPN login page, to capture and transmit credentials of users who attempt to log into the service. This variation on input capture may be conducted post-compromise using legitimate administrative access as a backup measure to maintain network access through [[Technique/T1133|External Remote Services]] and [[Technique/T1078|Valid Accounts]] or as part of the initial compromise by exploitation of the externally facing web service.Volexity Virtual Private Keylogging", 
+      "name": "Input Capture", 
+      "tactics": [
+        "571a762fcefaff1b704aefdb", 
+        "571a762fcefaff1b704aefdd"
+      ], 
+      "technique_id": "T1056", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1056"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e536", 
+      "description": "Adversaries may attempt to get information about running processes on a system. Information obtained could be used to gain an understanding of common software running on systems within the network.\n\n===Windows===\n\nAn example command that would obtain details on processes is \"tasklist\" using the [[Software/S0057|Tasklist]] utility.\n\n===Mac and Linux===\n\nIn Mac and Linux, this is accomplished with the <code>ps</code> command.", 
+      "name": "Process Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1057", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1057"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e537", 
+      "description": "When operating systems boot up, they can start programs or applications called services that perform background system functions.TechNet Services A service's configuration information, including the file path to the service's executable, is stored in the Windows Registry. \n\nAdversaries may install a new service that can be configured to execute at startup by using utilities to interact with services or by directly modifying the Registry. The service name may be disguised by using a name from a related operating system or benign software with [[Technique/T1036|Masquerading]]. Services may be created with administrator privileges but are executed under SYSTEM privileges, so an adversary may also use a service to escalate privileges from administrator to SYSTEM. Adversaries may also directly start services through [[Technique/T1035|Service Execution]].", 
+      "name": "New Service", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1050", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1050"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e538", 
+      "description": "Adversaries may add malicious content to an internally accessible website through an open network file share that contains the website's webroot or Web content directory and then browse to that content with a Web browser to cause the server to execute the malicious content. The malicious content will typically run under the context and permissions of the Web server process, often resulting in local system or administrative privileges, depending on how the Web server is configured.\n\nThis mechanism of shared access and remote execution could be used for lateral movement to the system running the Web server. For example, a Web server running PHP with an open network share could allow an adversary to upload a remote access tool and PHP script to execute the RAT on the system running the Web server when a specific page is visited.", 
+      "name": "Shared Webroot", 
+      "tactics": [
+        "571a762fcefaff1b704aefde"
+      ], 
+      "technique_id": "T1051", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1051"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e539", 
+      "description": "In certain circumstances, such as an air-gapped network compromise, exfiltration could occur via a physical medium or device introduced by a user. Such media could be an external hard drive, USB drive, cellular phone, MP3 player, or other removable storage and processing device. The physical medium or device could be used as the final exfiltration point or to hop between otherwise disconnected systems.", 
+      "name": "Exfiltration Over Physical Medium", 
+      "tactics": [
+        "571a762fcefaff1b704aefdc"
+      ], 
+      "technique_id": "T1052", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1052"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e53a", 
+      "description": "Utilities such as [[Software/S0110|at]] and [[Software/S0111|schtasks]], along with the Windows Task Scheduler, can be used to schedule programs or scripts to be executed at a date and time. The account used to create the task must be in the Administrators group on the local system. A task can also be scheduled on a remote system, provided the proper authentication is met to use RPC and file and printer sharing is turned on.TechNet Task Scheduler Security\n\nAn adversary may use task scheduling to execute programs at system startup or on a scheduled basis for persistence, to conduct remote [[Execution]] as part of [[Lateral Movement]], to gain SYSTEM privileges, or to run a process under the context of a specified account.", 
+      "name": "Scheduled Task", 
+      "tactics": [
+        "571a762fcefaff1b704aefe0", 
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1053", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1053"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e53b", 
+      "description": "Windows stores local service configuration information in the Registry under <code>HKLM\\SYSTEM\\CurrentControlSet\\Services</code>. The information stored under a service's Registry keys can be manipulated to modify a service's execution parameters through tools such as the service controller, sc.exe, PowerShell, or [[Software/S0075|Reg]]. Access to Registry keys is controlled through Access Control Lists and permissions.MSDN Registry Key Security\n\nIf the permissions for users and groups are not properly set and allow access to the Registry keys for a service, then adversaries can change the service binPath/ImagePath to point to a different executable under their control. When the service starts or is restarted, then the adversary-controlled program will execute, allowing the adversary to gain persistence and/or privilege escalation to the account context the service is set to execute under (local/domain account, SYSTEM, LocalService, or NetworkService).", 
+      "name": "Service Registry Permissions Weakness", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1058", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1058"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e53c", 
+      "description": "Command-line interfaces provide a way of interacting with computer systems and is a common feature across many types of operating system platforms.Wikipedia Command-Line Interface One example command-line interface on Windows systems is [[Software/S0106|cmd]], which can be used to perform a number of tasks including execution of other software. Command-line interfaces can be interacted with locally or remotely via a remote desktop application, reverse shell session, etc. Commands that are executed run with the current permission level of the command-line interface process unless the command includes process invocation that changes permissions context for that execution (e.g. [[Technique/T1053|Scheduled Task]]).\n\nAdversaries may use command-line interfaces to interact with systems and execute other software during the course of an operation.", 
+      "name": "Command-Line Interface", 
+      "tactics": [
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1059", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1059"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e53d", 
+      "description": "Adversaries may use an existing, legitimate external Web service as a means for relaying commands to a compromised system.\n\nPopular websites and social media can act as a mechanism for command and control and give a significant amount of cover due to the likelihood that hosts within a network are already communicating with them prior to a compromise. Using common services, such as those offered by Google or Twitter, makes it easier for adversaries to hide in expected noise. Web service providers commonly use SSL/TLS encryption, giving adversaries an added level of protection.", 
+      "name": "Web Service", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1102", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1102"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e53e", 
+      "description": "DLLs that are specified in the AppInit_DLLs value in the Registry key <code>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows</code> are loaded by user32.dll into every process that loads user32.dll. In practice this is nearly every program. This value can be abused to obtain persistence by causing a DLL to be loaded into most processes on the computer.AppInit Registry\n\nThe AppInit DLL functionality is disabled in Windows 8 and later versions when secure boot is enabled.AppInit Secure Boot", 
+      "name": "AppInit DLLs", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1103", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1103"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e53f", 
+      "description": "A Web shell is a Web script that is placed on an openly accessible Web server to allow an adversary to use the Web server as a gateway into a network. A Web shell may provide a set of functions to execute or a command-line interface on the system that hosts the Web server. In addition to a server-side script, a Web shell may have a client interface program that is used to talk to the Web server (see, for example, China Chopper Web shell client).Lee 2013\n\nWeb shells may serve as [[Technique/T1108|Redundant Access]] or as a persistence mechanism in case an adversary's primary access methods are detected and removed.", 
+      "name": "Web Shell", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1100", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1100"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e540", 
+      "description": "Windows Security Support Provider (SSP) DLLs are loaded into the Local Security Authority (LSA) process at system start. Once loaded into the LSA, SSP DLLs have access to encrypted and plaintext passwords that are stored in Windows, such as any logged-on user's Domain password or smart card PINs. The SSP configuration is stored in two Registry keys: <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Security Packages</code> and <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\OSConfig\\Security Packages</code>. An adversary may modify these Registry keys to add new SSPs, which will be loaded the next time the system boots, or when the AddSecurityPackage Windows API function is called.\nGraeber 2014", 
+      "name": "Security Support Provider", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1101", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1101"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e541", 
+      "description": "Adversary tools may directly use the Windows application programming interface (API) to execute binaries. Functions such as the Windows API CreateProcess will allow programs and scripts to start other processes with proper path and argument parameters.Microsoft CreateProcess\n\nAdditional Windows API calls that can be used to execute binaries include:Kanthak Verifier\n\n*CreateProcessA() and CreateProcessW(),\n*CreateProcessAsUserA() and CreateProcessAsUserW(),\n*CreateProcessInternalA() and CreateProcessInternalW(),\n*CreateProcessWithLogonW(), CreateProcessWithTokenW(),\n*LoadLibraryA() and LoadLibraryW(),\n*LoadLibraryExA() and LoadLibraryExW(),\n*LoadModule(),\n*LoadPackagedLibrary(),\n*WinExec(),\n*ShellExecuteA() and ShellExecuteW(),\n*ShellExecuteExA() and ShellExecuteExW()", 
+      "name": "Execution through API", 
+      "tactics": [
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1106", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1106"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e542", 
+      "description": "Malware, tools, or other non-native files dropped or created on a system by an adversary may leave traces behind as to what was done within a network and how. Adversaries may remove these files over the course of an intrusion to keep their footprint low or remove them at the end as part of the post-intrusion cleanup process.\n\nThere are tools available from the host operating system to perform cleanup, but adversaries may use other tools as well. Examples include native [[Software/S0106|cmd]] functions such as DEL, secure deletion tools such as Windows Sysinternals SDelete, or other third-party file deletion tools.Trend Micro APT Attack Tools", 
+      "name": "File Deletion", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1107", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1107"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e543", 
+      "description": "Adversaries may create multiple stages for command and control that are employed under different conditions or for certain functions. Use of multiple stages may obfuscate the command and control channel to make detection more difficult.\n\nRemote access tools will call back to the first-stage command and control server for instructions. The first stage may have automated capabilities to collect basic host information, update tools, and upload additional files. A second remote access tool (RAT) could be uploaded at that point to redirect the host to the second-stage command and control server. The second stage will likely be more fully featured and allow the adversary to interact with the system through a reverse shell and additional RAT features.\n\nThe different stages will likely be hosted separately with no overlapping infrastructure. The loader may also have backup first-stage callbacks or [[Technique/T1008|Fallback Channels]] in case the original first-stage communication path is discovered and blocked.", 
+      "name": "Multi-Stage Channels", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1104", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1104"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e544", 
+      "description": "Files may be copied from one system to another to stage adversary tools or other files over the course of an operation. Files may be copied from an external adversary-controlled system through the [[Command and Control]] channel to bring tools into the victim network or through alternate protocols with another tool such as [[Software/S0095|FTP]]. Files can also be copied over on Mac and Linux with native tools like scp, rsync, and sftp.\n\nAdversaries may also copy files laterally between internal victim systems to support [[Lateral Movement]] with remote [[Execution]] using inherent file sharing protocols such as file sharing over SMB to connected network shares or with authenticated connections with [[Technique/T1077|Windows Admin Shares]] or [[Technique/T1076|Remote Desktop Protocol]].", 
+      "name": "Remote File Copy", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9", 
+        "571a762fcefaff1b704aefde"
+      ], 
+      "technique_id": "T1105", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1105"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e545", 
+      "description": "Adversaries may use more than one remote access tool with varying command and control protocols as a hedge against detection. If one type of tool is detected and blocked or removed as a response but the organization did not gain a full understanding of the adversary's tools and access, then the adversary will be able to retain access to the network. Adversaries may also attempt to gain access to [[Technique/T1078|Valid Accounts]] to use [[Technique/T1133|External Remote Services]] such as external VPNs as a way to maintain access despite interruptions to remote access tools deployed within a target network.Mandiant APT1\n\nUse of a [[Technique/T1100|Web Shell]] is one such way to maintain access to a network through an externally accessible Web server.", 
+      "name": "Redundant Access", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1108", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1108"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e546", 
+      "description": "Some adversaries may employ sophisticated means to compromise computer components and install malicious firmware that will execute adversary code outside of the operating system and main system firmware or BIOS. This technique may be similar to [[Technique/T1019|System Firmware]] but conducted upon other system components that may not have the same capability or level of integrity checking. Malicious device firmware could provide both a persistent level of access to systems despite potential typical failures to maintain access and hard disk re-images, as well as a way to evade host software-based defenses and integrity checks.", 
+      "name": "Component Firmware", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1109", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1109"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e547", 
+      "description": "Cause a binary or script to execute based on interacting with the file through a graphical user interface (GUI) or in an interactive remote session such as [[Technique/T1076|Remote Desktop Protocol]].", 
+      "name": "Graphical User Interface", 
+      "tactics": [
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1061", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1061"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e548", 
+      "description": "Adding an entry to the \"run keys\" in the Registry or startup folder will cause the program referenced to be executed when a user logs in.Microsoft Run Key The program will be executed under the context of the user and will have the account's associated permissions level.\n\nAdversaries can use these configuration locations to execute malware, such as remote access tools, to maintain persistence through system reboots. Adversaries may also use [[Technique/T1036|Masquerading]] to make the Registry entries look as if they are associated with legitimate programs.", 
+      "name": "Registry Run Keys / Start Folder", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1060", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1060"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e549", 
+      "description": "Adversaries may attempt to get a listing of security software, configurations, defensive tools, and sensors that are installed on the system. This may include things such as local firewall rules, anti-virus, and virtualization. These checks may be built into early-stage remote access tools.\n\n===Windows===\n\nExample commands that can be used to obtain security software information are [[Software/S0108|netsh]], <code>reg query</code> with [[Software/S0075|Reg]], <code>dir</code> with [[Software/S0106|cmd]], and [[Software/S0057|Tasklist]], but other indicators of discovery behavior may be more specific to the type of software or security system the adversary is looking for.\n\n===Mac===\n\nIt's becoming more common to see macOS malware perform checks for LittleSnitch and KnockKnock software.", 
+      "name": "Security Software Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1063", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1063"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e54a", 
+      "description": "A type-1 hypervisor is a software layer that sits between the guest operating systems and system's hardware.Wikipedia Hypervisor It presents a virtual running environment to an operating system. An example of a common hypervisor is Xen.Wikipedia Xen A type-1 hypervisor operates at a level below the operating system and could be designed with [[Technique/T1014|Rootkit]] functionality to hide its existence from the guest operating system.Myers 2007 A malicious hypervisor of this nature could be used to persist on systems through interruption.", 
+      "name": "Hypervisor", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1062", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1062"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e54b", 
+      "description": "Adversaries may conduct C2 communications over a non-standard port to bypass proxies and firewalls that have been improperly configured.", 
+      "name": "Uncommonly Used Port", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1065", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1065"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e54c", 
+      "description": "Adversaries may use scripts to aid in operations and perform multiple actions that would otherwise be manual. Scripting is useful for speeding up operational tasks and reducing the time required to gain access to critical resources. Some scripting languages may be used to bypass process monitoring mechanisms by directly interacting with the operating system at an API level instead of calling other programs. Common scripting languages for Windows include VBScript and PowerShell but could also be in the form of command-line batch scripts.\n\nMany popular offensive frameworks exist which use forms of scripting for security testers and adversaries alike. MetasploitMetasploit, VeilVeil, and PowerSploitPowersploit are three examples that are popular among penetration testers for exploit and post-compromise operations and include many features for evading defenses. Some adversaries are known to use PowerShell.Alperovitch 2014", 
+      "name": "Scripting", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1064", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1064"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e54d", 
+      "description": "A bootkit is a malware variant that modifies the boot sectors of a hard drive, including the Master Boot Record (MBR) and Volume Boot Record (VBR).MTrends 2016\n\nAdversaries may use bootkits to persist on systems at a layer below the operating system, which may make it difficult to perform full remediation unless an organization suspects one was used and can act accordingly.\n\n===Master Boot Record===\nThe MBR is the section of disk that is first loaded after completing hardware initialization by the BIOS. It is the location of the boot loader. An adversary who has raw access to the boot drive may overwrite this area, diverting execution during startup from the normal boot loader to adversary code.Lau 2011\n\n===Volume Boot Record===\nThe MBR passes control of the boot process to the VBR. Similar to the case of MBR, an adversary who has raw access to the boot drive may overwrite the VBR to divert execution during startup to adversary code.", 
+      "name": "Bootkit", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1067", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1067"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e54e", 
+      "description": "If a malicious tool is detected and quarantined or otherwise curtailed, an adversary may be able to determine why the malicious tool was detected (the indicator), modify the tool by removing the indicator, and use the updated version that is no longer detected by the target's defensive systems or subsequent targets that may use similar systems.\n\nA good example of this is when malware is detected with a file signature and quarantined by anti-virus software. An adversary who can determine that the malware was quarantined because of its file signature may use [[Technique/T1045|Software Packing]] or otherwise modify the file so it has a different signature, and then re-use the malware.", 
+      "name": "Indicator Removal from Tools", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1066", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1066"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e54f", 
+      "description": "Adversaries may attempt to find local system or domain-level groups and permissions settings. \n\n===Windows===\n\nExamples of commands that can list groups are <code>net group /domain</code> and <code>net localgroup</code> using the [[Software/S0039|Net]] utility.\n\n===Mac===\n\nOn Mac, this same thing can be accomplished with the <code>dscacheutil -q group</code> for the domain, or <code>dscl . -list /Groups</code> for local groups.\n\n===Linux===\n\nOn Linux, local groups can be enumerated with the <code>groups</code> command and domain groups via the <code>ldapsearch</code> command.", 
+      "name": "Permission Groups Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1069", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1069"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e550", 
+      "description": "Exploitation of a software vulnerability occurs when an adversary takes advantage of a programming error in a program, service, or within the operating system software or kernel itself to execute adversary-controlled code. Exploiting software vulnerabilities may allow adversaries to run a command or binary on a remote system for lateral movement, escalate a current process to a higher privilege level, or bypass security mechanisms. Exploits may also allow an adversary access to privileged accounts and credentials. One example of this is MS14-068, which can be used to forge Kerberos tickets using domain user permissions.Technet MS14-068ADSecurity Detecting Forged Tickets", 
+      "name": "Exploitation of Vulnerability", 
+      "tactics": [
+        "571a762fcefaff1b704aefdd", 
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefde", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1068", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1068"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e551", 
+      "description": "Adversaries may steal the credentials of a specific user or service account using [[Credential Access]] techniques. Compromised credentials may be used to bypass access controls placed on various resources on hosts and within the network and may even be used for persistent access to remote systems. Compromised credentials may also grant an adversary increased privilege to specific systems or access to restricted areas of the network. Adversaries may choose not to use malware or tools in conjunction with the legitimate access those credentials provide to make it harder to detect their presence.\n\nAdversaries may also create accounts, sometimes using pre-defined account names and passwords, as a means for persistence through backup access in case other means are unsuccessful. \n\nThe overlap of credentials and permissions across a network of systems is of concern because the adversary may be able to pivot across accounts and systems to reach a high level of access (i.e., domain or enterprise administrator) to bypass access controls set within the enterprise.TechNet Credential Theft", 
+      "name": "Valid Accounts", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1078", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1078"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e552", 
+      "description": "An adversary performs C2 communications using multiple layers of encryption, typically (but not exclusively) tunneling a custom encryption scheme within a protocol encryption scheme such as HTTPS or SMTPS.", 
+      "name": "Multilayer Encryption", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1079", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1079"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e553", 
+      "description": "Remote desktop is a common feature in operating systems. It allows a user to log into an interactive session with a system desktop graphical user interface on a remote system. Microsoft refers to its implementation of the Remote Desktop Protocol (RDP) as Remote Desktop Services (RDS).TechNet Remote Desktop Services There are other implementations and third-party tools that provide graphical access [[Technique/T1021|Remote Services]] similar to RDS.\n\nAdversaries may connect to a remote system over RDP/RDS to expand access if the service is enabled and allows access to accounts with known credentials. Adversaries will likely use [[Credential Access]] techniques to acquire credentials to use with RDP. Adversaries may also use RDP in conjunction with the [[Technique/T1015|Accessibility Features]] technique for [[Persistence]].Alperovitch Malware", 
+      "name": "Remote Desktop Protocol", 
+      "tactics": [
+        "571a762fcefaff1b704aefde"
+      ], 
+      "technique_id": "T1076", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1076"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e554", 
+      "description": "Windows systems have hidden network shares that are accessible only to administrators and provide the ability for remote file copy and other administrative functions. Example network shares include <code>C$</code>, <code>ADMIN$</code>, and <code>IPC$</code>. \n\nAdversaries may use this technique in conjunction with administrator-level [[Technique/T1078|Valid Accounts]] to remotely access a networked system over server message block (SMB)Wikipedia SMB to interact with systems using remote procedure calls (RPCs),TechNet RPC transfer files, and run transferred binaries through remote [[Execution]]. Example execution techniques that rely on authenticated sessions over SMB/RPC are [[Technique/T1053|Scheduled Task]], [[Technique/T1035|Service Execution]], and [[Technique/T1047|Windows Management Instrumentation]]. Adversaries can also use NTLM hashes to access administrator shares on systems with [[Technique/T1075|Pass the Hash]] and certain configuration and patch levels.Microsoft Admin Shares\n\nThe [[Software/S0039|Net]] utility can be used to connect to Windows admin shares on remote systems using <code>net use</code> commands with valid credentials.Technet Net Use", 
+      "name": "Windows Admin Shares", 
+      "tactics": [
+        "571a762fcefaff1b704aefde"
+      ], 
+      "technique_id": "T1077", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1077"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e555", 
+      "description": "Collected data is staged in a central location or directory prior to [[Exfiltration]]. Data may be kept in separate files or combined into one file through techniques such as [[Technique/T1002|Data Compressed]] or [[Technique/T1022|Data Encrypted]].\n\nInteractive command shells may be used, and common functionality within [[Software/S0106|cmd]] and bash may be used to copy data into a staging location.", 
+      "name": "Data Staged", 
+      "tactics": [
+        "571a762fcefaff1b704aefdb"
+      ], 
+      "technique_id": "T1074", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1074"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e556", 
+      "description": "Pass the hash (PtH)Aorato PTH is a method of authenticating as a user without having access to the user's cleartext password. This method bypasses standard authentication steps that require a cleartext password, moving directly into the portion of the authentication that uses the password hash. In this technique, valid password hashes for the account being used are captured using a [[Credential Access]] technique. Captured hashes are used with PtH to authenticate as that user. Once authenticated, PtH may be used to perform actions on local or remote systems. \n\nWindows 7 and higher with KB2871997 require valid domain user credentials or RID 500 administrator hashes.NSA Spotting", 
+      "name": "Pass the Hash", 
+      "tactics": [
+        "571a762fcefaff1b704aefde"
+      ], 
+      "technique_id": "T1075", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1075"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e557", 
+      "description": "Third-party applications and software deployment systems may be in use in the network environment for administration purposes (e.g., SCCM, VNC, HBSS, Altiris, etc.). If an adversary gains access to these systems, then they may be able to execute code.\n\nAdversaries may gain access to and use third-party application deployment systems installed within an enterprise network. Access to a network-wide or enterprise-wide software deployment system enables an adversary to have remote code execution on all systems that are connected to such a system. The access may be used to laterally move to systems, gather information, or cause a specific effect, such as wiping the hard drives on all endpoints.\n\nThe permissions required for this action vary by system configuration; local credentials may be sufficient with direct access to the deployment server, or specific domain credentials may be required. However, the system may require an administrative account to log in or to perform software deployment.", 
+      "name": "Third-party Software", 
+      "tactics": [
+        "571a762fcefaff1b704aefe0", 
+        "571a762fcefaff1b704aefde"
+      ], 
+      "technique_id": "T1072", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1072"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e558", 
+      "description": "Programs may specify DLLs that are loaded at runtime. Programs that improperly or vaguely specify a required DLL may be open to a vulnerability in which an unintended DLL is loaded. Side-loading vulnerabilities specifically occur when Windows Side-by-Side (WinSxS) manifestsMSDN Manifests are not explicit enough about characteristics of the DLL to be loaded. Adversaries may take advantage of a legitimate program that is vulnerable to side-loading to load a malicious DLL.Stewart 2014\n\nAdversaries likely use this technique as a means of masking actions they perform under a legitimate, trusted system or software process.", 
+      "name": "DLL Side-Loading", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1073", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1073"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e559", 
+      "description": "Adversaries may delete or alter generated event files on a host system, including potentially captured files such as quarantined malware. This may compromise the integrity of the security solution, causing events to go unreported, or make forensic analysis and incident response more difficult due to lack of sufficient data to determine what occurred.", 
+      "name": "Indicator Removal on Host", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1070", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1070"
+    }, 
+    {
+      "_id": "571a773dcefaff3c6ca4e55a", 
+      "description": "Adversaries may communicate using a common, standardized application layer protocol such as HTTP, HTTPS, SMTP, or DNS to avoid detection by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server.\n\nFor connections that occur internally within an enclave (such as those between a proxy or pivot node and other nodes), commonly used protocols are RPC, SSH, or RDP.", 
+      "name": "Standard Application Layer Protocol", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1071", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1071"
+    }, 
+    {
+      "_id": "57d05f53f05f2644acac20f3", 
+      "description": "Regsvcs and Regasm are Windows command-line utilities that are used to register .NET Component Object Model (COM) assemblies. Both are digitally signed by Microsoft.MSDN RegsvcsMSDN Regasm\n\nAdversaries can use Regsvcs and Regasm to proxy execution of code through a trusted Windows utility. Both utilities may be used to bypass process whitelisting through use of attributes within the binary to specify code that should be run before registration or unregistration: <code>[ComRegisterFunction]</code> or <code>[ComUnregisterFunction]</code> respectively. The code with the registration and unregistration attributes will be executed even if the process is run under insufficient privileges and fails to execute.SubTee GitHub All The Things Application Whitelisting Bypass", 
+      "name": "Regsvcs/Regasm", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1121", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1121"
+    }, 
+    {
+      "_id": "57d05f53f05f2644acac20f4", 
+      "description": "The Microsoft Component Object Model (COM) is a system within Windows to enable interaction between software components through the operating system.Microsoft Component Object Model Adversaries can use this system to insert malicious code that can be executed in place of legitimate software through hijacking the COM references and relationships as a means for persistence. Hijacking a COM object requires a change in the Windows Registry to replace a reference to a legitimate system component which may cause that component to not work when executed. When that system component is executed through normal system operation the adversary's code will be executed instead.GDATA COM Hijacking An adversary is likely to hijack objects that are used frequently enough to maintain a consistent level of persistence, but are unlikely to break noticeable functionality within the system as to avoid system instability that could lead to detection.", 
+      "name": "Component Object Model Hijacking", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1122", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1122"
+    }, 
+    {
+      "_id": "59a73c6917f950517d31f987", 
+      "description": "Starting in Mac OS X 10.7 (Lion), users can specify certain applications to be re-opened when a user reboots their machine. While this is usually done via a Graphical User Interface (GUI) on an app-by-app basis, there are property list files (plist) that contain this information as well located at <code>~/Library/Preferences/com.apple.loginwindow.plist</code> and <code>~/Library/Preferences/ByHost/com.apple.loginwindow.*.plist</code>. \n\nAn adversary can modify one of these files directly to include a link to their malicious executable to provide a persistence mechanism each time the user reboots their machineMethods of Mac Malware Persistence.", 
+      "name": "Re-opened Applications", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1164", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1164"
+    }, 
+    {
+      "_id": "59a73c6917f950517d31f988", 
+      "description": "Per Apple\u2019s documentation, startup items execute during the final phase of the boot process and contain shell scripts or other executable files along with configuration information used by the system to determine the execution order for all startup itemsStartup Items. This is technically a deprecated version (superseded by Launch Daemons), and thus the appropriate folder, <code>/Library/StartupItems</code> isn\u2019t guaranteed to exist on the system by default, but does appear to exist by default on macOS Sierra. A startup item is a directory whose executable and configuration property list (plist), <code>StartupParameters.plist</code>, reside in the top-level directory. \n\nAn adversary can create the appropriate folders/files in the StartupItems directory to register their own persistence mechanismMethods of Mac Malware Persistence. Additionally, since StartupItems run during the bootup phase of macOS, they will run as root. If an adversary is able to modify an existing Startup Item, then they will be able to Privilege Escalate as well.", 
+      "name": "Startup Items", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1165", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1165"
+    }, 
+    {
+      "_id": "59a73c6917f950517d31f989", 
+      "description": "When the setuid or setgid bits are set on Linux or macOS for an application, this means that the application will run with the privileges of the owning user or group respectively. Normally an application is run in the current user\u2019s context, regardless of which user or group owns the application. There are instances where programs need to be executed in an elevated context to function properly, but the user running them doesn\u2019t need the elevated privileges. Instead of creating an entry in the sudoers file, which must be done by root, any user can specify the setuid or setgid flag to be set for their own applications. These bits are indicated with an \"s\" instead of an \"x\" when viewing a file's attributes via <code>ls -l</code>. The <code>chmod</code> program can set these bits with via bitmasking, <code>chmod 4777 [file]</code> or via shorthand naming, <code>chmod u+s [file]</code>.\n\nAn adversary can take advantage of this to either do a shell escape or exploit a vulnerability in an application with the setsuid or setgid bits to get code running in a different user\u2019s context.", 
+      "name": "Setuid and Setgid", 
+      "tactics": [
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1166", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1166"
+    }, 
+    {
+      "_id": "59a73c6917f950517d31f98a", 
+      "description": "In OS X prior to El Capitan, users with root access can read plaintext keychain passwords of logged-in users because Apple\u2019s keychain implementation allows these credentials to be cached so that users are not repeatedly prompted for passwords.OS X KeychainExternal to DA, the OS X Way Apple\u2019s securityd utility takes the user\u2019s logon password, encrypts it with PBKDF2, and stores this master key in memory. Apple also uses a set of keys and algorithms to encrypt the user\u2019s password, but once the master key is found, an attacker need only iterate over the other values to unlock the final password.OS X Keychain\n\nIf an adversary can obtain root access (allowing them to read securityd\u2019s memory), then they can scan through memory to find the correct sequence of keys in relatively few tries to decrypt the user\u2019s logon keychain. This provides the adversary with all the plaintext passwords for users, WiFi, mail, browsers, certificates, secure notes, etc.OS X KeychainOSX Keydnap malware", 
+      "name": "Securityd Memory", 
+      "tactics": [
+        "571a762fcefaff1b704aefdd"
+      ], 
+      "technique_id": "T1167", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1167"
+    }, 
+    {
+      "_id": "59a73c6917f950517d31f98b", 
+      "description": "Per Apple\u2019s developer documentation, when macOS and OS X boot up, launchd is run to finish system initialization. This process loads the parameters for each launch-on-demand system-level daemon from the property list (plist) files found in <code>/System/Library/LaunchDaemons</code> and <code>/Library/LaunchDaemons</code>AppleDocs Launch Agent Daemons. These LaunchDaemons have property list files which point to the executables that will be launchedMethods of Mac Malware Persistence.\n \nAdversaries may install a new launch daemon that can be configured to execute at startup by using launchd or launchctl to load a plist into the appropriate directoriesOSX Malware Detection. The daemon name may be disguised by using a name from a related operating system or benign software WireLurker. Launch Daemons may be created with administrator privileges, but are executed under root privileges, so an adversary may also use a service to escalate privileges from administrator to root.\n \nThe plist file permissions must be root:wheel, but the script or program that it points to has no such requirement. So, it is possible for poor configurations to allow an adversary to modify a current Launch Daemon\u2019s executable and gain persistence or Privilege Escalation.", 
+      "name": "Launch Daemon", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1160", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1160"
+    }, 
+    {
+      "_id": "59a73c6917f950517d31f98c", 
+      "description": "Mach-O binaries have a series of headers that are used to perform certain operations when a binary is loaded. The LC_LOAD_DYLIB header in a Mach-O binary tells macOS and OS X which dynamic libraries (dylibs) to load during execution time. These can be added ad-hoc to the compiled binary as long adjustments are made to the rest of the fields and dependenciesWriting Bad Malware for OSX. There are tools available to perform these changes. Any changes will invalidate digital signatures on binaries because the binary is being modified. Adversaries can remediate this issue by simply removing the LC_CODE_SIGNATURE command from the binary so that the signature isn\u2019t checked at load timeMalware Persistence on OS X.", 
+      "name": "LC_LOAD_DYLIB Addition", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1161", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1161"
+    }, 
+    {
+      "_id": "59a73c6917f950517d31f98d", 
+      "description": "MacOS provides the option to list specific applications to run when a user logs in. These applications run under the logged in user's context, and will be started every time the user logs in. Login items installed using the Service Management Framework are not visible in the System Preferences and can only be removed by the application that created themAdding Login Items. Users have direct control over login items installed using a shared file list which are also visible in System PreferencesAdding Login Items. These login items are stored in the user's <code>~/Library/Preferences/</code> directory in a plist file called <code>com.apple.loginitems.plist</code>Methods of Mac Malware Persistence. Some of these applications can open visible dialogs to the user, but they don\u2019t all have to since there is an option to \u2018Hide\u2019 the window. If an adversary can register their own login item or modified an existing one, then they can use it to execute their code for a persistence mechanism each time the user logs inMalware Persistence on OS XOSX.Dok Malware.", 
+      "name": "Login Item", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1162", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1162"
+    }, 
+    {
+      "_id": "59a73c6917f950517d31f98e", 
+      "description": "During the boot process, macOS and Linux both execute <code>source /etc/rc.common</code>, which is a shell script containing various utility functions. This file also defines routines for processing command-line arguments and for gathering system settings, and is thus recommended to include in the start of Startup Item ScriptsStartup Items. In macOS and OS X, this is now a deprecated technique in favor of launch agents and launch daemons, but is currently still used.\n\nAdversaries can use the rc.common file as a way to hide code for persistence that will execute on each reboot as the root userMethods of Mac Malware Persistence.", 
+      "name": "Rc.common", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1163", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1163"
+    }, 
+    {
+      "_id": "59a73c6917f950517d31f98f", 
+      "description": "Per Apple\u2019s developer documentation, there are two supported methods for creating periodic background jobs: launchd and cronAppleDocs Scheduling Timed Jobs.\n\n===Launchd===\n\nEach Launchd job is described by a different configuration property list (plist) file similar to Launch Daemons or Launch Agents, except there is an additional key called <code>StartCalendarInterval</code> with a dictionary of time values AppleDocs Scheduling Timed Jobs. This only works on macOS and OS X.\n\n===cron===\n\nSystem-wide cron jobs are installed by modifying <code>/etc/crontab</code> while per-user cron jobs are installed using crontab with specifically formatted crontab files AppleDocs Scheduling Timed Jobs. This works on Mac and Linux systems.\n\nBoth methods allow for commands or scripts to be executed at specific, periodic intervals in the background without user interaction. An adversary may use task scheduling to execute programs at system startup or on a scheduled basis for persistenceJanicabMethods of Mac Malware PersistenceMalware Persistence on OS X, to conduct Execution as part of Lateral Movement, to gain root privileges, or to run a process under the context of a specific account.", 
+      "name": "Cron Job", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1168", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1168"
+    }, 
+    {
+      "_id": "59a73c6917f950517d31f990", 
+      "description": "The sudoers file, <code>/etc/sudoers</code>, describes which users can run which commands and from which terminals. This also describes which commands users can run as other users or groups. This provides the idea of least privilege such that users are running in their lowest possible permissions for most of the time and only elevate to other users or permissions as needed, typically by prompting for a password. However, the sudoers file can also specify when to not prompt users for passwords with a line like <code>user1 ALL=(ALL) NOPASSWD: ALL</code>OSX.Dok Malware. \n\nAdversaries can take advantage of these configurations to execute commands as other users or spawn processes with higher privileges. You must have elevated privileges to edit this file though.", 
+      "name": "Sudo", 
+      "tactics": [
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1169", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1169"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f991", 
+      "description": "Adversaries can hide a program's true filetype by changing the extension of a file. With certain file types (specifically this does not work with .app extensions), appending a space to the end of a filename will change how the file is processed by the operating system. For example, if there is a Mach-O executable file called evil.bin, when it is double clicked by a user, it will launch Terminal.app and execute. If this file is renamed to evil.txt, then when double clicked by a user, it will launch with the default text editing application (not executing the binary). However, if the file is renamed to \"evil.txt \" (note the space at the end), then when double clicked by a user, the true file type is determined by the OS and handled appropriately and the binary will be executedMac Backdoors are back. \n\nAdversaries can use this feature to trick users into double clicking benign-looking files of any format and ultimately executing something malicious.", 
+      "name": "Space after Filename", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1151", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1151"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f992", 
+      "description": "Property list (plist) files contain all of the information that macOS and OS X uses to configure applications and services. These files are UT-8 encoded and formatted like XML documents via a series of keys surrounded by < >. They detail when programs should execute, file paths to the executables, program arguments, required OS permissions, and many others. plists are located in certain locations depending on their purpose such as <code>/Library/Preferences</code> (which execute with elevated privileges) and <code>~/Library/Preferences</code> (which execute with a user's privileges). \nAdversaries can modify these plist files to point to their own code, can use them to execute their code in the context of another user, bypass whitelisting procedures, or even use them as a persistence mechanismSofacy Komplex Trojan.", 
+      "name": "Plist Modification", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1150", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1150"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f993", 
+      "description": "The <code>source</code> command loads functions into the current shell or executes files in the current context. This built-in command can be run in two different ways <code>source /path/to/filename [arguments]</code> or <code>. /path/to/filename [arguments]</code>. Take note of the space after the \".\". Without a space, a new shell is created that runs the program instead of running the program within the current context. This is often used to make certain features or functions available to a shell or to update a specific shell's environment. \n\nAdversaries can abuse this functionality to execute programs. The file executed with this technique does not need to be marked executable beforehand.", 
+      "name": "Source", 
+      "tactics": [
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1153", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1153"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f994", 
+      "description": "Launchctl controls the macOS launchd process which handles things like launch agents and launch daemons, but can execute other commands or programs itself. Launchctl supports taking subcommands on the command-line, interactively, or even redirected from standard input. By loading or reloading launch agents or launch daemons, adversaries can install persistence or execute changes they made Sofacy Komplex Trojan. Running a command from launchctl is as simple as <code>launchctl submit -l <labelName> -- /Path/to/thing/to/execute \"arg\" \"arg\" \"arg\"</code>. Loading, unloading, or reloading launch agents or launch daemons can require elevated privileges. \n\nAdversaries can abuse this functionality to execute code or even bypass whitelisting if launchctl is an allowed process.", 
+      "name": "Launchctl", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe0", 
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1152", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1152"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f995", 
+      "description": "macOS and OS X applications send AppleEvent messages to each other for interprocess communications (IPC). These messages can be easily scripted with AppleScript for local or remote IPC. Osascript executes AppleScript and any other Open Scripting Architecture (OSA) language scripts. A list of OSA languages installed on a system can be found by using the <code>osalang</code> program.\nAppleEvent messages can be sent independently or as part of a script. These events can locate open windows, send keystrokes, and interact with almost any open application locally or remotely. \n\nAdversaries can use this to interact with open SSH connection, move to remote machines, and even present users with fake dialog boxes. These events cannot start applications remotely (they can start them locally though), but can interact with applications if they're already running remotely. Since this is a scripting language, it can be used to launch more common techniques as well such as a reverse shell via python Macro Malware Targets Macs. Scripts can be run from the command lie via <code>osascript /path/to/script</code> or <code>osascript -e \"script here\"</code>.", 
+      "name": "AppleScript", 
+      "tactics": [
+        "571a762fcefaff1b704aefe0", 
+        "571a762fcefaff1b704aefde"
+      ], 
+      "technique_id": "T1155", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1155"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f996", 
+      "description": "The <code>trap</code> command allows programs and shells to specify commands that will be executed upon receiving interrupt signals. A common situation is a script allowing for graceful termination and handling of common  keyboard interrupts like <code>ctrl+c</code> and <code>ctrl+d</code>. Adversaries can use this to register code to be executed when the shell encounters specific interrupts either to gain execution or as a persistence mechanism. Trap commands are of the following format <code>trap 'command list' signals</code> where \"command list\" will be executed when \"signals\" are received.", 
+      "name": "Trap", 
+      "tactics": [
+        "571a762fcefaff1b704aefe0", 
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1154", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1154"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f997", 
+      "description": "macOS and OS X use a common method to look for required dynamic libraries (dylib) to load into a program based on search paths. Adversaries can take advantage of ambiguous paths to plant dylibs to gain privilege escalation or persistence.\n\nA common method is to see what dylibs an application uses, then plant a malicious version with the same name higher up in the search path. This typically results in the dylib being in the same folder as the application itselfWriting Bad Malware for OSXMalware Persistence on OS X.\nIf the program is configured to run at a higher privilege level than the current user, then when the dylib is loaded into the application, the dylib will also run at that elevated level. This can be used by adversaries as a privilege escalation technique.", 
+      "name": "Dylib Hijacking", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1157", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1157"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f998", 
+      "description": "<code>~/.bash_profile</code> and <code>~/.bashrc</code> are executed in a user's context when a new shell opens or when a user logs in so that their environment is set correctly. <code>~/.bash_profile</code> is executed for login shells and <code>~/.bashrc</code> is executed for interactive non-login shells. This means that when a user logs in (via username and password) to the console (either locally or remotely via something like SSH), <code>~/.bash_profile</code> is executed before the initial command prompt is returned to the user. After that, every time a new shell is opened, <code>~/.bashrc</code> is executed. This allows users more fine grained control over when they want certain commands executed.\n\nMac's Terminal.app is a little different in that it runs a login shell by default each time a new terminal window is opened, thus calling <code>~/.bash_profile</code> each time instead of <code>~/.bashrc</code>.\n\nThese files are meant to be written to by the local user to configure their own environment; however, adversaries can also insert code into these files to gain persistence each time a user logs in or opens a new shell.", 
+      "name": ".bash_profile and .bashrc", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1156", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1156"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f999", 
+      "description": "Per Apple\u2019s developer documentation, when a user logs in, a per-user launchd process is started which loads the parameters for each launch-on-demand user agent from the property list (plist) files found in <code>/System/Library/LaunchAgents</code>, <code>/Library/LaunchAgents</code>, and <code>$HOME/Library/LaunchAgents</code>AppleDocs Launch Agent DaemonsOSX Keydnap malwareAntiquated Mac Malware.  These launch agents have property list files which point to the executables that will be launchedOSX.Dok Malware.\n \nAdversaries may install a new launch agent that can be configured to execute at login by using launchd or launchctl to load a plist into the appropriate directories Sofacy Komplex Trojan Methods of Mac Malware Persistence. The agent name may be disguised by using a name from a related operating system or benign software. Launch Agents are created with user level privileges and are executed with the privileges of the user when they log inOSX Malware DetectionOceanLotus for OS X. They can be set up to execute when a specific user logs in (in the specific user\u2019s directory structure) or when any user logs in (which requires administrator privileges).", 
+      "name": "Launch Agent", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1159", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1159"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f99a", 
+      "description": "To prevent normal users from accidentally changing special files on a system, most operating systems have the concept of a \u2018hidden\u2019 file. These files don\u2019t show up when a user browses the file system with a GUI or when using normal commands on the command line. Users must explicitly ask to show the hidden files either via a series of Graphical User Interface (GUI) prompts or with command line switches (<code>dir /a</code> for Windows and <code>ls \u2013a</code> for Linux and macOS).\n\n===Windows===\n\nUsers can mark specific files as hidden by using the attrib.exe binary. Simply do <code>attrib +h filename</code> to mark a file or folder as hidden. Similarly, the \u201c+s\u201d marks a file as a system file and the \u201c+r\u201d flag marks the file as read only. Like most windows binaries, the attrib.exe binary provides the ability to apply these changes recursively \u201c/S\u201d.\n\n===Linux/Mac===\n\nUsers can mark specific files as hidden simply by putting a \u201c.\u201d as the first character in the file or folder name Sofacy Komplex TrojanAntiquated Mac Malware. Files and folder that start with a period, \u2018.\u2019, are by default hidden from being viewed in the Finder application and standard command-line utilities like \u201cls\u201d. Users must specifically change settings to have these files viewable. For command line usages, there is typically a flag to see all files (including hidden ones). To view these files in the Finder Application, the following command must be executed: <code>defaults write com.apple.finder AppleShowAllFiles YES</code>, and then relaunch the Finder Application.\n\n===Mac===\n\nFiles on macOS can be marked with the UF_HIDDEN flag which prevents them from being seen in Finder.app, but still allows them to be seen in Terminal.appWireLurker.\nMany applications create these hidden files and folders to store information so that it doesn\u2019t clutter up the user\u2019s workspace. For example, SSH utilities create a .ssh folder that\u2019s hidden and contains the user\u2019s known hosts and keys. \n\nAdversaries can use this to their advantage to hide files and folders anywhere on the system for persistence and evading a typical user or system analysis that does not incorporate investigation of hidden files.", 
+      "name": "Hidden Files and Directories", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1158", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1158"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f99b", 
+      "description": "The <code>HISTCONTROL</code> environment variable keeps track of what should be saved by the <code>history</code> command and eventually into the <code>~/.bash_history</code> file when a user logs out. This setting can be configured to ignore commands that start with a space by simply setting it to \"ignorespace\". <code>HISTCONTROL</code> can also be set to ignore duplicate commands by setting it to \"ignoredups\". In some Linux systems, this is set by default to \"ignoreboth\" which covers both of the previous examples. This means that \u201c ls\u201d will not be saved, but \u201cls\u201d would be saved by history. <code>HISTCONTROL</code> does not exist by default on macOS, but can be set by the user and will be respected. Adversaries can use this to operate without leaving traces by simply prepending a space to all of their terminal commands.", 
+      "name": "HISTCONTROL", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1148", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1148"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f99c", 
+      "description": "macOS and Linux both keep track of the commands users type in their terminal so that users can easily remember what they've done. These logs can be accessed in a few different ways. While logged in, this command history is tracked in a file pointed to by the environment variable <code>HISTFILE</code>. When a user logs off a system, this information is flushed to a file in the user's home directory called <code>~/.bash_history</code>. The benefit of this is that it allows users to go back to commands they've used before in different sessions. Since everything typed on the command-line is saved, passwords passed in on the command line are also saved. Adversaries can abuse this by searching these files for cleartext passwords. Additionally, adversaries can use a variety of methods to prevent their own commands from appear in these logs such as <code>unset HISTFILE</code>, <code>export HISTFILESIZE=0</code>, <code>history -c</code>, <code>rm ~/.bash_history</code>.", 
+      "name": "Clear Command History", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1146", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1146"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f99d", 
+      "description": "Every user account in macOS has a userID associated with it. When creating a user, you can specify the userID for that account. There is a property value in <code>/Library/Preferences/com.apple.loginwindow</code> called <code>Hide500Users</code> that prevents users with userIDs 500 and lower from appearing at the login screen. By using the [[Technique/T1136|Create Account]] technique with a userID under 500 and enabling this property (setting it to Yes), an adversary can hide their user accounts much more easily: <code>sudo dscl . -create /Users/username UniqueID 401</code>Cybereason OSX Pirrit.", 
+      "name": "Hidden Users", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1147", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1147"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f99e", 
+      "description": "In macOS and OS X, when applications or programs are downloaded from the internet, there is a special attribute set on the file called <code>com.apple.quarantine</code>. This attribute is read by Apple's Gatekeeper defense program at execution time and provides a prompt to the user to allow or deny execution. \n\nApps loaded onto the system from USB flash drive, optical disk, external hard drive, or even from a drive shared over the local network won\u2019t set this flag. Additionally, other utilities or events like drive-by downloads don\u2019t necessarily set it either. This completely bypasses the built-in Gatekeeper checkMethods of Mac Malware Persistence. The presence of the quarantine flag can be checked by the xattr command <code>xattr /path/to/MyApp.app</code> for <code>com.apple.quarantine</code>. Similarly, given sudo access or elevated permission, this attribute can be removed with xattr as well, <code>sudo xattr -r -d com.apple.quarantine /path/to/MyApp.app</code> Clearing quarantine attributeOceanLotus for OS X.\n \nIn typical operation, a file will be downloaded from the internet and given a quarantine flag before being saved to disk. When the user tries to open the file or application, macOS\u2019s gatekeeper will step in and check for the presence of this flag. If it exists, then macOS will then prompt the user to confirmation that they want to run the program and will even provide the url where the application came from. However, this is all based on the file being downloaded from a quarantine-savvy application Bypassing Gatekeeper.", 
+      "name": "Gatekeeper Bypass", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1144", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1144"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f99f", 
+      "description": "Private cryptographic keys and certificates are used for authentication, encryption/decryption, and digital signatures.Wikipedia Public Key Crypto\n\nAdversaries may gather private keys from compromised systems for use in authenticating to [[Technique/T1021|Remote Services]] like SSH or for use in decrypting other collected files such as email. Common key and certificate file extensions include: .key, .pgp, .gpg, .ppk., .p12, .pem, pfx, .cer, .p7b, .asc. Adversaries may also look in common key directories, such as <code>~/.ssh</code> for SSH keys on *nix-based systems or <code>C:\\Users\\(username)\\.ssh\\</code> on Windows.\n\nPrivate keys should require a password or passphrase for operation, so an adversary may also use [[Technique/T1056|Input Capture]] for keylogging or attempt to [[Technique/T1110|Brute Force]] the passphrase off-line.\n\nAdversary tools have been discovered that search compromised systems for file extensions relating to cryptographic keys and certificates.Kaspersky CaretoPalo Alto Prince of Persia", 
+      "name": "Private Keys", 
+      "tactics": [
+        "571a762fcefaff1b704aefdd"
+      ], 
+      "technique_id": "T1145", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1145"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9a0", 
+      "description": "Keychains are the built-in way for macOS to keep track of users' passwords and credentials for many services and features such as WiFi passwords, websites, secure notes, certificates, and Kerberos. Keychain files are located in <code>~/Library/Keychains/</code>,<code>/Library/Keychains/</code>, and <code>/Network/Library/Keychains/</code>.Wikipedia keychain The <code>security</code> command-line utility, which is built into macOS by default, provides a useful way to manage these credentials.\n\nTo manage their credentials, users have to use additional credentials to access their keychain. If an adversary knows the credentials for the login keychain, then they can get access to all the other credentials stored in this vault.External to DA, the OS X Way By default, the passphrase for the keychain is the user\u2019s logon credentials.", 
+      "name": "Keychain", 
+      "tactics": [
+        "571a762fcefaff1b704aefdd"
+      ], 
+      "technique_id": "T1142", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1142"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9a1", 
+      "description": "Bash keeps track of the commands users type on the command-line with the \"history\" utility. Once a user logs out, the history is flushed to the user\u2019s <code>.bash_history</code> file. For each user, this file resides at the same location: <code>~/.bash_history</code>. Typically, this file keeps track of the user\u2019s last 500 commands. Users often type usernames and passwords on the command-line as parameters to programs, which then get saved to this file when they log out. Attackers can abuse this by looking through the file for potential credentials.External to DA, the OS X Way", 
+      "name": "Bash History", 
+      "tactics": [
+        "571a762fcefaff1b704aefdd"
+      ], 
+      "technique_id": "T1139", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1139"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9a2", 
+      "description": "Adversaries may use [[Technique/T1027|Obfuscated Files or Information]] to hide artifacts of an intrusion from analysis. They may require separate mechanisms to decode or deobfuscate that information depending on how they intend to use it. Methods for doing that include built-in functionality of malware, [[Technique/T1064|Scripting]], [[Technique/T1086|PowerShell]], or by using utilities present on the system.\n\nOne such example is use of [[Software/S0160|certutil]] to decode a remote access tool portable executable file that has been hidden inside a certificate file.Malwarebytes Targeted Attack against Saudi Arabia", 
+      "name": "Deobfuscate/Decode Files or Information", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1140", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1140"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9a3", 
+      "description": "When programs are executed that need additional privileges than are present in the current user context, it is common for the operating system to prompt the user for proper credentials to authorize the elevated privileges for the task. Adversaries can mimic this functionality to prompt users for credentials with a normal-looking prompt. This type of prompt can be accomplished with AppleScript:\n\n<code>set thePassword to the text returned of (display dialog \"AdobeUpdater needs permission to check for updates. Please authenticate.\" default answer \"\")</code>\nOSX Keydnap malware\n\nAdversaries can prompt a user for a number of reasons that mimic normal usage, such as a fake installer requiring additional access or a fake malware removal suite.OSX Malware Exploits MacKeeper", 
+      "name": "Input Prompt", 
+      "tactics": [
+        "571a762fcefaff1b704aefdd"
+      ], 
+      "technique_id": "T1141", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1141"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9a4", 
+      "description": "Windows Authentication Package DLLs are loaded by the Local Security Authority (LSA) process at system start. They provide support for multiple logon processes and multiple security protocols to the operating system.MSDN Authentication Packages\n\nAdversaries can use the autostart mechanism provided by LSA Authentication Packages for persistence by placing a reference to a binary in the Windows Registry location <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\</code> with the key value of <code>\"Authentication Packages\"=<target binary></code>. The binary will then be executed by the system when the authentication packages are loaded.", 
+      "name": "Authentication Package", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1131", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1131"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9a5", 
+      "description": "The Microsoft Windows Application Compatibility Infrastructure/Framework (Application Shim) was created to allow compatibility of programs as Windows updates and changes its code. For example, application shimming feature that allows programs that were created for Windows XP to work with Windows 10. Within the framework, shims are created to act as a buffer between the program (or more specifically, the Import Address Table) and the Windows OS. When a program is executed, the shim cache is referenced to determine if the program requires the use of the shim database (.sdb). If so, the shim database uses API hooking to redirect the code as necessary in order to communicate with the OS. A list of all shims currently installed by the default Windows installer (sdbinst.exe) is kept in:\n\n* <code>%WINDIR%\\AppPatch\\sysmain.sdb</code>\n* <code>hklm\\software\\microsoft\\windows nt\\currentversion\\appcompatflags\\installedsdb</code>\n\nCustom databases are stored in:\n\n* <code>%WINDIR%\\AppPatch\\custom & %WINDIR%\\AppPatch\\AppPatch64\\Custom</code>\n* <code>hklm\\software\\microsoft\\windows nt\\currentversion\\appcompatflags\\custom</code>\n\nTo keep shims secure, Windows designed them to run in user mode so they cannot modify the kernel and you must have administrator privileges to install a shim. However, certain shims can be used to [[Technique/T1088|Bypass User Account Control]] (UAC) (RedirectEXE), inject DLLs into processes (InjectDll), and intercept memory addresses (GetProcAddress). Utilizing these shims, an adversary can perform several malicious acts, such as elevate privileges, install backdoors, disable defenses like Windows Defender, etc.", 
+      "name": "Application Shimming", 
+      "tactics": [
+        "571a762fcefaff1b704aefe0", 
+        "571a762fcefaff1b704aefe1", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1138", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1138"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9a6", 
+      "description": "Remote services such as VPNs, Citrix, and other access mechanisms allow users to connect to internal enterprise network resources from external locations. There are often remote service gateways that manage connections and credential authentication for these services.\n\nAdversaries may use remote services to access and persist within a network.Volexity Virtual Private Keylogging Access to [[Technique/T1078|Valid Accounts]] to use the service is often a requirement, which could be obtained through credential pharming or by obtaining the credentials from users after compromising the enterprise network. Access to remote services may be used as part of [[Technique/T1108|Redundant Access]] during an operation.", 
+      "name": "External Remote Services", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1133", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1133"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9a7", 
+      "description": "Command and control (C2) information is encoded using a standard data encoding system. Use of data encoding may be to adhere to existing protocol specifications and includes use of ASCII, Unicode, Base64,  MIME, UTF-8, or other binary-to-text and character encoding systems.Wikipedia Binary-to-text EncodingWikipedia Character Encoding Some data encoding systems may also result in data compression, such as gzip.", 
+      "name": "Data Encoding", 
+      "tactics": [
+        "571a762fcefaff1b704aefd9"
+      ], 
+      "technique_id": "T1132", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1132"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9a8", 
+      "description": "Microsoft Office is a fairly common application suite on Windows-based operating systems within an enterprise network. There are multiple mechanisms that can be used with Office for persistence when an Office-based application is started.\n\n===Office Template Macros===\n\nMicrosoft Office contains templates that are part of common Office applications and are used to customize styles. The base templates within the application are used each time an application starts.Microsoft Change Normal Template\n\nOffice Visual Basic for Applications (VBA) macrosMSDN VBA in Office can inserted into the base templated and used to execute code when the respective Office application starts in order to obtain persistence. Examples for both Word and Excel have been discovered and published. By default, Word has a Normal.dotm template created that can be modified to include a malicious macro. Excel does not have a template file created by default, but one can be added that will automatically be loaded.enigma0x3 normal.dotmHexacorn Office Template Macros\n\nWord Normal.dotm location:<code>C:\\Users\\(username)\\AppData\\Roaming\\Microsoft\\Templates\\Normal.dotm</code>\n\nExcel Personal.xlsb location:<code>C:\\Users\\(username)\\AppData\\Roaming\\Microsoft\\Excel\\XLSTART\\PERSONAL.XLSB</code>\n\nAn adversary may need to enable macros to execute unrestricted depending on the system or enterprise security policy on use of macros.\n\n===Office Test===\n\nA Registry location was found that when a DLL reference was placed within it the corresponding DLL pointed to by the binary path would be executed every time an Office application is startedHexacorn Office Test\n\n<code>HKEY_CURRENT_USER\\Software\\Microsoft\\Office test\\Special\\Perf</code>\n\n===Add-ins===\n\nOffice add-ins can be used to add functionality to Office programs.Microsoft Office Add-ins\n\nAdd-ins can also be used to obtain persistence because they can be set to execute code when an Office application starts. There are different types of add-ins that can be used by the various Office products; including Word/Excel add-in Libraries (WLL/XLL), VBA add-ins, Office Component Object Model (COM) add-ins, automation add-ins, VBA Editor (VBE), and Visual Studio Tools for Office (VSTO) add-ins.MRWLabs Office Persistence Add-ins", 
+      "name": "Office Application Startup", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1137", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1137"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9a9", 
+      "description": "Adversaries with a sufficient level of access may create a local system or domain account. Such accounts may be used for persistence that do not require persistent remote access tools to be deployed on the system.\n\nThe <code>net user</code> commands can be used to create a local or domain account.", 
+      "name": "Create Account", 
+      "tactics": [
+        "571a762fcefaff1b704aefdd"
+      ], 
+      "technique_id": "T1136", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1136"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9aa", 
+      "description": "Networks often contain shared network drives and folders that enable users to access file directories on various systems across a network. \n\n===Windows===\n\nFile sharing over a Windows network occurs over the SMB protocol.Wikipedia Shared ResourceTechNet Shared Folder\n\n[[Software/S0039|Net]] can be used to query a remote system for available shared drives using the <code>net view \\\\remotesystem</code> command. It can also be used to query shared drives on the local system using <code>net share</code>.\n\nAdversaries may look for folders and drives shared on remote systems as a means of identifying sources of information to gather as a precursor for [[Collection]] and to identify potential systems of interest for [[Lateral Movement]].\n\n===Mac===\n\nOn Mac, locally mounted shares can be viewed with the <code>df -aH</code> command.", 
+      "name": "Network Share Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1135", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1135"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9ab", 
+      "description": "Windows uses access tokens to determine the ownership of a running process.  A user can manipulate access tokens to make a running process appear as though it belongs to someone other than the user that started the process.  When this occurs, the process also takes on the security context associated with the new token.  For example, Microsoft promotes the use of access tokens as a security best practice.  Administrators should log in as a standard user but run their tools with administrator privileges using the built-in access token manipulation command <code>runas</code>. Microsoft runas\n  \nAdversaries may use access tokens to operate under a different user or system security context to perform actions and evade detection.   An adversary can use built-in Windows API functions to copy access tokens from existing processes; this is known as token stealing.  An adversary must already be in a privileged user context (i.e. administrator) to steal a token.  However, adversaries commonly use token stealing to elevate their security context from the administrator level to the SYSTEM level.Pentestlab Token Manipulation\n\nAdversaries can also create spoofed access tokens if they know the credentials of a user.  Any standard user can use the <code>runas</code> command, and the Windows API functions, to do this; it does not require access to an administrator account.\n\nLastly, an adversary can use a spoofed token to authenticate to a remote system as the account for that token if the account has appropriate permissions on the remote system.\n\nMetasploit\u2019s Meterpreter payload allows arbitrary token stealing and uses token stealing to escalate privileges. Metasploit access token  The Cobalt Strike beacon payload allows arbitrary token stealing and can also create tokens. Cobalt Strike Access Token", 
+      "name": "Access Token Manipulation", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefda"
+      ], 
+      "technique_id": "T1134", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1134"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9ac", 
+      "description": "Netsh.exe (also referred to as Netshell) is a command-line scripting utility used to interact with the network configuration of a system. It contains functionality to add helper DLLs for extending functionality of the utility.TechNet Netsh The paths to registered netsh.exe helper DLLs are entered into the Windows Registry at <code>HKLM\\SOFTWARE\\Microsoft\\Netsh</code>.\n\nAdversaries can use netsh.exe with helper DLLs to proxy execution of arbitrary code in a persistent manner when netsh.exe is executed automatically with another [[Persistence]] technique or if other persistent software is present on the system that executes netsh.exe as part of its normal functionality. Examples include some VPN software that invoke netsh.exe.Demaske Netsh Persistence\n\nProof of concept code exists to load Cobalt Strike's payload using netsh.exe helper DLLs.Github Netsh Helper CS Beacon", 
+      "name": "Netsh Helper DLL", 
+      "tactics": [
+        "571a762fcefaff1b704aefe1"
+      ], 
+      "technique_id": "T1128", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1128"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9ad", 
+      "description": "The Windows module loader can be instructed to load DLLs from arbitrary local paths and arbitrary Universal Naming Convention (UNC) network paths. This functionality resides in NTDLL.dll and is part of the Windows Native API which is called from functions like CreateProcess(), LoadLibrary(), etc. of the Win32 API.Wikipedia Windows Library Files\n\nThe module loader can load DLLs:\n\n*via specification of the (fully-qualified or relative) DLL pathname in the IMPORT directory;\n    \n*via EXPORT forwarded to another DLL, specified with (fully-qualified or relative) pathname (but without extension);\n    \n*via an NTFS junction or symlink program.exe.local with the fully-qualified or relative pathname of a directory containing the DLLs specified in the IMPORT directory or forwarded EXPORTs;\n    \n*via <code><file name=\"filename.extension\" loadFrom=\"fully-qualified or relative pathname\"></code> in an embedded or external \"application manifest\". The file name refers to an entry in the IMPORT directory or a forwarded EXPORT.\n\nAdversaries can use this functionality as a way to execute arbitrary code on a system.", 
+      "name": "Execution through Module Load", 
+      "tactics": [
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1129", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1129"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9ae", 
+      "description": "An adversary can leverage a computer's peripheral devices (e.g., microphones and webcams) or applications (e.g., voice and video call services) to capture audio recordings for the purpose of listening into sensitive conversations to gather information.\n\nMalware or scripts may be used to interact with the devices through an available API provided by the operating system or an application to capture audio. Audio files may be written to disk and exfiltrated later.", 
+      "name": "Audio Capture", 
+      "tactics": [
+        "571a762fcefaff1b704aefdb"
+      ], 
+      "technique_id": "T1123", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1123"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9af", 
+      "description": "The system time is set and stored by the Windows Time Service within a domain to maintain time synchronization between systems and services in an enterprise network.MSDN System TimeTechnet Windows Time Service\n\nAn adversary may gather the system time and/or time zone from a local or remote system. This information may be gathered in a number of ways, such as with [[Software/S0039|Net]] on Windows by performing <code>net time \\\\hostname</code> to gather the system time on a remote system. The victim's time zone may also be inferred from the current system time or gathered by using <code>w32tm /tz</code>.Technet Windows Time Service The information could be useful for performing other techniques, such as executing a file with a [[Technique/T1053|Scheduled Task]]RSA EU12 They're Inside, or to discover locality information based on time zone to assist in victim targeting.", 
+      "name": "System Time Discovery", 
+      "tactics": [
+        "571a762fcefaff1b704aefe2"
+      ], 
+      "technique_id": "T1124", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1124"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9b0", 
+      "description": "An adversary can leverage a computer's peripheral devices (e.g., integrated cameras or webcams) or applications (e.g., video call services) to capture video recordings for the purpose of gathering information. Images may also be captured from devices or applications, potentially in specified intervals, in lieu of video files.\n\nMalware or scripts may be used to interact with the devices through an available API provided by the operating system or an application to capture video or images. Video or image files may be written to disk and exfiltrated later. This technique differs from [[Technique/T1113|Screen Capture]] due to use of specific devices or applications for video recording rather than capturing the victim's screen.", 
+      "name": "Video Capture", 
+      "tactics": [
+        "571a762fcefaff1b704aefdb"
+      ], 
+      "technique_id": "T1125", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1125"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9b1", 
+      "description": "Windows shared drive and [[Technique/T1077|Windows Admin Shares]] connections can be removed when no longer needed. [[Software/S0039|Net]] is an example utility that can be used to remove network share connections with the <code>net use \\\\system\\share /delete</code> command.Technet Net Use\n\nAdversaries may remove share connections that are no longer useful in order to clean up traces of their operation.", 
+      "name": "Network Share Connection Removal", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1126", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1126"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9b2", 
+      "description": "There are many utilities used for software development related tasks that can be used to execute code in various forms to assist in development, debugging, and reverse engineering. These utilities may often be signed with legitimate certificates that allow them to execute on a system and proxy execution of malicious code through a trusted process that effectively bypasses application whitelisting defensive solutions.\n\n===MSBuild===\n\nMSBuild.exe (Microsoft Build Engine) is a software build platform used by Visual Studio. It takes XML formatted project files that define requirements for building various platforms and configurations.MSDN MSBuild \n\nAdversaries can use MSBuild to proxy execution of code through a trusted Windows utility. The inline task capability of MSBuild that was introduced in .NET version 4 allows for C# code to be inserted into the XML project file.MSDN MSBuild Inline Tasks MSBuild will compile and execute the inline task. MSBuild.exe is a signed Microsoft binary, so when it is used this way it can execute arbitrary code and bypass application whitelisting defenses that are configured to allow MSBuild.exe execution.SubTee GitHub All The Things Application Whitelisting Bypass\n\n===DNX===\n\nThe .NET Execution Environment (DNX), dnx.exe, is a software development kit packaged with Visual Studio Enterprise. It was retired in favor of .NET Core CLI in 2016.Microsoft Migrating from DNX DNX is not present on standard builds of Windows and may only be present on developer workstations using older versions of .NET Core and ASP.NET Core 1.0. The dnx.exe executable is signed by Microsoft. \n\nAn adversary can use dnx.exe to proxy execution of arbitrary code to bypass application whitelist policies that do not account for DNX.engima0x3 DNX Bypass\n\n===RCSI===\n\nThe rcsi.exe utility is a non-interactive command-line interface for C# that is similar to csi.exe. It was provided within an early version of the Roslyn .NET Compiler Platform but has since been deprecated for an integrated solution.Microsoft Roslyn CPT RCSI The rcsi.exe binary is signed by Microsoft.engima0x3 RCSI Bypass\n\nC# .csx script files can be written and executed with rcsi.exe at the command-line. An adversary can use rcsi.exe to proxy execution of arbitrary code to bypass application whitelisting policies that do not account for execution of rcsi.exe.engima0x3 RCSI Bypass\n\n===WinDbg/CDB===\n\nWinDbg is a Microsoft Windows kernel and user-mode debugging utility. The Microsoft Console Debugger (CDB) cdb.exe is also user-mode debugger. Both utilities are included in Windows software development kits and can be used as standalone tools.Microsoft Debugging Tools for Windows They are commonly used in software development and reverse engineering and may not be found on typical Windows systems. Both WinDbg.exe and cdb.exe binaries are signed by Microsoft.\n\nAn adversary can use WinDbg.exe and cdb.exe to proxy execution of arbitrary code to bypass application whitelist policies that do not account for execution of those utilities.Exploit Monday WinDbg\n\nIt is likely possible to use other debuggers for similar purposes, such as the kernel-mode debugger kd.exe, which is also signed by Microsoft.", 
+      "name": "Trusted Developer Utilities", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf", 
+        "571a762fcefaff1b704aefe0"
+      ], 
+      "technique_id": "T1127", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1127"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9b3", 
+      "description": "As of OS X 10.8, mach-O binaries introduced a new header called LC_MAIN that points to the binary\u2019s entry point for execution. Previously, there were two headers to achieve this same effect: LC_THREAD and LC_UNIXTHREAD Prolific OSX Malware History. The entry point for a binary can be hijacked so that initial execution flows to a malicious addition (either another section or a code cave) and then goes back to the initial entry point so that the victim doesn\u2019t know anything was different Methods of Mac Malware Persistence. By modifying a binary in this way, application whitelisting can be bypassed because the file name or application path is still the same.", 
+      "name": "LC_MAIN Hijacking", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1149", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1149"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9b4", 
+      "description": "The configurations for how applications run on macOS and OS X are listed in property list (plist) files. One of the tags in these files can be <code>apple.awt.UIElement</code>, which allows for Java applications to prevent the application's icon from appearing in the Dock. A common use for this is when applications run in the system tray, but don't also want to show up in the Dock. However, adversaries can abuse this feature and hide their running window Antiquated Mac Malware.", 
+      "name": "Hidden Window", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1143", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1143"
+    }, 
+    {
+      "_id": "59a73c6a17f950517d31f9b5", 
+      "description": "Root certificates are used in public key cryptography to identify a root certificate authority (CA). When a root certificate is installed, the system or application will trust certificates in the root's chain of trust that have been signed by the root certificate.Wikipedia Root Certificate Certificates are commonly used for establishing secure TLS/SSL communications within a web browser. When a user attempts to browse a website that presents a certificate that is not trusted an error message will be displayed to warn the user of the security risk. Depending on the security settings, the browser may not allow the user to establish a connection to the website.\n\nInstallation of a root certificate on a compromised system would give an adversary a way to degrade the security of that system. Adversaries have used this technique to avoid security warnings prompting users when compromised systems connect over HTTPS to adversary controlled web servers that spoof legitimate websites in order to collect login credentials.Operation Emmental\n\nAtypical root certificates have also been pre-installed on systems by the manufacturer or in the software supply chain and were used in conjunction with malware/adware to provide a man-in-the-middle capability for intercepting information transmitted over secure TLS/SSL communications.Kaspersky Superfish", 
+      "name": "Install Root Certificate", 
+      "tactics": [
+        "571a762fcefaff1b704aefdf"
+      ], 
+      "technique_id": "T1130", 
+      "url": "https://attack.mitre.org/wiki/Technique/T1130"
+    }
+  ]
+}

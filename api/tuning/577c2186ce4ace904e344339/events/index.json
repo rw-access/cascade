@@ -1,0 +1,40 @@
+[
+  {
+    "cluster": {
+      "command_line": "C:\\windows\\system32\\cmd.exe /c \"\"c:\\Program Files\\SplunkUniversalForwarder\\etc\\apps\\fmx_computer_properties\\bin\\launch.bat\"\"", 
+      "exe": "cmd.exe", 
+      "image_path": "C:\\Windows\\System32\\cmd.exe", 
+      "integrity_level": "System", 
+      "parent_command_line": "\"c:\\Program Files\\SplunkUniversalForwarder\\bin\\splunkd.exe\" service", 
+      "parent_exe": "splunkd.exe", 
+      "parent_image_path": "C:\\Program Files\\SplunkUniversalForwarder\\bin\\splunkd.exe", 
+      "user": "NT AUTHORITY\\SYSTEM"
+    }, 
+    "size": 138
+  }, 
+  {
+    "cluster": {
+      "command_line": "C:\\Windows\\system32\\cmd.exe /c \"\"C:\\Program Files\\SplunkUniversalForwarder\\etc\\apps\\TA-autorunsTCP\\bin\\launch.bat\"\"", 
+      "exe": "cmd.exe", 
+      "image_path": "C:\\Windows\\System32\\cmd.exe", 
+      "integrity_level": "System", 
+      "parent_command_line": "\"c:\\Program Files\\SplunkUniversalForwarder\\bin\\splunkd.exe\" service", 
+      "parent_exe": "splunkd.exe", 
+      "parent_image_path": "C:\\Program Files\\SplunkUniversalForwarder\\bin\\splunkd.exe", 
+      "user": "NT AUTHORITY\\SYSTEM"
+    }, 
+    "size": 34
+  }, 
+  {
+    "cluster": {
+      "exe": "cmd.exe", 
+      "image_path": "C:\\Windows\\System32\\cmd.exe", 
+      "integrity_level": "System", 
+      "parent_command_line": "\"c:\\Program Files\\cagent\\cagent.exe\"", 
+      "parent_exe": "cagent.exe", 
+      "parent_image_path": "C:\\Program Files\\cagent\\cagent.exe", 
+      "user": "NT AUTHORITY\\SYSTEM"
+    }, 
+    "size": 64
+  }
+]

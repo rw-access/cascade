@@ -1,0 +1,218 @@
+[
+  {
+    "_id": "59a810fc17f9500537045892", 
+    "fqdn": "kressierer-pc.brawlco.com", 
+    "hostname": "KRESSIERER-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\tkressierer", 
+      "NT AUTHORITY\\SYSTEM", 
+      "S-1-5-18", 
+      "NT AUTHORITY\\NETWORK SERVICE"
+    ], 
+    "uuid": "Host-kressierer-pc"
+  }, 
+  {
+    "_id": "59a8113017f9500537045c43", 
+    "fqdn": "peele-pc.brawlco.com", 
+    "hostname": "PEELE-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\npeele", 
+      "S-1-5-18", 
+      "NT AUTHORITY\\SYSTEM"
+    ], 
+    "uuid": "Host-peele-pc"
+  }, 
+  {
+    "_id": "59a810fd17f95005370459a0", 
+    "fqdn": "teston-pc.brawlco.com", 
+    "hostname": "TESTON-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\cteston", 
+      "S-1-5-18", 
+      "NT AUTHORITY\\SYSTEM"
+    ], 
+    "uuid": "Host-teston-pc"
+  }, 
+  {
+    "_id": "59a810fb17f95005370457bf", 
+    "fqdn": "fulco-pc.brawlco.com", 
+    "hostname": "FULCO-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\rfulco", 
+      "S-1-5-18", 
+      "NT AUTHORITY\\SYSTEM"
+    ], 
+    "uuid": "Host-fulco-pc"
+  }, 
+  {
+    "_id": "59a8116b17f95005370461c3", 
+    "fqdn": "harley-pc.brawlco.com", 
+    "hostname": "HARLEY-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\dharley", 
+      "S-1-5-18", 
+      "NT AUTHORITY\\SYSTEM", 
+      "NT AUTHORITY\\NETWORK SERVICE"
+    ], 
+    "uuid": "Host-harley-pc"
+  }, 
+  {
+    "_id": "59a810fb17f95005370457d3", 
+    "fqdn": "colgan-pc.brawlco.com", 
+    "hostname": "COLGAN-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\scolgan", 
+      "NT AUTHORITY\\SYSTEM", 
+      "S-1-5-18", 
+      "NT AUTHORITY\\NETWORK SERVICE"
+    ], 
+    "uuid": "Host-colgan-pc"
+  }, 
+  {
+    "_id": "59a810fa17f9500537045783", 
+    "fqdn": "escue-pc.brawlco.com", 
+    "hostname": "ESCUE-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\rescue", 
+      "S-1-5-18", 
+      "NT AUTHORITY\\SYSTEM", 
+      "NT AUTHORITY\\NETWORK SERVICE"
+    ], 
+    "uuid": "Host-escue-pc"
+  }, 
+  {
+    "_id": "59a810f917f950053704576b", 
+    "fqdn": "ostermeyer-pc.brawlco.com", 
+    "hostname": "OSTERMEYER-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\mostermeyer", 
+      "NT AUTHORITY\\SYSTEM", 
+      "S-1-5-18"
+    ], 
+    "uuid": "Host-ostermeyer-pc"
+  }, 
+  {
+    "_id": "59a810f917f9500537045777", 
+    "fqdn": "mims-pc.brawlco.com", 
+    "hostname": "MIMS-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\cmims", 
+      "NT AUTHORITY\\SYSTEM", 
+      "S-1-5-18"
+    ], 
+    "uuid": "Host-mims-pc"
+  }, 
+  {
+    "_id": "59a8116c17f95005370461d4", 
+    "fqdn": "beane-pc.brawlco.com", 
+    "hostname": "BEANE-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\abeane", 
+      "S-1-5-18", 
+      "NT AUTHORITY\\SYSTEM", 
+      "NT AUTHORITY\\NETWORK SERVICE"
+    ], 
+    "uuid": "Host-beane-pc"
+  }, 
+  {
+    "_id": "59a810fb17f95005370457af", 
+    "fqdn": "santilli-pc.brawlco.com", 
+    "hostname": "SANTILLI-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\psantilli", 
+      "NT AUTHORITY\\SYSTEM", 
+      "S-1-5-18"
+    ], 
+    "uuid": "Host-santilli-pc"
+  }, 
+  {
+    "_id": "59a810f817f9500537045761", 
+    "fqdn": "sounder-pc.brawlco.com", 
+    "hostname": "SOUNDER-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "NT AUTHORITY\\SYSTEM", 
+      "S-1-5-18"
+    ], 
+    "uuid": "Host-sounder-pc"
+  }, 
+  {
+    "_id": "59a810fb17f95005370457e0", 
+    "fqdn": "zissler-pc.brawlco.com", 
+    "hostname": "ZISSLER-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\szissler", 
+      "S-1-5-18", 
+      "NT AUTHORITY\\SYSTEM", 
+      "NT AUTHORITY\\NETWORK SERVICE"
+    ], 
+    "uuid": "Host-zissler-pc"
+  }, 
+  {
+    "_id": "59a8113217f9500537045c59", 
+    "fqdn": "minahan-pc.brawlco.com", 
+    "hostname": "MINAHAN-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\gminahan", 
+      "S-1-5-18", 
+      "NT AUTHORITY\\SYSTEM", 
+      "NT AUTHORITY\\NETWORK SERVICE"
+    ], 
+    "uuid": "Host-minahan-pc"
+  }, 
+  {
+    "_id": "59a8116a17f95005370461af", 
+    "fqdn": "sespinosa-pc.brawlco.com", 
+    "hostname": "SESPINOSA-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\wsespinosa", 
+      "S-1-5-18", 
+      "NT AUTHORITY\\SYSTEM", 
+      "NT AUTHORITY\\NETWORK SERVICE"
+    ], 
+    "uuid": "Host-sespinosa-pc"
+  }, 
+  {
+    "_id": "59a810fb17f95005370457c6", 
+    "fqdn": "platten-pc.brawlco.com", 
+    "hostname": "PLATTEN-PC", 
+    "interfaces": [], 
+    "leases": [], 
+    "users": [
+      "BRAWLCO\\aplatten", 
+      "NT AUTHORITY\\SYSTEM", 
+      "S-1-5-18", 
+      "NT AUTHORITY\\NETWORK SERVICE"
+    ], 
+    "uuid": "Host-platten-pc"
+  }
+]

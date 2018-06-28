@@ -1,0 +1,1798 @@
+[
+  {
+    "discovered_time": "2017-08-31T13:36:55.952000+00:00", 
+    "event_id": "59a810f817f9500537045760", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:55.952000+00:00", 
+    "event_id": "59a810f817f9500537045760", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:55.952000+00:00", 
+    "event_id": "59a810f817f9500537045760", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:56.399000+00:00", 
+    "event_id": "59a810f817f9500537045764", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:56.399000+00:00", 
+    "event_id": "59a810f817f9500537045764", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:56.399000+00:00", 
+    "event_id": "59a810f817f9500537045764", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:56.907000+00:00", 
+    "event_id": "59a810f917f9500537045769", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:56.907000+00:00", 
+    "event_id": "59a810f917f9500537045769", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:56.907000+00:00", 
+    "event_id": "59a810f917f9500537045769", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:57.142000+00:00", 
+    "event_id": "59a810f917f950053704576d", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:57.142000+00:00", 
+    "event_id": "59a810f917f950053704576d", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:57.232000+00:00", 
+    "event_id": "59a810f917f950053704576f", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:57.527000+00:00", 
+    "event_id": "59a810f917f9500537045776", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:57.527000+00:00", 
+    "event_id": "59a810f917f9500537045776", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:57.527000+00:00", 
+    "event_id": "59a810f917f9500537045776", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:57.676000+00:00", 
+    "event_id": "59a810f917f9500537045778", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:57.676000+00:00", 
+    "event_id": "59a810f917f9500537045778", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:57.799000+00:00", 
+    "event_id": "59a810fa17f950053704577b", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.127000+00:00", 
+    "event_id": "59a810fa17f9500537045782", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.127000+00:00", 
+    "event_id": "59a810fa17f9500537045782", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.127000+00:00", 
+    "event_id": "59a810fa17f9500537045782", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.358000+00:00", 
+    "event_id": "59a810fa17f9500537045784", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.358000+00:00", 
+    "event_id": "59a810fa17f9500537045784", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.430000+00:00", 
+    "event_id": "59a810fa17f9500537045787", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.662000+00:00", 
+    "event_id": "59a810fa17f950053704578c", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.662000+00:00", 
+    "event_id": "59a810fa17f950053704578c", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.662000+00:00", 
+    "event_id": "59a810fa17f950053704578c", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.674000+00:00", 
+    "event_id": "59a810fa17f9500537045790", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.674000+00:00", 
+    "event_id": "59a810fa17f9500537045790", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.717000+00:00", 
+    "event_id": "59a810fa17f9500537045791", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.801000+00:00", 
+    "event_id": "59a810fa17f9500537045798", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.801000+00:00", 
+    "event_id": "59a810fa17f9500537045798", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.801000+00:00", 
+    "event_id": "59a810fa17f9500537045798", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.846000+00:00", 
+    "event_id": "59a810fa17f950053704579a", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.846000+00:00", 
+    "event_id": "59a810fa17f950053704579a", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.867000+00:00", 
+    "event_id": "59a810fa17f950053704579c", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.949000+00:00", 
+    "event_id": "59a810fa17f95005370457a3", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.949000+00:00", 
+    "event_id": "59a810fa17f95005370457a3", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.949000+00:00", 
+    "event_id": "59a810fa17f95005370457a3", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.954000+00:00", 
+    "event_id": "59a810fa17f95005370457a5", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.954000+00:00", 
+    "event_id": "59a810fa17f95005370457a5", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:58.960000+00:00", 
+    "event_id": "59a810fa17f95005370457a7", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.005000+00:00", 
+    "event_id": "59a810fb17f95005370457ae", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.005000+00:00", 
+    "event_id": "59a810fb17f95005370457ae", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.005000+00:00", 
+    "event_id": "59a810fb17f95005370457ae", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.020000+00:00", 
+    "event_id": "59a810fb17f95005370457b0", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.020000+00:00", 
+    "event_id": "59a810fb17f95005370457b0", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.025000+00:00", 
+    "event_id": "59a810fb17f95005370457b1", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.100000+00:00", 
+    "event_id": "59a810fb17f95005370457bb", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.100000+00:00", 
+    "event_id": "59a810fb17f95005370457bb", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.103000+00:00", 
+    "event_id": "59a810fb17f95005370457be", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.106000+00:00", 
+    "event_id": "59a810fb17f95005370457ba", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.106000+00:00", 
+    "event_id": "59a810fb17f95005370457ba", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.106000+00:00", 
+    "event_id": "59a810fb17f95005370457ba", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.142000+00:00", 
+    "event_id": "59a810fb17f95005370457c5", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.142000+00:00", 
+    "event_id": "59a810fb17f95005370457c5", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.142000+00:00", 
+    "event_id": "59a810fb17f95005370457c5", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.158000+00:00", 
+    "event_id": "59a810fb17f95005370457c8", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.158000+00:00", 
+    "event_id": "59a810fb17f95005370457c8", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.159000+00:00", 
+    "event_id": "59a810fb17f95005370457ca", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.263000+00:00", 
+    "event_id": "59a810fb17f95005370457d2", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.263000+00:00", 
+    "event_id": "59a810fb17f95005370457d2", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.317000+00:00", 
+    "event_id": "59a810fb17f95005370457d1", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.317000+00:00", 
+    "event_id": "59a810fb17f95005370457d1", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.317000+00:00", 
+    "event_id": "59a810fb17f95005370457d1", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.326000+00:00", 
+    "event_id": "59a810fb17f95005370457dc", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.577000+00:00", 
+    "event_id": "59a810fb17f9500537045805", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.577000+00:00", 
+    "event_id": "59a810fb17f9500537045805", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.577000+00:00", 
+    "event_id": "59a810fb17f9500537045805", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.582000+00:00", 
+    "event_id": "59a810fb17f9500537045807", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.582000+00:00", 
+    "event_id": "59a810fb17f9500537045807", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:36:59.734000+00:00", 
+    "event_id": "59a810fb17f950053704582d", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:00.076000+00:00", 
+    "event_id": "59a810fc17f9500537045887", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:00.076000+00:00", 
+    "event_id": "59a810fc17f9500537045887", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:00.233000+00:00", 
+    "event_id": "59a810fc17f9500537045884", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:00.233000+00:00", 
+    "event_id": "59a810fc17f9500537045884", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:00.233000+00:00", 
+    "event_id": "59a810fc17f9500537045884", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:00.332000+00:00", 
+    "event_id": "59a810fc17f95005370458c9", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:00.664000+00:00", 
+    "event_id": "59a810fc17f9500537045920", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:00.664000+00:00", 
+    "event_id": "59a810fc17f9500537045920", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:00.682000+00:00", 
+    "event_id": "59a810fc17f9500537045924", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:00.682000+00:00", 
+    "event_id": "59a810fc17f9500537045924", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:00.682000+00:00", 
+    "event_id": "59a810fc17f9500537045924", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:00.838000+00:00", 
+    "event_id": "59a810fd17f950053704594b", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:01.179000+00:00", 
+    "event_id": "59a810fd17f950053704597a", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:01.179000+00:00", 
+    "event_id": "59a810fd17f950053704597a", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:01.371000+00:00", 
+    "event_id": "59a810fd17f9500537045982", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:01.371000+00:00", 
+    "event_id": "59a810fd17f9500537045982", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:01.371000+00:00", 
+    "event_id": "59a810fd17f9500537045982", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:01.418000+00:00", 
+    "event_id": "59a810fd17f9500537045996", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:01.813000+00:00", 
+    "event_id": "59a810fe17f95005370459cc", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:01.813000+00:00", 
+    "event_id": "59a810fe17f95005370459cc", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:01.890000+00:00", 
+    "event_id": "59a810fe17f95005370459d4", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:01.890000+00:00", 
+    "event_id": "59a810fe17f95005370459d4", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:01.890000+00:00", 
+    "event_id": "59a810fe17f95005370459d4", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:02.224000+00:00", 
+    "event_id": "59a810fe17f95005370459f3", 
+    "tactics": [
+      "571a762fcefaff1b704aefe0"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e51f"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:02.959000+00:00", 
+    "event_id": "59a810ff17f9500537045a27", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:02.959000+00:00", 
+    "event_id": "59a810ff17f9500537045a27", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:02.959000+00:00", 
+    "event_id": "59a810ff17f9500537045a27", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:03.619000+00:00", 
+    "event_id": "59a810ff17f9500537045a3d", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:03.619000+00:00", 
+    "event_id": "59a810ff17f9500537045a3d", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:03.619000+00:00", 
+    "event_id": "59a810ff17f9500537045a3d", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:04.309000+00:00", 
+    "event_id": "59a8110017f9500537045a42", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:04.309000+00:00", 
+    "event_id": "59a8110017f9500537045a42", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:04.309000+00:00", 
+    "event_id": "59a8110017f9500537045a42", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:04.636000+00:00", 
+    "event_id": "59a8110017f9500537045a4e", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:04.636000+00:00", 
+    "event_id": "59a8110017f9500537045a4e", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:04.636000+00:00", 
+    "event_id": "59a8110017f9500537045a4e", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:05.363000+00:00", 
+    "event_id": "59a8110117f9500537045a6d", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:05.363000+00:00", 
+    "event_id": "59a8110117f9500537045a6d", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:05.363000+00:00", 
+    "event_id": "59a8110117f9500537045a6d", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:05.810000+00:00", 
+    "event_id": "59a8110117f9500537045a9c", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:05.810000+00:00", 
+    "event_id": "59a8110117f9500537045a9c", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:05.810000+00:00", 
+    "event_id": "59a8110117f9500537045a9c", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:06.419000+00:00", 
+    "event_id": "59a8110217f9500537045abe", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:06.419000+00:00", 
+    "event_id": "59a8110217f9500537045abe", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:06.419000+00:00", 
+    "event_id": "59a8110217f9500537045abe", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:06.856000+00:00", 
+    "event_id": "59a8110317f9500537045ad1", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:06.856000+00:00", 
+    "event_id": "59a8110317f9500537045ad1", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:06.856000+00:00", 
+    "event_id": "59a8110317f9500537045ad1", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:07.578000+00:00", 
+    "event_id": "59a8110317f9500537045adc", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:07.578000+00:00", 
+    "event_id": "59a8110317f9500537045adc", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:07.578000+00:00", 
+    "event_id": "59a8110317f9500537045adc", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:07.963000+00:00", 
+    "event_id": "59a8110417f9500537045ae5", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:07.963000+00:00", 
+    "event_id": "59a8110417f9500537045ae5", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:08.469000+00:00", 
+    "event_id": "59a8110417f9500537045aeb", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:08.469000+00:00", 
+    "event_id": "59a8110417f9500537045aeb", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:08.469000+00:00", 
+    "event_id": "59a8110417f9500537045aeb", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:09.703000+00:00", 
+    "event_id": "59a8110517f9500537045afa", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:09.703000+00:00", 
+    "event_id": "59a8110517f9500537045afa", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:09.703000+00:00", 
+    "event_id": "59a8110517f9500537045afa", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:10.040000+00:00", 
+    "event_id": "59a8110617f9500537045b01", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:10.040000+00:00", 
+    "event_id": "59a8110617f9500537045b01", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:10.477000+00:00", 
+    "event_id": "59a8110617f9500537045b03", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:10.477000+00:00", 
+    "event_id": "59a8110617f9500537045b03", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:10.477000+00:00", 
+    "event_id": "59a8110617f9500537045b03", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:12.626000+00:00", 
+    "event_id": "59a8110817f9500537045b0c", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:12.626000+00:00", 
+    "event_id": "59a8110817f9500537045b0c", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:12.626000+00:00", 
+    "event_id": "59a8110817f9500537045b0c", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e527"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:17.442000+00:00", 
+    "event_id": "59a8110e17f9500537045b35", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:17.442000+00:00", 
+    "event_id": "59a8110e17f9500537045b35", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:20.846000+00:00", 
+    "event_id": "59a8111117f9500537045b4d", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:20.846000+00:00", 
+    "event_id": "59a8111117f9500537045b4d", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:26.196000+00:00", 
+    "event_id": "59a8111717f9500537045b5e", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:26.196000+00:00", 
+    "event_id": "59a8111717f9500537045b5e", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:30.976000+00:00", 
+    "event_id": "59a8111b17f9500537045b6d", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:30.976000+00:00", 
+    "event_id": "59a8111b17f9500537045b6d", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:33.180000+00:00", 
+    "event_id": "59a8111e17f9500537045b7f", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:33.180000+00:00", 
+    "event_id": "59a8111e17f9500537045b7f", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:34.501000+00:00", 
+    "event_id": "59a8111e17f9500537045b85", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:34.501000+00:00", 
+    "event_id": "59a8111e17f9500537045b85", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:34.847000+00:00", 
+    "event_id": "59a8111f17f9500537045b87", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:34.847000+00:00", 
+    "event_id": "59a8111f17f9500537045b87", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:54.940000+00:00", 
+    "event_id": "59a8113317f9500537045c60", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:54.940000+00:00", 
+    "event_id": "59a8113317f9500537045c60", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:54.975000+00:00", 
+    "event_id": "59a8113317f9500537045c64", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:54.975000+00:00", 
+    "event_id": "59a8113317f9500537045c64", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:55.508000+00:00", 
+    "event_id": "59a8113417f9500537045c6c", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:37:55.508000+00:00", 
+    "event_id": "59a8113417f9500537045c6c", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:27.729000+00:00", 
+    "event_id": "59a8115317f9500537045f26", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:28.389000+00:00", 
+    "event_id": "59a8115417f9500537045f38", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:29.038000+00:00", 
+    "event_id": "59a8115517f9500537045f45", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:30.239000+00:00", 
+    "event_id": "59a8115617f9500537045f81", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:30.361000+00:00", 
+    "event_id": "59a8115617f9500537045f89", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:31.485000+00:00", 
+    "event_id": "59a8115717f9500537045fa6", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:31.932000+00:00", 
+    "event_id": "59a8115817f9500537045fb9", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:32.026000+00:00", 
+    "event_id": "59a8115817f9500537045fbf", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:32.710000+00:00", 
+    "event_id": "59a8115817f9500537045fe4", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:32.910000+00:00", 
+    "event_id": "59a8115917f9500537045fee", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:33.154000+00:00", 
+    "event_id": "59a8115917f9500537045ff8", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:33.785000+00:00", 
+    "event_id": "59a8115a17f950053704601c", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:34.175000+00:00", 
+    "event_id": "59a8115a17f950053704602b", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:35.346000+00:00", 
+    "event_id": "59a8115b17f950053704603e", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:35.691000+00:00", 
+    "event_id": "59a8115b17f9500537046045", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:37.091000+00:00", 
+    "event_id": "59a8115d17f9500537046063", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:42.721000+00:00", 
+    "event_id": "59a8116317f95005370460c0", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:43.655000+00:00", 
+    "event_id": "59a8116417f95005370460d2", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:45.777000+00:00", 
+    "event_id": "59a8116617f9500537046107", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:45.906000+00:00", 
+    "event_id": "59a8116617f950053704610d", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:47.015000+00:00", 
+    "event_id": "59a8116717f950053704614e", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:47.729000+00:00", 
+    "event_id": "59a8116817f9500537046175", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:48.878000+00:00", 
+    "event_id": "59a8116917f9500537046192", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:48.947000+00:00", 
+    "event_id": "59a8116917f9500537046195", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:51.965000+00:00", 
+    "event_id": "59a8116c17f95005370461c7", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:51.965000+00:00", 
+    "event_id": "59a8116c17f95005370461c7", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:52.845000+00:00", 
+    "event_id": "59a8116d17f95005370461d8", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:52.845000+00:00", 
+    "event_id": "59a8116d17f95005370461d8", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:53.823000+00:00", 
+    "event_id": "59a8116e17f95005370461e7", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e544"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:53.823000+00:00", 
+    "event_id": "59a8116e17f95005370461e7", 
+    "tactics": [
+      "571a762fcefaff1b704aefde"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e554"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:55.070000+00:00", 
+    "event_id": "59a8116f17f95005370461f0", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:55.636000+00:00", 
+    "event_id": "59a8116f17f95005370461f4", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:56.203000+00:00", 
+    "event_id": "59a8117017f95005370461f7", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:56.292000+00:00", 
+    "event_id": "59a8117017f95005370461f8", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:56.567000+00:00", 
+    "event_id": "59a8117017f95005370461fb", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:56.613000+00:00", 
+    "event_id": "59a8117017f95005370461fc", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:56.785000+00:00", 
+    "event_id": "59a8117017f95005370461fd", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:56.962000+00:00", 
+    "event_id": "59a8117117f9500537046200", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:57.002000+00:00", 
+    "event_id": "59a8117117f9500537046202", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:57.194000+00:00", 
+    "event_id": "59a8117117f9500537046203", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:57.364000+00:00", 
+    "event_id": "59a8117117f9500537046206", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:57.367000+00:00", 
+    "event_id": "59a8117117f9500537046207", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:57.471000+00:00", 
+    "event_id": "59a8117117f9500537046209", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:57.530000+00:00", 
+    "event_id": "59a8117117f950053704620a", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:38:57.614000+00:00", 
+    "event_id": "59a8117117f950053704620b", 
+    "tactics": [], 
+    "technique": "571a773dcefaff3c6ca4e53c"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:39:37.022000+00:00", 
+    "event_id": "59a8119917f95005370463ce", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:39:37.133000+00:00", 
+    "event_id": "59a8119917f95005370463dc", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:39:38.445000+00:00", 
+    "event_id": "59a8119a17f95005370463fe", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:39:39.829000+00:00", 
+    "event_id": "59a8119c17f950053704641d", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:39:40.546000+00:00", 
+    "event_id": "59a8119d17f9500537046425", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T13:39:43.010000+00:00", 
+    "event_id": "59a8119f17f950053704643e", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:04.988000+00:00", 
+    "event_id": "59a8234917f95005370464ec", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:05.247000+00:00", 
+    "event_id": "59a8234917f95005370464fb", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e530"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:05.619000+00:00", 
+    "event_id": "59a8234917f9500537046509", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:05.697000+00:00", 
+    "event_id": "59a8234917f9500537046517", 
+    "tactics": [
+      "571a762fcefaff1b704aefe2"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4fe"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:05.776000+00:00", 
+    "event_id": "59a8234917f9500537046525", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:05.859000+00:00", 
+    "event_id": "59a8234917f9500537046533", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:05.943000+00:00", 
+    "event_id": "59a8234917f9500537046541", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:06.026000+00:00", 
+    "event_id": "59a8234a17f950053704654f", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:06.099000+00:00", 
+    "event_id": "59a8234a17f950053704655d", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:06.172000+00:00", 
+    "event_id": "59a8234a17f950053704656b", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:06.283000+00:00", 
+    "event_id": "59a8234a17f9500537046579", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:06.779000+00:00", 
+    "event_id": "59a8234a17f9500537046588", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:09.002000+00:00", 
+    "event_id": "59a8234d17f950053704659f", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:11.915000+00:00", 
+    "event_id": "59a8235017f95005370465e6", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:13.996000+00:00", 
+    "event_id": "59a8235217f950053704664f", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:14.257000+00:00", 
+    "event_id": "59a8235217f9500537046669", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:14.420000+00:00", 
+    "event_id": "59a8235217f9500537046684", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:15.204000+00:00", 
+    "event_id": "59a8235317f95005370466a4", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:17.442000+00:00", 
+    "event_id": "59a8235517f95005370466d3", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:20.571000+00:00", 
+    "event_id": "59a8235817f95005370466fc", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:23.112000+00:00", 
+    "event_id": "59a8235b17f9500537046721", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }, 
+  {
+    "discovered_time": "2017-08-31T14:55:26.316000+00:00", 
+    "event_id": "59a8235e17f9500537046755", 
+    "tactics": [
+      "571a762fcefaff1b704aefdf"
+    ], 
+    "technique": "571a773dcefaff3c6ca4e4f1"
+  }
+]

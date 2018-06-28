@@ -1,0 +1,626 @@
+[
+  {
+    "_title": "RegistryKeyModification", 
+    "abstract": false, 
+    "depends": [
+      "process_end"
+    ], 
+    "name": "registry_key_modification", 
+    "reverse": false, 
+    "source": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create", 
+        "inject"
+      ], 
+      "name": "process"
+    }, 
+    "target": {
+      "_class": "RegistryEvent", 
+      "actions": [
+        "create_key", 
+        "delete_key", 
+        "rename_key"
+      ], 
+      "name": "registry"
+    }
+  }, 
+  {
+    "_title": "WmicProcessCreate", 
+    "abstract": true, 
+    "depends": [], 
+    "name": "wmic_process_create", 
+    "reverse": false, 
+    "source": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "SmbFileWrite", 
+    "abstract": true, 
+    "depends": [], 
+    "name": "smb_file_write", 
+    "reverse": false, 
+    "source": {
+      "_class": "NetworkEvent", 
+      "actions": [
+        "message"
+      ], 
+      "name": "flow"
+    }, 
+    "target": {
+      "_class": "FileEvent", 
+      "actions": [
+        "create", 
+        "modify"
+      ], 
+      "name": "file"
+    }
+  }, 
+  {
+    "_title": "CmdCopy", 
+    "abstract": true, 
+    "depends": [], 
+    "name": "cmd_copy", 
+    "reverse": false, 
+    "source": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }, 
+    "target": {
+      "_class": "FileEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "file"
+    }
+  }, 
+  {
+    "_title": "At", 
+    "abstract": true, 
+    "depends": [], 
+    "name": "at", 
+    "reverse": false, 
+    "source": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "GetRegistryContext", 
+    "abstract": false, 
+    "depends": [], 
+    "inverse": null, 
+    "name": "get_registry_context", 
+    "reverse": true, 
+    "source": {
+      "_class": "RegistryEvent", 
+      "actions": [
+        "create_key", 
+        "delete_key", 
+        "delete_value", 
+        "read_value", 
+        "rename_key", 
+        "write_value"
+      ], 
+      "name": "registry"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "ChildProcess", 
+    "abstract": false, 
+    "depends": [
+      "process_end"
+    ], 
+    "name": "child_process", 
+    "reverse": false, 
+    "source": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create", 
+        "inject"
+      ], 
+      "name": "process"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "GetFileContext", 
+    "abstract": false, 
+    "depends": [], 
+    "inverse": "file_modification", 
+    "name": "get_file_context", 
+    "reverse": true, 
+    "source": {
+      "_class": "FileEvent", 
+      "actions": [
+        "create", 
+        "delete", 
+        "modify", 
+        "raw_access", 
+        "read", 
+        "timestomp", 
+        "write"
+      ], 
+      "name": "file"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "Schtasks", 
+    "abstract": true, 
+    "depends": [], 
+    "name": "schtasks", 
+    "reverse": false, 
+    "source": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "FileExecution", 
+    "abstract": false, 
+    "depends": [], 
+    "name": "file_execution", 
+    "reverse": false, 
+    "source": {
+      "_class": "FileEvent", 
+      "actions": [
+        "create", 
+        "write", 
+        "modify"
+      ], 
+      "name": "file"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "ThreadInject", 
+    "abstract": false, 
+    "depends": [
+      "process_end"
+    ], 
+    "name": "thread_inject", 
+    "reverse": false, 
+    "source": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create", 
+        "inject"
+      ], 
+      "name": "process"
+    }, 
+    "target": {
+      "_class": "ThreadEvent", 
+      "actions": [
+        "remote_create"
+      ], 
+      "name": "thread"
+    }
+  }, 
+  {
+    "_title": "InjectionSource", 
+    "abstract": false, 
+    "depends": [], 
+    "inverse": "thread_inject", 
+    "name": "injection_source", 
+    "reverse": true, 
+    "source": {
+      "_class": "ThreadEvent", 
+      "actions": [
+        "remote_create"
+      ], 
+      "name": "thread"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "RegistryValueModification", 
+    "abstract": false, 
+    "depends": [
+      "process_end"
+    ], 
+    "name": "registry_value_modification", 
+    "reverse": false, 
+    "source": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create", 
+        "inject"
+      ], 
+      "name": "process"
+    }, 
+    "target": {
+      "_class": "RegistryEvent", 
+      "actions": [
+        "write_value", 
+        "delete_value"
+      ], 
+      "name": "registry"
+    }
+  }, 
+  {
+    "_title": "RegistryReadValue", 
+    "abstract": false, 
+    "depends": [
+      "process_end"
+    ], 
+    "name": "registry_read_value", 
+    "reverse": false, 
+    "source": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create", 
+        "inject"
+      ], 
+      "name": "process"
+    }, 
+    "target": {
+      "_class": "RegistryEvent", 
+      "actions": [
+        "read_value"
+      ], 
+      "name": "registry"
+    }
+  }, 
+  {
+    "_title": "ProcessEnd", 
+    "abstract": false, 
+    "depends": [], 
+    "name": "process_end", 
+    "reverse": false, 
+    "source": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create", 
+        "inject"
+      ], 
+      "name": "process"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "terminate"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "RegistryKeyRun", 
+    "abstract": false, 
+    "depends": [], 
+    "name": "registry_key_run", 
+    "reverse": false, 
+    "source": {
+      "_class": "RegistryEvent", 
+      "actions": [
+        "write_value"
+      ], 
+      "name": "registry"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create", 
+        "inject"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "GetModuleContext", 
+    "abstract": false, 
+    "depends": [], 
+    "inverse": "file_modification", 
+    "name": "get_module_context", 
+    "reverse": true, 
+    "source": {
+      "_class": "ModuleEvent", 
+      "actions": [
+        "load", 
+        "unload"
+      ], 
+      "name": "module"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "FileModification", 
+    "abstract": false, 
+    "depends": [
+      "process_end"
+    ], 
+    "name": "file_modification", 
+    "reverse": false, 
+    "source": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create", 
+        "inject"
+      ], 
+      "name": "process"
+    }, 
+    "target": {
+      "_class": "FileEvent", 
+      "actions": [
+        "create", 
+        "write", 
+        "modify"
+      ], 
+      "name": "file"
+    }
+  }, 
+  {
+    "_title": "RemoteFileModify", 
+    "abstract": true, 
+    "depends": [], 
+    "name": "remote_file_modify", 
+    "reverse": false, 
+    "source": {
+      "_class": "FileEvent", 
+      "actions": [
+        "create", 
+        "modify"
+      ], 
+      "name": "file"
+    }, 
+    "target": {
+      "_class": "FileEvent", 
+      "actions": [
+        "create", 
+        "modify"
+      ], 
+      "name": "file"
+    }
+  }, 
+  {
+    "_title": "FileLoadedAsModule", 
+    "abstract": false, 
+    "depends": [], 
+    "name": "file_loaded_as_module", 
+    "reverse": false, 
+    "source": {
+      "_class": "FileEvent", 
+      "actions": [
+        "create", 
+        "write", 
+        "modify"
+      ], 
+      "name": "file"
+    }, 
+    "target": {
+      "_class": "ModuleEvent", 
+      "actions": [
+        "load"
+      ], 
+      "name": "module"
+    }
+  }, 
+  {
+    "_title": "TaintedProcess", 
+    "abstract": true, 
+    "depends": [], 
+    "name": "tainted_process", 
+    "reverse": false, 
+    "source": {
+      "_class": "ThreadEvent", 
+      "actions": [
+        "remote_create"
+      ], 
+      "name": "thread"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "inject"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "NetworkConnection", 
+    "abstract": false, 
+    "depends": [
+      "process_end"
+    ], 
+    "name": "network_connection", 
+    "reverse": false, 
+    "source": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create", 
+        "inject"
+      ], 
+      "name": "process"
+    }, 
+    "target": {
+      "_class": "NetworkEvent", 
+      "actions": [
+        "start"
+      ], 
+      "name": "flow"
+    }
+  }, 
+  {
+    "_title": "GroupMessages", 
+    "abstract": false, 
+    "depends": [], 
+    "inverse": null, 
+    "name": "group_messages", 
+    "reverse": true, 
+    "source": {
+      "_class": "NetworkEvent", 
+      "actions": [
+        "message"
+      ], 
+      "name": "flow"
+    }, 
+    "target": {
+      "_class": "NetworkEvent", 
+      "actions": [
+        "start"
+      ], 
+      "name": "flow"
+    }
+  }, 
+  {
+    "_title": "LookupParent", 
+    "abstract": false, 
+    "depends": [], 
+    "inverse": "child_process", 
+    "name": "lookup_parent", 
+    "reverse": true, 
+    "source": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create", 
+        "inject"
+      ], 
+      "name": "process"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "Sc", 
+    "abstract": true, 
+    "depends": [], 
+    "name": "sc", 
+    "reverse": false, 
+    "source": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "GetNetworkContext", 
+    "abstract": false, 
+    "depends": [], 
+    "inverse": "network_connection", 
+    "name": "get_network_context", 
+    "reverse": true, 
+    "source": {
+      "_class": "NetworkEvent", 
+      "actions": [
+        "end", 
+        "message", 
+        "start"
+      ], 
+      "name": "flow"
+    }, 
+    "target": {
+      "_class": "ProcessEvent", 
+      "actions": [
+        "create"
+      ], 
+      "name": "process"
+    }
+  }, 
+  {
+    "_title": "MappedRpc", 
+    "abstract": true, 
+    "depends": [], 
+    "name": "mapped_rpc", 
+    "reverse": false, 
+    "source": {
+      "_class": "NetworkEvent", 
+      "actions": [
+        "start"
+      ], 
+      "name": "flow"
+    }, 
+    "target": {
+      "_class": "NetworkEvent", 
+      "actions": [
+        "start"
+      ], 
+      "name": "flow"
+    }
+  }
+]

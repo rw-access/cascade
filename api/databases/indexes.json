@@ -1,0 +1,13 @@
+[
+  {
+    "_cls": "DatabaseInfo.ElasticSearchInfo", 
+    "_id": "59a724a617f950517d31f761", 
+    "hosts": [
+      "localhost"
+    ], 
+    "name": "Local ES", 
+    "port": 9200, 
+    "use_ssl": false, 
+    "verify_certs": false
+  }
+]
