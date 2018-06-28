@@ -5,7 +5,7 @@
     self.sessionId = $stateParams.sessionId;
     $scope.sessionId = self.sessionId;
 
-    $http.get('/api/sessions/' + $stateParams.sessionId + '/graphs/alerts').success(function(data) {
+    $http.get('api/sessions/' + $stateParams.sessionId + '/graphs/alerts/').success(function(data) {
       AnalyticService.init.then(function() {
         $scope.nodes = _.map(data.nodes, function(result) {
             result.analytic = AnalyticService.index[result.analytic]

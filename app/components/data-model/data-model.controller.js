@@ -14,7 +14,7 @@
       process: 'glyphicon-leaf'
     };
 
-    return $http.get('/api/data_model').success(function(data_model) {
+    return $http.get('api/data_model/').success(function(data_model) {
       $scope.objects = data_model.objects;
       $scope.pivots = data_model.pivots;
     });

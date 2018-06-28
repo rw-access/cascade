@@ -6,7 +6,7 @@
   app.directive('datatable', function() {
     return {
       // restrict: 'A',
-      templateUrl: '/app/common/datatable/datatable.html',
+      templateUrl: 'app/common/datatable/datatable.html',
       scope: {
         rows: "=",
         columns: "=",

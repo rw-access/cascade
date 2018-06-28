@@ -126,19 +126,19 @@
           }, true);
       });
 
-      $http.get('/api/sessions/' + self.sessionId + '/hosts')
+      $http.get('api/sessions/' + self.sessionId + '/hosts/')
         .success(function(data){
             $scope.hosts = data;
             $scope.hostIndex = _.indexBy(data, '_id');
       })
 
-      $http.get('/api/sessions/' + self.sessionId + '/events')
+      $http.get('api/sessions/' + self.sessionId + '/events/')
       .success(function(data){
         $scope.events = data;
       });
 
 
-      $http.get('/api/sessions/' + self.sessionId + '/results')
+      $http.get('api/sessions/' + self.sessionId + '/results/')
       .success(function(results) {
         $scope.results = results;
         AnalyticService.init.then(function() {
@@ -159,7 +159,7 @@
 
       });
 
-      $http.get('/api/sessions/' + self.sessionId + '/clusters/attack').success(function(data) {
+      $http.get('api/sessions/' + self.sessionId + '/clusters/attack/').success(function(data) {
         AttackService.init.then(function() {
             $scope.clusters = data;
 

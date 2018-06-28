@@ -11,11 +11,11 @@
       var x = 0;
       var events = [];
       var connections = {};
-      $http.get('/api/sessions/' + self.sessionId + '/events').success(function(events) {
+      $http.get('api/sessions/' + self.sessionId + '/events/').success(function(events) {
         $scope.events = events;
       });
 
-      $http.get('/api/sessions/' + self.sessionId + '/results').success(function(results) {
+      $http.get('api/sessions/' + self.sessionId + '/results/').success(function(results) {
         AnalyticService.init.then(function() {
             _.each(results, function(result) { result.analytic = AnalyticService.index[result.analytic]; });
             $scope.results = results;

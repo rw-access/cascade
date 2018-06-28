@@ -2,7 +2,7 @@
   angular.module('cascade').directive('matrix', function() {
       return {
         restrict: 'E',
-        templateUrl: '/app/common/attack-matrix/matrix.html',
+        templateUrl: 'app/common/attack-matrix/matrix.html',
         scope: {
           coverage: '=?', // list of {technique: technique, tactic: tactic}
           heatMap: '=?'

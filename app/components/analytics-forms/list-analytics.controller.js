@@ -6,7 +6,7 @@
     $scope.queries = {};
     $scope.format = 'Data Model Query Language';
 
-    $http.get('/api/query/languages').success(function(languages) {
+    $http.get('api/query/languages/').success(function(languages) {
       $scope.formats = languages;
     });
 
@@ -28,7 +28,7 @@
     $scope.$watch('format', function() {
       var format = $scope.format;
       if (! $scope.queries[format]) {
-        $http.get('/api/analytics/format/' + format).success(function(analytics) {
+        $http.get('api/analytics/format/' + format +'/').success(function(analytics) {
           updateQueries(format, analytics);
         });
       }

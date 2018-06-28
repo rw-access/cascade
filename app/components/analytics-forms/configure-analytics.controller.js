@@ -20,10 +20,10 @@
     self.update = function() {
         var configId = $scope.activeConfig._id;
         // server only implements a patch
-        $http.put("/api/configurations/analytics/" + configId, {analytics: self.getCurrentConfig()})
+        $http.put("api/configurations/analytics/" + configId, {analytics: self.getCurrentConfig()})
              .success(function(configId) {
                 $(".modal").modal("hide");
-                $http.get("/api/configurations/analytics/" + configId).success(function(newConfig) {
+                $http.get("api/configurations/analytics/" + configId).success(function(newConfig) {
                     $scope.configurations.push(newConfig);
                 });
              });
@@ -32,7 +32,7 @@
     };
 
     self.removeConfig = function(configId) {
-        $http.delete("/api/configurations/analytics/" + configId).success(function() {
+        $http.delete("api/configurations/analytics/" + configId).success(function() {
             // force the whole state to reload all configurations
             $scope.activeConfig = null;
             $state.reload();
@@ -40,10 +40,10 @@
     }
 
     self.saveConfig = function() {
-        $http.post("/api/configurations/analytics", {name: $scope.configName, analytics: self.getCurrentConfig()})
+        $http.post("api/configurations/analytics", {name: $scope.configName, analytics: self.getCurrentConfig()})
              .success(function(configId) {
                 $(".modal").modal("hide");
-                $http.get("/api/configurations/analytics/" + configId).success(function(newConfig) {
+                $http.get("api/configurations/analytics/" + configId).success(function(newConfig) {
                     $scope.configurations.push(newConfig);
                     $scope.activeConfig = newConfig;
                 });

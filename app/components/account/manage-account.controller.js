@@ -6,7 +6,7 @@
 
       var self = this;
       function fetchDatabases() {
-        $http.get('/api/user/databases').success(function(user_databases) {
+        $http.get('api/user/databases/').success(function(user_databases) {
           self.databases = user_databases;
         });
       }
@@ -14,7 +14,7 @@
       fetchDatabases();
 
       $scope.removeDb = function(database_layer) {
-        $http.post('/api/user/databases?action=remove', {database: database_layer._id}).success(function(data) {
+        $http.post('api/user/databases?action=remove', {database: database_layer._id}).success(function(data) {
             // console.log('Remove database result: ' + data);
             fetchDatabases();
         });

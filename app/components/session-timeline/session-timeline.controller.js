@@ -4,13 +4,13 @@
 
   app.controller('SessionTimelineController', function($scope, $http, $stateParams, AttackService) {
 
-      $http.get('/api/sessions/' + $stateParams.sessionId + '/events').success(function(eventData) {
+      $http.get('api/sessions/' + $stateParams.sessionId + '/events/').success(function(eventData) {
         _.each(eventData, function(e) {
             e.attack = {tactics: [], techniques: []}
         });
         $scope.events = eventData;
 
-        $http.get('/api/sessions/' + $stateParams.sessionId + '/attack_timeline').success(function(attackTimeline) {
+        $http.get('api/sessions/' + $stateParams.sessionId + '/attack_timeline/').success(function(attackTimeline) {
           AttackService.init.then(function() {
             var eventLookup = _.indexBy(eventData, '_id');
 

@@ -5,7 +5,7 @@
   app.directive('analyticFormContent', function() {
     return {
       restrict: 'E',
-      templateUrl: '/app/components/analytics-forms/analytics-form-base.html',
+      templateUrl: 'app/components/analytics-forms/analytics-form-base.html',
       scope: {
         platforms: '=',
         configuration: '=',  /* { analyticId: {mode: 'first-pass', status: true}, ... } */

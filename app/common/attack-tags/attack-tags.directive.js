@@ -3,7 +3,7 @@
   app.directive('attackTags', function() {
     return {
       restrict: 'E',
-      templateUrl: '/app/common/attack-tags/attack-tags.html',
+      templateUrl: 'app/common/attack-tags/attack-tags.html',
       scope: {
         coverageList: '=',
         levels: '&'

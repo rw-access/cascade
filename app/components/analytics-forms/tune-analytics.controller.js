@@ -31,7 +31,7 @@
           time: $scope.timeData
         };
 
-        $http.post('/api/tuning', data).success(function(data){
+        $http.post('api/tuning', data).success(function(data){
           console.log('training posted successfully');
         });
       };
@@ -47,7 +47,7 @@
       }
       $scope.sessions = SessionService;
 
-      $http.get('/api/tuning').success(function(baselines) {
+      $http.get('api/tuning/').success(function(baselines) {
         AnalyticService.init.then(function () {
           $scope.baselines = baselines;
 

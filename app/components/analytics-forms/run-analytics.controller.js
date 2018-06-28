@@ -5,7 +5,7 @@
       var self = this;
       self.sessionId = $stateParams.sessionId;
       self.baselines = {};
-      $http.get('/api/tuning').success(function (baselines) {
+      $http.get('api/tuning/').success(function (baselines) {
         self.baselines = _.indexBy(baselines, 'analytic');
       });
 
@@ -49,7 +49,7 @@
 
         console.log(missing.length);
         if (missing.length === 0 || confirm(warningMessage)) {
-            $http.post('/api/sessions/' + self.sessionId + '/automate', {analytics: analytics}).success(function(data) {
+            $http.post('api/sessions/' + self.sessionId + '/automate', {analytics: analytics}).success(function(data) {
               $state.go('eventMap', {sessionId: self.sessionId});
             });
         }

@@ -38,7 +38,7 @@
   app.directive('eventTimeline', function() {
     return {
       restrict: 'E',
-      templateUrl: '/app/common/event-timeline/event-timeline.html',
+      templateUrl: 'app/common/event-timeline/event-timeline.html',
       scope: {
         events: '='
       },

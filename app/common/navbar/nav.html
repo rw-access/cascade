@@ -196,7 +196,7 @@
             <li ng-click="buildClone()"><a href="" data-toggle="modal" data-target="#clone-session"><span class="glyphicon glyphicon-duplicate"></span> Clone Session</a></li>
             <li><a href="" data-toggle="modal" data-target="#remove-session"><span class="glyphicon glyphicon-remove"></span> Remove Session</a></li>
             <li><a href="" data-toggle="modal" data-target="#reset-session"><span class="glyphicon glyphicon-repeat"></span> Reset Session</a></li>
-            <li><a href="/api/sessions/{{sessions.currentId}}/export" target="_self" download="{{sessions.current.name}}.bson"><span class="glyphicon glyphicon-repeat"></span> Export Session</a></li>
+            <li><a href="api/sessions/{{sessions.currentId}}/export/" target="_self" download="{{sessions.current.name}}.bson"><span class="glyphicon glyphicon-repeat"></span> Export Session</a></li>
           </ul>
         </li> <!-- Session Dropdown /-->
       </ul>

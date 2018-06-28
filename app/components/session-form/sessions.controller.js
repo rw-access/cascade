@@ -8,7 +8,7 @@
 
       $scope.submitSession = function() {
 
-        $http.post('/api/sessions', {name: $scope.session_name, range: $scope.time}).success(function(sessionId) {
+        $http.post('api/sessions', {name: $scope.session_name, range: $scope.time}).success(function(sessionId) {
             // the session service will take care of updating, etc
             $state.go('eventMap', {sessionId: sessionId});
         });

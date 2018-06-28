@@ -4,7 +4,7 @@
   app.directive('eventTags', function() {
     return {
       restrict: 'E',
-      templateUrl: '/app/common/event-tags/event-tags.html',
+      templateUrl: 'app/common/event-tags/event-tags.html',
       scope: {
         mappedEvents: '=',
         labels: '&'

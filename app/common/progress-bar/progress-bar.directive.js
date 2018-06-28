@@ -3,7 +3,7 @@
 
       return {
         restrict: 'EA',
-        templateUrl: '/app/common/progress-bar/progress-bar.html',
+        templateUrl: 'app/common/progress-bar/progress-bar.html',
         scope: {
             total: '=',
             fail: '=?',

@@ -7,7 +7,7 @@
 
       $scope.links = [];
       $scope.nodes = [];
-      $http.get('/api/sessions/' + $stateParams.sessionId + '/clusters/hosts').success(function(data) {
+      $http.get('api/sessions/' + $stateParams.sessionId + '/clusters/hosts/').success(function(data) {
         var links = [];
         data.forEach(function(node) {
           var host = node.host;

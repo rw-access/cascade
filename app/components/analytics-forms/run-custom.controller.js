@@ -43,7 +43,7 @@
 
       $scope.$watch('queryText', function()  {
         if ($scope.queryText) {
-          $http.post('/api/query/parse', {query: $scope.queryText}).then(function(queryData) {
+          $http.post('api/query/parse', {query: $scope.queryText}).then(function(queryData) {
             var query = queryData.data;
             $scope.mapped_events = [{object: query.object, action: query.action}];
             $scope.query = query.query;
@@ -56,7 +56,7 @@
       });
 
       $scope.submit = function()  {
-        $http.post('/api/query/parse', {query: $scope.queryText}).success(function(query) {
+        $http.post('api/query/parse', {query: $scope.queryText}).success(function(query) {
           $scope.error = false;
           $scope.query = query.query;
           $scope.mapped_events = [{object: query.object, action: query.action}];
@@ -68,7 +68,7 @@
             };
           });
 
-          $http.post('/api/sessions/' + self.sessionId + '/automate/custom', {query: $scope.query}).success(function(result) {
+          $http.post('api/sessions/' + self.sessionId + '/automate/custom', {query: $scope.query}).success(function(result) {
             console.log('success');
             $state.go('dashboard', {sessionId: self.sessionId});
           }).catch(function(failure) {

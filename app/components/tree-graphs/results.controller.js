@@ -18,7 +18,7 @@
         var analyticId = $scope.selectedAnalytic._id;
         var fieldList = _.map(_.where($scope.resultTree.keys, {status: true}), function(k) { return k.name; });
 
-        $http.get('/api/sessions/' + $stateParams.sessionId +   '/results/' + analyticId +'/tree').success(function(data) {
+        $http.get('api/sessions/' + $stateParams.sessionId +   '/results/' + analyticId +'/tree/').success(function(data) {
           $scope.treeIndex[analyticId] = data;
           if ($scope.selectedAnalytic._id == analyticId) {
             $scope.resultTree = data;
@@ -60,7 +60,7 @@
         }
 
         var new_whitelist = {root: pruneTree($scope.whitelist.root)/*, keys: $scope.whitelist.keys */};
-        $http.put('/api/analytics/' + $scope.whitelist.analytic.id + '/training', new_whitelist).success(function(data) {
+        $http.put('api/analytics/' + $scope.whitelist.analytic.id + '/training', new_whitelist).success(function(data) {
 
           $scope.whitelist = data;
           // dereference this from the scope
@@ -71,7 +71,7 @@
       }
 
       // initialize this from the analytic
-      $http.get('/api/sessions/' + $stateParams.sessionId + '/results/tree').success(function(data){
+      $http.get('api/sessions/' + $stateParams.sessionId + '/results/tree/').success(function(data){
         AnalyticService.init.then(function() {
           // $scope.resultTree = data;
           $scope.treeIndex = _.indexBy(data, 'analytic');

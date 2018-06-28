@@ -4,7 +4,7 @@
   app.directive('navbar', function() {
     return {
       restrict: 'E',
-      templateUrl: '/app/common/navbar/nav.html',
+      templateUrl: 'app/common/navbar/nav.html',
       controller: function($http, $state, $rootScope, $cookies, $scope, $window, SessionService) {
 
         var self = this;
@@ -14,7 +14,7 @@
         });
 
         $scope.removeSession = function() {
-          $http.delete('/api/sessions/' + SessionService.currentId).success(function() {
+          $http.delete('api/sessions/' + SessionService.currentId +'/').success(function() {
             SessionService.refresh();
             // use jQuery to close the modals
             $('.modal').modal('hide');
@@ -40,7 +40,7 @@
           var fd = new FormData();
           fd.append('file', file);
 
-          $http.post('/api/utils/upload', fd, {
+          $http.post('api/utils/upload', fd, {
             transformRequest: angular.identity,
             headers: {'Content-Type': undefined}}).success(function(data) {
               $scope.message = data.message;
@@ -52,7 +52,7 @@
          * to the newly cloned session.
          */
         $scope.cloneSession = function(){
-          $http.post('/api/sessions?clone=' + SessionService.currentId, $scope.newSession).success(function(sessionId){
+          $http.post('api/sessions?clone=' + SessionService.currentId, $scope.newSession).success(function(sessionId){
             // use jQuery to close the modals
             $('.modal').modal('hide');
             $state.go($state.current.name, {sessionId: sessionId});
@@ -63,7 +63,7 @@
          * Use the API to reset the current session
          */
          $scope.resetSession = function(){
-          $http.post('/api/sessions/' + SessionService.currentId + '?reset=true').success(function(){
+          $http.post('api/sessions/' + SessionService.currentId + '?reset=true').success(function(){
             // refresh the view
             $('.modal').modal('hide');
             $state.go($state.current.name, {sessionId: sessionId});
@@ -74,7 +74,7 @@
          * Use the API to refresh the current session
          */
          $scope.refreshSession = function(){
-          $http.post('/api/sessions/' + SessionService.currentId + '?refresh=true').success(function(){
+          $http.post('api/sessions/' + SessionService.currentId + '?refresh=true').success(function(){
             $state.reload();
           });
         };

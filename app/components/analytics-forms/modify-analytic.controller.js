@@ -8,7 +8,7 @@
       $scope.queryText = '';
       // expose this to view
       $scope.attack = AttackService;
-      $http.get('/api/data_model/objects').success(function(dataModel) {
+      $http.get('api/data_model/objects/').success(function(dataModel) {
         $scope.dataModel = dataModel;
         $scope.dataModelIndex = _.indexBy(dataModel, 'name');
       });
@@ -25,7 +25,7 @@
             $scope.analytic = $.extend(true, {}, analytic);
 
             if ($scope.analytic.platform === 'CASCADE') {
-                $http.get('/api/analytics/' + analyticId + '/lift').success(function(query) {
+                $http.get('api/analytics/' + analyticId + '/lift').success(function(query) {
                     $scope.queryText = query.text;
                 });
             } else {
@@ -72,7 +72,7 @@
 
       $scope.$watch('queryText', function()  {
         if ($scope.queryText) {
-          $http.post('/api/query/parse', {query: $scope.queryText}).then(function(queryData) {
+          $http.post('api/query/parse', {query: $scope.queryText}).then(function(queryData) {
             var query = queryData.data;
             $scope.analytic.mapped_events = [{object: query.object, action: query.action}];
             $scope.query = query.query;
@@ -120,10 +120,10 @@
           }
 
         function createAnalytic() {
-          $http.post('/api/analytics', updatedAnalytic).success(function(analyticId) {
+          $http.post('api/analytics', updatedAnalytic).success(function(analyticId) {
             $scope.analytic._id = analyticId
             iconTimer('saved');
-            $http.get('/api/analytics/' + analyticId).success(function(analytic) {
+            $http.get('api/analytics/' + analyticId +'/').success(function(analytic) {
                 AnalyticService.updateAnalytic(analytic);
                 $state.go('modifyAnalytic', {analyticId: analyticId});
             })
@@ -137,7 +137,7 @@
             return createAnalytic();
           }
           updatedAnalytic._id = undefined;
-          $http.put('/api/analytics/' + analyticId, updatedAnalytic).success(function(analytic) {
+          $http.put('api/analytics/' + analyticId, updatedAnalytic).success(function(analytic) {
             iconTimer('saved');
             AnalyticService.updateAnalytic(analytic);
              // alert('Analytic updated successfully');
@@ -153,7 +153,7 @@
         } else {
           var query;
           // CASCADE analytics require verification of query langauge before submitting
-          $http.post('/api/query/parse', {query: $scope.queryText}).success(function(query) {
+          $http.post('api/query/parse', {query: $scope.queryText}).success(function(query) {
             updatedAnalytic.mapped_events = [{object: query.object, action: query.action}];
             updatedAnalytic.query = query.query;
 
@@ -164,7 +164,7 @@
 
       $scope.remove = function() {
         if (confirm("Are you sure you want to remove the analytic " + $scope.analytic.name)) {
-          $http.delete('/api/analytics/' + $scope.analytic._id).then(function(success) {
+          $http.delete('api/analytics/' + $scope.analytic._id).then(function(success) {
             var status = success.data;
             alert('Successfully removed analytic');
             AnalyticService.removeAnalytic($scope.analytic._id);

@@ -4,7 +4,7 @@
   app.directive('analyticConfigurationButtons', function() {
     return {
       restrict: 'E',
-      templateUrl: '/app/components/analytics-forms/configuration-buttons.html',
+      templateUrl: 'app/components/analytics-forms/configuration-buttons.html',
       scope: {
         analytics: '=',
         platforms: '=',
@@ -36,7 +36,7 @@
           self.selectConfiguration(self.defaultConfig);
         });
 
-        $http.get("/api/configurations/analytics").success(function(configs) {
+        $http.get("api/configurations/analytics/").success(function(configs) {
             $scope.configurations = configs;
         });
 

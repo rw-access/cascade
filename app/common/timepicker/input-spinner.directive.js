@@ -4,7 +4,7 @@
   app.directive('inputSpinner', function() {
     return {
       restrict: 'E',
-      templateUrl: '/app/common/timepicker/input-spinner.html',
+      templateUrl: 'app/common/timepicker/input-spinner.html',
       scope: {
         min: '=?',
         max: '=?',

@@ -55,32 +55,17 @@
         url: '',
         views: {
           "head-block": {
-            // templateUrl: "/app/index_head.html",
+            // templateUrl: "app/index_head.html",
           },
           "content-block": {
-            templateUrl: "/app/components/home/home.html"
-          }
-        }
-      }).state('debug', {
-        url: '/debug',
-        views: {
-          "content-block": {
-            template: ('<div>' +
-              '<h1 style="text-align:center;">' +
-              '<strong><code> DEBUG MODE </code><strong>' +
-              '</h1></div>'
-              ),
-            controller: function($scope, $http) {
-              // just to make life easier
-              $http.get('/api/debug');
-            }
+            templateUrl: "app/components/home/home.html"
           }
         }
       }).state('createSession', {
         url: '/create-session',
         views: {
           'content-block': {
-            templateUrl: '/app/components/session-form/create-session.html',
+            templateUrl: 'app/components/session-form/create-session.html',
             controller: "CreateSessionController"
           }
         }
@@ -89,14 +74,14 @@
         scope: {},
         views: {
           'head-block': {
-            template: '<link type="text/css" href="/app/css/bargraph.css" rel="stylesheet"></link>'
+            template: '<link type="text/css" href="app/css/bargraph.css" rel="stylesheet"></link>'
           },
           'content-block': {
             template: '<div bar-graph tactics="tactics"></div>',
             controller: function($scope, $rootScope, $stateParams, $http) {
               var sessionId = $stateParams.sessionId;
               var clusterindex = $stateParams.clusterindex;
-              $http.get('/api/sessions/' + sessionId + '/clusters/attack').success(function(data) {
+              $http.get('api/sessions/' + sessionId + '/clusters/attack/').success(function(data) {
                 $scope.tactics = data[clusterindex].attack_summary.tactics;
               });
             }
@@ -107,10 +92,10 @@
         scope: {},
         views: { /*
           'head-block': {
-            templateUrl: '/app/map_head.html'
+            templateUrl: 'app/map_head.html'
           }, */
           'content-block': {
-            templateUrl: '/app/common/directed-graph/session-graph.html',
+            templateUrl: 'app/common/directed-graph/session-graph.html',
             controller: 'TechniqueGraphController'
           }
         }
@@ -119,10 +104,10 @@
         scope: {},
         views: { /*
           "head-block": {
-            templateUrl: "/app/map_head.html",
+            templateUrl: "app/map_head.html",
           }, */
           'content-block': {
-            templateUrl: '/app/common/directed-graph/session-graph.html',
+            templateUrl: 'app/common/directed-graph/session-graph.html',
             controller: 'AlertGraphController'
           }
         }
@@ -131,10 +116,10 @@
         scope: {},
         views: {
           "head-block": {
-            // templateUrl: "/app/map_head.html",
+            // templateUrl: "app/map_head.html",
           },
           'content-block': {
-            templateUrl: '/app/common/directed-graph/session-graph.html',
+            templateUrl: 'app/common/directed-graph/session-graph.html',
             controller: 'HostGraphController'
           }
         }
@@ -146,7 +131,7 @@
         },
         views: {
           "content-block": {
-            templateUrl: "/app/components/tree-graphs/result-tree.html",
+            templateUrl: "app/components/tree-graphs/result-tree.html",
             controller: 'ResultTreeController'
           }
         }
@@ -154,7 +139,7 @@
         url: '/data-model',
         views: {
           'content-block': { 
-            templateUrl: '/app/components/data-model/data-model.html',
+            templateUrl: 'app/components/data-model/data-model.html',
             scope: {
               objects: '=',
               pivots: '=',
@@ -167,7 +152,7 @@
         url: '/analytics',
         views: {
           'content-block': { 
-            templateUrl: '/app/components/analytics-forms/list-analytics.html',
+            templateUrl: 'app/components/analytics-forms/list-analytics.html',
             scope: {
               analytics: '=',
               platforms: '=',
@@ -182,7 +167,7 @@
         url: '/analytics/coverage',
         views: {
           'content-block': { 
-            templateUrl: '/app/components/attack/analytic-coverage.html',
+            templateUrl: 'app/components/attack/analytic-coverage.html',
             scope: {
             },
             controller: 'AnalyticCoverageController'
@@ -192,7 +177,7 @@
         url: '/analytics/modify/:analyticId',
         views: {
           'content-block': { 
-            templateUrl: '/app/components/analytics-forms/modify-analytic.html',
+            templateUrl: 'app/components/analytics-forms/modify-analytic.html',
             scope: {
               analytic: '='
             },
@@ -203,7 +188,7 @@
         url: '/analytics/create',
         views: {
           'content-block': { 
-            templateUrl: '/app/components/analytics-forms/modify-analytic.html',
+            templateUrl: 'app/components/analytics-forms/modify-analytic.html',
             scope: {
             },
             controller: 'ModifyAnalyticController'
@@ -213,7 +198,7 @@
         url: '/sessions/:sessionId/graphs/events',
         views: {
           "head-block": {
-            // templateUrl: "/app/map_head.html",
+            // templateUrl: "app/map_head.html",
           }, 
           "content-block": {
             template: ('<div class="height-full pad-bottom">' +
@@ -245,7 +230,7 @@
         url: '/sessions/:sessionId/dashboard',
         views: {
           'content-block': {
-            templateUrl: '/app/components/dashboard/dashboard.html',
+            templateUrl: 'app/components/dashboard/dashboard.html',
             controllerAs: 'ctrl',
             controller: "DashboardController"
           }
@@ -254,7 +239,7 @@
         url: '/sessions/:sessionId/run-analytics',
         views: {
           "content-block": {
-            templateUrl: '/app/components/analytics-forms/run-analytics.html',
+            templateUrl: 'app/components/analytics-forms/run-analytics.html',
             scope: { 
               // runMode: '=',
               getSelected: '='
@@ -266,14 +251,14 @@
         url: '/attack/matrix',
         views: {
          'content-block': {
-           templateUrl: '/app/components/attack/matrix.html'
+           templateUrl: 'app/components/attack/matrix.html'
          }
        }
       }).state('customQuery', {
         url: '/sessions/:sessionId/custom-query',
         views: {
           'content-block': {
-            templateUrl: '/app/components/analytics-forms/run-custom.html',
+            templateUrl: 'app/components/analytics-forms/run-custom.html',
             controller: "CustomQueryController"
           }
         }
@@ -281,7 +266,7 @@
         url: '/attack/tactic-sets',
         views: {
           'content-block': {
-            templateUrl: '/app/components/attack/tactic-sets.html',
+            templateUrl: 'app/components/attack/tactic-sets.html',
             scope: {
               tacticSets: '=',
               newTacticSet: '='
@@ -293,7 +278,7 @@
         url: '/analytics/configure',
         views: {
           'content-block': {
-            templateUrl: '/app/components/analytics-forms/configure-analytics.html',
+            templateUrl: 'app/components/analytics-forms/configure-analytics.html',
             controller: "ConfigureAnalyticsController",
             controllerAs: "configCtrl"
           }
@@ -302,7 +287,7 @@
         url: '/analytics/tuning',
         views: {
           'content-block': {
-            templateUrl: '/app/components/analytics-forms/tune-analytics.html',
+            templateUrl: 'app/components/analytics-forms/tune-analytics.html',
             controllerAs:'trainingCtrl',
             controller: "TuneAnalyticsController"
           }
@@ -311,7 +296,7 @@
         url: '/analytics/tuning/:analyticId',
         views: {
           'content-block': {
-            templateUrl: '/app/components/tuning/tuning.html',
+            templateUrl: 'app/components/tuning/tuning.html',
             controller: "TuneAnalyticController"
           }
         }   
@@ -322,7 +307,7 @@
             template: ""
           },
           "content-block": {
-            templateUrl: "/app/components/account/manage-account.html",
+            templateUrl: "app/components/account/manage-account.html",
             controller: 'ManageAccountController',
             controllerAs:'dbCtrl'
           }
@@ -331,7 +316,7 @@
         url: '/account/add-database',
         views: {
           'content-block': {
-            templateUrl: '/app/components/account/add-database-login.html',
+            templateUrl: 'app/components/account/add-database-login.html',
             controller: "AddDatabaseController",
             controllerAs: 'addDbCtrl'
           }
@@ -340,7 +325,7 @@
         url: '/admin/databases',
         views: {
           'content-block': {
-            templateUrl: '/app/components/databases/manage-databases.html',
+            templateUrl: 'app/components/databases/manage-databases.html',
             controller: "ManageDatabasesController",
           }
         }
@@ -348,7 +333,7 @@
         url: '/admin/databases/connect',
         views: {
           'content-block': {
-            templateUrl: '/app/components/databases/connect-database.html',
+            templateUrl: 'app/components/databases/connect-database.html',
             controller: "ConnectDatabaseController",
             controllerAs: "dbCtrl"
           }
@@ -357,7 +342,7 @@
         url: '/admin/jobs',
         views: {
           'content-block': {
-            templateUrl: '/app/components/jobs/job-manager.html',
+            templateUrl: 'app/components/jobs/job-manager.html',
             controller: "JobManagerController",
             controllerAs: "jobCtrl"
           }
@@ -422,7 +407,7 @@
   // Load analytic info into memory
   app.run(function($rootScope, $http, $cookies, SessionService) {
 
-      $http.get("/api/user").success(function(data) {
+      $http.get("api/user/").success(function(data) {
         $rootScope.user = data;
       });
 

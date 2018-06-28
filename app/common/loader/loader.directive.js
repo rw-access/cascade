@@ -4,7 +4,7 @@
   app.directive('loader', function() {
     return {
       restrict: 'E',
-      templateUrl: '/app/common/loader/loader.html',
+      templateUrl: 'app/common/loader/loader.html',
       scope: {
         size: "=?"
       }

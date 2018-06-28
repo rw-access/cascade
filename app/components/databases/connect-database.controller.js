@@ -7,7 +7,7 @@
       $scope.dbInfo = {name: null, _cls: null};
       $scope.dbFields = {};
 
-      var databasePromise = $http.get('/api/schemas/databases').success(function(dbSchemas) {
+      var databasePromise = $http.get('api/schemas/databases/').success(function(dbSchemas) {
         $scope.dbSchemas = dbSchemas;
         $scope.schemaFields = {};
         
@@ -30,7 +30,7 @@
 
       self.submit = function() {
         var dbInfo = _.extend({}, $scope.dbInfo, $scope.dbFields);
-        $http.post('/api/databases', dbInfo).success(function(data) {
+        $http.post('api/databases', dbInfo).success(function(data) {
           console.log(data);
           $state.go('manageExternalDatabases');
 

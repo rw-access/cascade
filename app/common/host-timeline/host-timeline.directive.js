@@ -1,7 +1,7 @@
 angular.module('cascade').directive("hostTimeline", function() {
   return {
     restrict: 'AE',
-    templateUrl: "/app/common/host-timeline/host-timeline.html",
+    templateUrl: "app/common/host-timeline/host-timeline.html",
     scope: {
       events: "="
     },

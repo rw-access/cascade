@@ -5,7 +5,7 @@
   app.directive('relativeTimepicker', function() {
     return {
       restrict: 'E',
-      templateUrl: '/app/common/timepicker/relative-datetime-picker.html',
+      templateUrl: 'app/common/timepicker/relative-datetime-picker.html',
       scope: {
         range: '='
       },

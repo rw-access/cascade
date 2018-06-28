@@ -4,7 +4,7 @@ angular.module('cascade').directive('d3Tree', function() {
 
     return {
         restrict: 'EA',
-        /* templateUrl: '/app/tree.html', */ // all content is built by d3
+        /* templateUrl: 'app/tree.html', */ // all content is built by d3
         scope: {
             root: '=',
             transposed: '=?'

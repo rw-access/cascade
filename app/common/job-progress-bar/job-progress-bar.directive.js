@@ -16,19 +16,20 @@
 
           $scope.jobs = {};
           function updateJobs() {
-            $http.get('/api/jobs/summary').success(function(summary) {
+            $http.get('api/jobs/summary/').success(function(summary) {
             // {total: summary.total, fail: summary.failure, success: summary.success, pending: summary.started};
               $scope.jobs = summary;
             })
           }
 
+          updateJobs();
+          /*
           $scope.$watch('sessionId', function() {
             if ($scope.sessionId) {
                 updateJobs();
             }
           })
 
-          /*
           $scope.jobTimer = setInterval(updateJobs, 10000);
           setTimeout(updateJobs, 1000);
 

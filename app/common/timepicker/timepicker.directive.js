@@ -2,7 +2,7 @@
   app.directive('timepicker', function() {
     return {
       restrict: 'E',
-      templateUrl: '/app/common/timepicker/timepicker.html',
+      templateUrl: 'app/common/timepicker/timepicker.html',
       scope: {
         inputData: '='
       },

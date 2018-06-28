@@ -25,7 +25,7 @@
         })
 
         self.loadJobs = function() {
-            $http.get('/api/jobs').success(function(jobs) {
+            $http.get('api/jobs/').success(function(jobs) {
                 self.loaded = true;
                 $scope.jobs = jobs;
                 $scope.$watch('jobFilter', function() {
@@ -46,7 +46,7 @@
 
     	self.updateStatus = function(status) {
     	    var params = $.extend({multi: true}, $scope.jobFilter);
-            $http.post('/api/jobs', {status: status}, {params: params}).success(function() {
+            $http.post('api/jobs', {status: status}, {params: params}).success(function() {
                 self.loadJobs();
             });
     	}
@@ -54,7 +54,7 @@
     	self.removeJobs = function() {
     	    var params = $.extend({multi: true}, $scope.jobFilter);
     	    if (confirm("Are you sure you want to remove " + $scope.filteredJobs.length + " jobs?")) {
-    	        $http.delete('/api/jobs', {params:params}).success(function() {
+    	        $http.delete('api/jobs', {params:params}).success(function() {
     	            $scope.jobFilter = {};
     	            self.loadJobs();
     	        });

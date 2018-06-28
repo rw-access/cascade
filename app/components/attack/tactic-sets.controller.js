@@ -12,14 +12,14 @@
         return tacticSet;
       }
 
-      $http.get('/api/attack/tactic_sets').success(function(tacticSets) {
+      $http.get('api/attack/tactic_sets/').success(function(tacticSets) {
         AttackService.init.then(function() {
             $scope.tacticSets = _.map(tacticSets, convertSet);
         });
       });
 
       $scope.removeSet = function(tacticSet) {
-        $http.delete('/api/attack/tactic_sets/' + tacticSet._id).success(function(status) {
+        $http.delete('api/attack/tactic_sets/' + tacticSet._id).success(function(status) {
           $scope.tacticSets.splice($scope.tacticSets.indexOf(tacticSet));
         });
       };
@@ -30,7 +30,7 @@
               return t._id;
             })
         };
-        $http.post('/api/attack/tactic_sets', data).success(function (setId) {
+        $http.post('api/attack/tactic_sets', data).success(function (setId) {
           $scope.tacticSets.push({_id: setId, tactics: $scope.newTacticSet});
           $scope.newTacticSet = [{}];
         });

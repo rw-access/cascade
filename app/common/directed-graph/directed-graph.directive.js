@@ -4,7 +4,7 @@ var globalForce;
        // TODO: switch some things to self if possiblef
       return {
         restrict: 'A',
-        templateUrl: '/app/common/directed-graph/svg-container.html',
+        templateUrl: 'app/common/directed-graph/svg-container.html',
         scope: {
           nodes: '=',
           links: '=',

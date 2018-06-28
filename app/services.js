@@ -16,7 +16,7 @@
 
     self.refresh = function (sessionId) {
         if (sessionId) {
-            $http.get('/api/sessions/' + sessionId).success(function(session) {
+            $http.get('api/sessions/' + sessionId).success(function(session) {
                 if (!self.index[sessionId]) {
                     self.list.push(session);
                 }
@@ -33,7 +33,7 @@
                 }
             });
         } else {
-            $http.get('/api/sessions').success(function(sessions) {
+            $http.get('api/sessions/').success(function(sessions) {
                 self.list = sessions;
                 self.index = _.indexBy(sessions, '_id');
                 if (self.currentId) {
@@ -84,7 +84,7 @@
     self.init = self.deferred.promise;
 
 
-    $http.get('/api/attack')
+    $http.get('api/attack/')
     .success(function(attack){
       self.tactics = _.sortBy(attack.tactics, function(tactic) { return tactic.order; });
       self.techniques = _.sortBy(attack.techniques, function(technique) { return technique.name; }); 
@@ -126,7 +126,7 @@
     self.deferred = $q.defer();
     self.init = self.deferred.promise;
 
-    $http.get('/api/analytics').success(function(analytics) {
+    $http.get('api/analytics/').success(function(analytics) {
         self.analytics = analytics;
         self.index = _.indexBy(analytics, '_id');
         self.deferred.resolve();
@@ -165,7 +165,7 @@
         });
 
       });
-    });// end GET /api/analytics
+    });// end GET api/analytics
 
     self.updateAnalytic = function(analytic) {
       // must already have the _id field satisfied

@@ -19,7 +19,7 @@
               $scope.$watch('activeNode.investigate', function() {
                 if ($scope.activeNode && $scope.activeNode.investigate) {
                     $scope.activeNode.investigate = undefined;
-                    var uri = '/api/sessions/' + SessionService.currentId + '/automate/event/' + $scope.activeNode.id;
+                    var uri = 'api/sessions/' + SessionService.currentId + '/automate/event/' + $scope.activeNode.id +'/';
                     $http.post(uri).success(function(result) {
 
                     });

@@ -9,7 +9,7 @@
       $scope.links = [];
 
       // This is boilerplate at this point...
-      $http.get('/api/sessions/' + $stateParams.sessionId + '/graphs/technique').success(function(data) {
+      $http.get('api/sessions/' + $stateParams.sessionId + '/graphs/technique/').success(function(data) {
         AttackService.init.then(function() {
             AnalyticService.init.then(function() {
                 $scope.nodes = data.nodes.map(function(node) {
